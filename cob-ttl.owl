@@ -1,0 +1,922 @@
+@prefix : <http://purl.obolibrary.org/obo/cob.owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@base <http://purl.obolibrary.org/obo/cob.owl> .
+
+<http://purl.obolibrary.org/obo/cob.owl> rdf:type owl:Ontology ;
+                                          owl:versionIRI <http://purl.obolibrary.org/obo/cob/releases/2022-11-02/cob.owl> ;
+                                          dc:description "COB brings together key terms from a wide range of OBO projects to improve interoperability."@en ;
+                                          dc:title "Core Ontology for Biology and Biomedicine"@en ;
+                                          terms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+                                          rdfs:comment "This version of COB includes native OBO URIs, only using COB IRIs where equivalent natives could not be found. To see the edition that includes native IRIs, consult cob-edit.owl."@en ;
+                                          owl:versionInfo "2022-11-02"^^xsd:string .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/COB_based_on
+obo:COB_based_on rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000115
+obo:IAO_0000115 rdf:type owl:AnnotationProperty ;
+                rdfs:label "definition" .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000116
+obo:IAO_0000116 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+dc:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+terms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+skos:exactMatch rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000050
+obo:BFO_0000050 rdf:type owl:ObjectProperty ;
+                owl:inverseOf obo:BFO_0000051 ;
+                rdf:type owl:TransitiveProperty ;
+                rdfs:label "part of" .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000051
+obo:BFO_0000051 rdf:type owl:ObjectProperty ;
+                rdfs:label "has part" .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000054
+obo:BFO_0000054 rdf:type owl:ObjectProperty ;
+                owl:inverseOf obo:COB_0000087 ;
+                rdfs:label "realized in"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000066
+obo:BFO_0000066 rdf:type owl:ObjectProperty ;
+                owl:inverseOf obo:BFO_0000067 ;
+                rdfs:domain obo:BFO_0000015 ;
+                rdfs:label "occurs in" .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000067
+obo:BFO_0000067 rdf:type owl:ObjectProperty ;
+                rdfs:label "contains process"@en .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000016
+obo:COB_0000016 rdf:type owl:ObjectProperty ;
+                owl:inverseOf obo:STATO_0000102 ;
+                rdfs:label "executed by"@en .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000078
+obo:COB_0000078 rdf:type owl:ObjectProperty ;
+                owl:inverseOf obo:RO_0000058 ;
+                rdfs:label "concretizes" .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000081
+obo:COB_0000081 rdf:type owl:ObjectProperty ;
+                rdfs:label "intended to realize" .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000084
+obo:COB_0000084 rdf:type owl:ObjectProperty ;
+                rdfs:label "has plan" .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000085
+obo:COB_0000085 rdf:type owl:ObjectProperty ;
+                rdfs:label "intended plan process type" .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000087
+obo:COB_0000087 rdf:type owl:ObjectProperty ;
+                rdfs:domain obo:BFO_0000015 ;
+                rdfs:range obo:BFO_0000017 ;
+                rdfs:label "realizes" .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000136
+obo:IAO_0000136 rdf:type owl:ObjectProperty ;
+                obo:COB_based_on "http://purl.obolibrary.org/obo/IAO_0000136" ;
+                rdfs:label "is about" .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000293
+obo:OBI_0000293 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:RO_0000057 ;
+                owl:inverseOf obo:OBI_0000295 ;
+                rdfs:domain obo:OBI_0000011 ;
+                rdfs:label "has specified input"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000295
+obo:OBI_0000295 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:RO_0000056 ;
+                rdfs:label "is specified input of"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000299
+obo:OBI_0000299 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:RO_0000057 ;
+                owl:inverseOf obo:OBI_0000312 ;
+                rdfs:domain obo:OBI_0000011 ;
+                rdfs:label "has specified output"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000312
+obo:OBI_0000312 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:RO_0000056 ;
+                rdfs:label "is specified output of"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000052
+obo:RO_0000052 rdf:type owl:ObjectProperty ;
+               owl:inverseOf obo:RO_0000053 ;
+               rdfs:label "characteristic of"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000053
+obo:RO_0000053 rdf:type owl:ObjectProperty ,
+                        owl:InverseFunctionalProperty ;
+               rdfs:domain owl:Thing ;
+               rdfs:range obo:PATO_0000001 ;
+               rdfs:label "has characteristic" ;
+               rdfs:seeAlso "https://github.com/oborel/obo-relations/pull/284" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource obo:RO_0000053 ;
+   owl:annotatedProperty rdfs:domain ;
+   owl:annotatedTarget owl:Thing ;
+   rdfs:comment "Anything can have a characteristic"
+ ] .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000056
+obo:RO_0000056 rdf:type owl:ObjectProperty ;
+               owl:inverseOf obo:RO_0000057 ;
+               rdfs:label "participates in"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000057
+obo:RO_0000057 rdf:type owl:ObjectProperty ;
+               rdfs:domain obo:BFO_0000015 ;
+               rdfs:label "has participant" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000058
+obo:RO_0000058 rdf:type owl:ObjectProperty ;
+               rdfs:label "is concretized as"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002333
+obo:RO_0002333 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000057 ;
+               rdfs:label "enabled by" .
+
+
+###  http://purl.obolibrary.org/obo/STATO_0000102
+obo:STATO_0000102 rdf:type owl:ObjectProperty ;
+                  owl:propertyChainAxiom ( obo:COB_0000087
+                                           obo:COB_0000078
+                                         ) ;
+                  rdfs:label "executes" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/COB_0000511
+obo:COB_0000511 rdf:type owl:DatatypeProperty ;
+                rdfs:domain obo:PATO_0000001 ;
+                rdfs:comment "The range of this property should be a user-defined unit datatype, e.g 182^:cm" ;
+                rdfs:label "has quantity" ;
+                rdfs:seeAlso "https://github.com/OBOFoundry/COB/issues/35" .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000800
+obo:COB_0000800 rdf:type owl:DatatypeProperty ;
+                rdfs:domain obo:COB_0000011 ;
+                rdfs:range xsd:nonNegativeInteger ;
+                obo:IAO_0000115 "Number of protons in an atomic nucleus" ;
+                rdfs:comment "We are undecided as to whether to ultimately model this as a data property of object property + cardinality, but for now we are using DPs as these are faster for reasoning" ;
+                rdfs:label "has atomic number"@en .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000801
+obo:COB_0000801 rdf:type owl:DatatypeProperty ;
+                rdfs:domain obo:BFO_0000040 ;
+                rdfs:range xsd:nonNegativeInteger ;
+                rdfs:label "has number of atomic nuclei"@en .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000803
+obo:COB_0000803 rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:label "has inchi string"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000015
+obo:BFO_0000015 rdf:type owl:Class ;
+                rdfs:subClassOf owl:Thing ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000050 ;
+                                  owl:allValuesFrom obo:BFO_0000015
+                                ] ;
+                rdfs:label "process"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000016
+obo:BFO_0000016 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000017 ;
+                rdfs:label "disposition"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000017
+obo:BFO_0000017 rdf:type owl:Class ;
+                rdfs:subClassOf obo:PATO_0000001 ;
+                rdfs:label "realizable"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000023
+obo:BFO_0000023 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000017 ;
+                rdfs:label "role"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000029
+obo:BFO_0000029 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000041 ;
+                rdfs:label "site" .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000034
+obo:BFO_0000034 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000016 ;
+                rdfs:label "function"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000040
+obo:BFO_0000040 rdf:type owl:Class ;
+                rdfs:subClassOf owl:Thing ;
+                rdfs:label "material entity"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000041
+obo:BFO_0000041 rdf:type owl:Class ;
+                rdfs:subClassOf owl:Thing ;
+                rdfs:label "immaterial entity"@en .
+
+
+###  http://purl.obolibrary.org/obo/CARO_0001008
+obo:CARO_0001008 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:BFO_0000040 ;
+                 obo:IAO_0000115 "A part of a multicellular organism that is a collection of cell components that are not all contained in one cell." ;
+                 rdfs:comment "Bodily fluids, such as urine, are currently defined as anatomical entities in UBERON. We should make sure there is a proper home for these here." ;
+                 rdfs:label "gross anatomical part"@en .
+
+
+###  http://purl.obolibrary.org/obo/CARO_0010004
+obo:CARO_0010004 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:OBI_0100026 ;
+                 rdfs:label "cellular organism"@en .
+
+
+###  http://purl.obolibrary.org/obo/CHEBI_10545
+obo:CHEBI_10545 rdf:type owl:Class ;
+                rdfs:subClassOf obo:CHEBI_36342 ,
+                                obo:COB_0000013 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:COB_0000801 ;
+                                  owl:hasValue 0
+                                ] ;
+                rdfs:label "electron"@en ,
+                           "nucleic acid polymer" .
+
+
+###  http://purl.obolibrary.org/obo/CHEBI_24636
+obo:CHEBI_24636 rdf:type owl:Class ;
+                rdfs:subClassOf obo:CHEBI_36342 ;
+                rdfs:label "proton"@en .
+
+
+###  http://purl.obolibrary.org/obo/CHEBI_24867
+obo:CHEBI_24867 rdf:type owl:Class ;
+                rdfs:subClassOf obo:COB_0000011 ;
+                owl:disjointWith obo:CHEBI_33250 ;
+                rdfs:label "monoatomic ion" .
+
+
+###  http://purl.obolibrary.org/obo/CHEBI_30222
+obo:CHEBI_30222 rdf:type owl:Class ;
+                rdfs:subClassOf obo:CHEBI_36342 ;
+                rdfs:label "neutron"@en .
+
+
+###  http://purl.obolibrary.org/obo/CHEBI_33250
+obo:CHEBI_33250 rdf:type owl:Class ;
+                rdfs:subClassOf obo:COB_0000011 ;
+                rdfs:label "uncharged atom" .
+
+
+###  http://purl.obolibrary.org/obo/CHEBI_33252
+obo:CHEBI_33252 rdf:type owl:Class ;
+                rdfs:subClassOf obo:CHEBI_36342 ;
+                rdfs:comment "Some people may be uncomfortable calling every proton an atomic nucleus" ,
+                             "This is equivalent to CHEBI:33252" ;
+                rdfs:label "atomic nucleus"@en .
+
+
+###  http://purl.obolibrary.org/obo/CHEBI_36342
+obo:CHEBI_36342 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000040 ;
+                rdfs:label "subatomic particle"@en .
+
+
+###  http://purl.obolibrary.org/obo/CL_0000000
+obo:CL_0000000 rdf:type owl:Class ;
+               rdfs:subClassOf obo:BFO_0000040 ;
+               obo:IAO_0000115 "A material entity that has a plasma membrane and results from cellular division." ;
+               rdfs:comment "CL and GO definitions of cell differ based on inclusive or exclusive of cell wall, etc." ,
+                            "We struggled with this definition. We are worried about circularity. We also considered requiring the capability of metabolism." ;
+               rdfs:label "cell"@en .
+
+
+###  http://purl.obolibrary.org/obo/CL_0000003
+obo:CL_0000003 rdf:type owl:Class ;
+               rdfs:subClassOf obo:CL_0000000 ;
+               rdfs:label "native cell"@en .
+
+
+###  http://purl.obolibrary.org/obo/CL_0001034
+obo:CL_0001034 rdf:type owl:Class ;
+               rdfs:subClassOf obo:CL_0000000 ;
+               rdfs:label "cell in vitro"@en .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000005
+obo:COB_0000005 rdf:type owl:Class ;
+                rdfs:subClassOf owl:Thing ;
+                obo:IAO_0000116 "no longer needed"^^xsd:string ;
+                rdfs:label "obsolete_elementary charge"@en ;
+                owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000011
+obo:COB_0000011 rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                      owl:onProperty obo:COB_0000801 ;
+                                      owl:hasValue 1
+                                    ] ;
+                rdfs:subClassOf obo:BFO_0000040 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000051 ;
+                                  owl:someValuesFrom obo:CHEBI_33252
+                                ] ;
+                owl:disjointWith obo:COB_0000013 ;
+                obo:IAO_0000115 "A material entity consisting of exactly one atomic nucleus and the electron(s) orbiting it." ;
+                rdfs:comment "This atom is closely related to ChEBI's atom, but not exactly equivalent to." ;
+                rdfs:label "atom"@en .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000013
+obo:COB_0000013 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000040 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000051 ;
+                                  owl:someValuesFrom obo:COB_0000011
+                                ] ;
+                owl:disjointWith obo:COB_0000080 ;
+                obo:IAO_0000115 "A material entity that consists of two or more atoms that are all connected via covalent bonds such that any atom can be transitively connected with any other atom." ;
+                rdfs:comment "This molecular entity is different than ChEBI's 'molecular entity'." ,
+                             "We would like to have cardinality restrictions on the logic, but there are some technical limitations." ;
+                rdfs:label "molecular entity"@en .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000014
+obo:COB_0000014 rdf:type owl:Class ;
+                rdfs:subClassOf owl:Thing ;
+                obo:IAO_0000115 "A material entity consisting of multiple atoms that are completely connected by covalent bonds and structured in subunits, and where the most determinate class identity of the macromolecule is not necessarily changed when there is an addition or subtraction of atoms or bonds." ;
+                rdfs:comment "Terms moved to 'molecular entity', see https://github.com/OBOFoundry/Experimental-OBO-Core/issues/33" ;
+                rdfs:label "obsolete macromolecular entity"@en ;
+                owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000020
+obo:COB_0000020 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000040 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000051 ;
+                                  owl:someValuesFrom obo:COB_0000013
+                                ] ;
+                obo:IAO_0000115 "A material entity consisting of at least two macromolecular entities derived from a cell as parts, and that has a function for the cell." ;
+                rdfs:comment "Components are larger than individual macromolecular entities. It is tricky to define distinction between 'cell component' and 'macromolecular entity', e.g. ribosome. We would like to exclude most protein complexes." ,
+                             "Overlaps with some cellular components from GO" ;
+                rdfs:label "subcellular structure"@en .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000032
+obo:COB_0000032 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000041 ;
+                rdfs:label "geographical location"@en .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000056
+obo:COB_0000056 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000041 ;
+                rdfs:label "immaterial anatomical entity" .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000073
+obo:COB_0000073 rdf:type owl:Class ;
+                rdfs:subClassOf obo:COB_0000013 ;
+                rdfs:label "gene product" .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000077
+obo:COB_0000077 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000033 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000051 ;
+                                  owl:someValuesFrom obo:COB_0000077
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000051 ;
+                                  owl:someValuesFrom obo:IAO_0000005
+                                ] ;
+                rdfs:label "action specification" .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000080
+obo:COB_0000080 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000040 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000051 ;
+                                  owl:someValuesFrom obo:COB_0000013
+                                ] ;
+                obo:IAO_0000115 "A complex of two or more molecular entities that are not covalently bound." ;
+                rdfs:label "complex of molecular entities" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource obo:COB_0000080 ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty obo:BFO_0000051 ;
+                         owl:someValuesFrom obo:COB_0000013
+                       ] ;
+   rdfs:comment ">=2 parts (not we cannot use cardinality with transitive properties)"
+ ] .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000082
+obo:COB_0000082 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000015 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:COB_0000081 ;
+                                  owl:someValuesFrom obo:OBI_0000260
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:COB_0000087 ;
+                                  owl:someValuesFrom obo:SEPIO_0000048
+                                ] ;
+                obo:IAO_0000115 "A process that is initiated by an agent who intends to carry out a plan to achieve an objective through one or more actions as described in a plan specification." ;
+                rdfs:label "planned process" .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000083
+obo:COB_0000083 rdf:type owl:Class ;
+                rdfs:subClassOf obo:COB_0000082 ;
+                owl:disjointWith obo:OBI_0000011 ;
+                rdfs:label "failed planned process" .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000116
+obo:COB_0000116 rdf:type owl:Class ;
+                rdfs:subClassOf obo:COB_0000020 ;
+                rdfs:label "cellular membrane"@en .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000119
+obo:COB_0000119 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000023 ;
+                obo:COB_based_on "OBI:0000067" ;
+                rdfs:label "evaluant role" .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000120
+obo:COB_0000120 rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                      owl:onProperty obo:COB_0000078 ;
+                                      owl:someValuesFrom obo:IAO_0000030
+                                    ] ;
+                rdfs:subClassOf obo:PATO_0000001 ;
+                obo:COB_based_on "http://purl.obolibrary.org/obo/IAO_0000015" ;
+                rdfs:comment "Pier 'representational entity'" ,
+                             "This captures: pattern of writing in a book; neural state in the brain, electronic charges in computer memory etc" ;
+                rdfs:label "information representation" .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000121
+obo:COB_0000121 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000027 ;
+                obo:COB_based_on "http://purl.obolibrary.org/obo/IAO_0000109" ;
+                rdfs:label "measurement datum" .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000122
+obo:COB_0000122 rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                      owl:onProperty obo:RO_0000053 ;
+                                      owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                           owl:onProperty obo:COB_0000078 ;
+                                                           owl:someValuesFrom obo:IAO_0000030
+                                                         ]
+                                    ] ;
+                rdfs:subClassOf obo:BFO_0000040 ;
+                rdfs:label "physical information carrier" .
+
+
+###  http://purl.obolibrary.org/obo/COB_0001000
+obo:COB_0001000 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000015 ;
+                obo:IAO_0000115 "A process during which an organism comes into contact with another entity." ;
+                rdfs:label "exposure of organism"@en .
+
+
+###  http://purl.obolibrary.org/obo/DRON_0000005
+obo:DRON_0000005 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:OBI_0000047 ;
+                 obo:COB_based_on obo:DRON_00000005 ;
+                 obo:IAO_0000115 "A processed material entity created to be administered to an individual with the intent to improve health." ;
+                 rdfs:label "drug product" .
+
+
+###  http://purl.obolibrary.org/obo/ENVO_01000813
+obo:ENVO_01000813 rdf:type owl:Class ;
+                  rdfs:subClassOf obo:BFO_0000040 ;
+                  rdfs:label "geophysical entity" .
+
+
+###  http://purl.obolibrary.org/obo/ENVO_01001110
+obo:ENVO_01001110 rdf:type owl:Class ;
+                  rdfs:subClassOf obo:BFO_0000040 ;
+                  rdfs:label "ecosystem" .
+
+
+###  http://purl.obolibrary.org/obo/ENVO_02500000
+obo:ENVO_02500000 rdf:type owl:Class ;
+                  rdfs:subClassOf obo:BFO_0000015 ;
+                  owl:disjointWith obo:GO_0003674 ,
+                                   obo:GO_0008150 ,
+                                   obo:MOP_0000543 ;
+                  rdfs:label "environmental process" .
+
+
+###  http://purl.obolibrary.org/obo/GO_0003674
+obo:GO_0003674 rdf:type owl:Class ;
+               rdfs:subClassOf obo:BFO_0000015 ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty obo:RO_0002333 ;
+                                 owl:someValuesFrom [ rdf:type owl:Class ;
+                                                      owl:unionOf ( obo:COB_0000073
+                                                                    obo:GO_0032991
+                                                                  )
+                                                    ]
+                               ] ;
+               owl:disjointWith obo:GO_0008150 ,
+                                obo:MOP_0000543 ;
+               rdfs:comment "This is the same as GO molecular function" ;
+               rdfs:label "gene product or complex activity"@en .
+
+
+###  http://purl.obolibrary.org/obo/GO_0005634
+obo:GO_0005634 rdf:type owl:Class ;
+               rdfs:subClassOf obo:COB_0000020 ;
+               rdfs:label "cell nucleus"@en .
+
+
+###  http://purl.obolibrary.org/obo/GO_0008150
+obo:GO_0008150 rdf:type owl:Class ;
+               rdfs:subClassOf obo:BFO_0000015 ,
+                               [ rdf:type owl:Class ;
+                                 owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                 owl:onProperty obo:BFO_0000066 ;
+                                                 owl:someValuesFrom obo:OBI_0100026
+                                               ]
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty obo:RO_0000057 ;
+                                                 owl:someValuesFrom obo:OBI_0100026
+                                               ]
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty obo:RO_0000057 ;
+                                                 owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty obo:BFO_0000050 ;
+                                                                      owl:someValuesFrom obo:OBI_0100026
+                                                                    ]
+                                               ]
+                                             )
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty obo:BFO_0000051 ;
+                                 owl:someValuesFrom obo:GO_0003674
+                               ] ;
+               owl:disjointWith obo:MOP_0000543 ;
+               obo:IAO_0000115 "A process that emerges from two or more causally-connected macromolecular activities and has evolved to achieve a biological objective." ;
+               rdfs:comment "A biological process is an evolved process" ;
+               rdfs:label "biological process"@en .
+
+
+###  http://purl.obolibrary.org/obo/GO_0032991
+obo:GO_0032991 rdf:type owl:Class ;
+               rdfs:subClassOf obo:COB_0000080 ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty obo:BFO_0000051 ;
+                                 owl:someValuesFrom obo:COB_0000073
+                               ] ;
+               rdfs:comment "This is not covalently bonded, which conflicts with changes to the parent definition." ;
+               rdfs:label "protein-containing macromolecular complex" .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000005
+obo:IAO_0000005 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000033 ;
+                rdfs:label "objective specification" .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000027
+obo:IAO_0000027 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000030 ;
+                rdfs:label "data item"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000030
+obo:IAO_0000030 rdf:type owl:Class ;
+                rdfs:subClassOf owl:Thing ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:IAO_0000136 ;
+                                  owl:someValuesFrom owl:Thing
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty [ owl:inverseOf obo:COB_0000078
+                                                 ] ;
+                                  owl:someValuesFrom obo:COB_0000120
+                                ] ;
+                rdfs:comment "Pier: 'data, information or knowledge'. OR 'representation" ;
+                rdfs:label "information" .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000033
+obo:IAO_0000033 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000030 ;
+                rdfs:label "directive information entity" .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000104
+obo:IAO_0000104 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000033 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000051 ;
+                                  owl:someValuesFrom obo:COB_0000077
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000051 ;
+                                  owl:someValuesFrom obo:IAO_0000005
+                                ] ;
+                rdfs:label "plan specification" .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000310
+obo:IAO_0000310 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000030 ;
+                rdfs:label "document"@en .
+
+
+###  http://purl.obolibrary.org/obo/MOP_0000543
+obo:MOP_0000543 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000015 ;
+                rdfs:comment "This is meant to capture processes that are more fundamental than macromolecular activities" ;
+                rdfs:label "physico-chemical process" .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000011
+obo:OBI_0000011 rdf:type owl:Class ;
+                rdfs:subClassOf obo:COB_0000082 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:COB_0000087 ;
+                                  owl:someValuesFrom obo:OBI_0000260
+                                ] ;
+                rdfs:label "completely executed planned process"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000047
+obo:OBI_0000047 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000040 ;
+                obo:IAO_0000115 "A material entity processed by human activity with an intent to produce" ;
+                rdfs:label "processed material entity"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000066
+obo:OBI_0000066 rdf:type owl:Class ;
+                rdfs:subClassOf obo:OBI_0000011 ;
+                rdfs:label "investigation"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000070
+obo:OBI_0000070 rdf:type owl:Class ;
+                rdfs:subClassOf obo:OBI_0000011 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:OBI_0000293 ;
+                                  owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000040
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty obo:RO_0000053 ;
+                                                                              owl:someValuesFrom obo:COB_0000119
+                                                                            ]
+                                                                          ) ;
+                                                       rdf:type owl:Class
+                                                     ]
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:OBI_0000299 ;
+                                  owl:someValuesFrom [ owl:intersectionOf ( obo:COB_0000121
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty obo:IAO_0000136 ;
+                                                                              owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000040
+                                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                                          owl:onProperty obo:RO_0000053 ;
+                                                                                                                          owl:someValuesFrom obo:COB_0000119
+                                                                                                                        ]
+                                                                                                                      ) ;
+                                                                                                   rdf:type owl:Class
+                                                                                                 ]
+                                                                            ]
+                                                                          ) ;
+                                                       rdf:type owl:Class
+                                                     ]
+                                ] ;
+                rdfs:label "assay"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000094
+obo:OBI_0000094 rdf:type owl:Class ;
+                rdfs:subClassOf obo:OBI_0000011 ;
+                rdfs:label "material processing"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000245
+obo:OBI_0000245 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000040 ;
+                rdfs:comment "Should revisit if we can place outside of material entity - a collection of roles." ;
+                rdfs:label "organization"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000260
+obo:OBI_0000260 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000017 ,
+                                obo:COB_0000120 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:COB_0000078 ;
+                                  owl:someValuesFrom obo:IAO_0000104
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty [ owl:inverseOf obo:COB_0000087
+                                                 ] ;
+                                  owl:allValuesFrom obo:COB_0000082
+                                ] ;
+                rdfs:label "plan"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0001909
+obo:OBI_0001909 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000030 ;
+                rdfs:label "conclusion based on data" .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0100026
+obo:OBI_0100026 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000040 ;
+                obo:IAO_0000115 "A material entity that is a maximal functionally integrated unit that develops from a program encoded in a genome." ;
+                rdfs:comment "\"Maximal functionally integrated unit\" is intended to express unity, which Barry considers synonymous with BFO 'object'." ,
+                             "Includes virus - we will later have a class for cellular organisms." ;
+                rdfs:label "organism"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0200000
+obo:OBI_0200000 rdf:type owl:Class ;
+                rdfs:subClassOf obo:OBI_0000011 ;
+                rdfs:label "data transformation"@en .
+
+
+###  http://purl.obolibrary.org/obo/OGMS_0000014
+obo:OGMS_0000014 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:IAO_0000030 ;
+                 rdfs:label "phenotypic finding" .
+
+
+###  http://purl.obolibrary.org/obo/OGMS_0000063
+obo:OGMS_0000063 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:BFO_0000015 ;
+                 rdfs:label "disease course" .
+
+
+###  http://purl.obolibrary.org/obo/OGMS_0000073
+obo:OGMS_0000073 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:IAO_0000030 ;
+                 rdfs:label "disease diagnosis" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0000001
+obo:PATO_0000001 rdf:type owl:Class ;
+                 rdfs:subClassOf owl:Thing ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty [ owl:inverseOf obo:RO_0000053
+                                                  ] ;
+                                   owl:someValuesFrom owl:Thing
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty obo:BFO_0000051 ;
+                                   owl:allValuesFrom obo:PATO_0000001
+                                 ] ;
+                 rdfs:label "characteristic"@en ;
+                 rdfs:seeAlso "https://github.com/OBOFoundry/COB/issues/65" ,
+                              "https://github.com/oborel/obo-relations/pull/284" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource obo:PATO_0000001 ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty [ owl:inverseOf obo:RO_0000053
+                                        ] ;
+                         owl:someValuesFrom owl:Thing
+                       ] ;
+   rdfs:comment "We should name the inverse in COB and avoid the confusing inverse(..) construct"
+ ] .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0000125
+obo:PATO_0000125 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:PATO_0000001 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty obo:RO_0000052 ;
+                                   owl:someValuesFrom obo:BFO_0000040
+                                 ] ;
+                 rdfs:label "mass"@en .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0002193
+obo:PATO_0002193 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:PATO_0000001 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty obo:RO_0000052 ;
+                                   owl:someValuesFrom obo:BFO_0000040
+                                 ] ;
+                 rdfs:label "charge"@en .
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000000
+obo:PCO_0000000 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000040 ;
+                rdfs:label "collection of organisms" .
+
+
+###  http://purl.obolibrary.org/obo/PR_000000001
+obo:PR_000000001 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:COB_0000013 ;
+                 rdfs:label "protein"@en .
+
+
+###  http://purl.obolibrary.org/obo/SEPIO_0000048
+obo:SEPIO_0000048 rdf:type owl:Class ;
+                  rdfs:subClassOf obo:BFO_0000023 ;
+                  obo:IAO_0000116 "A role realized by a participant in a process such that the participant causes the process." ;
+                  rdfs:label "agent role" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
