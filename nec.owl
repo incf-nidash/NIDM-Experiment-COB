@@ -62,6 +62,10 @@ dc:title rdf:type owl:AnnotationProperty .
 terms:license rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/identifier
+dc:identifier rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2004/02/skos/core#exactMatch
 skos:exactMatch rdf:type owl:AnnotationProperty .
 
@@ -81,8 +85,27 @@ rdfs:seeAlso rdf:type owl:AnnotationProperty .
 ###  http://www.w3.org/2002/07/owl#versionInfo
 owl:versionInfo rdf:type owl:AnnotationProperty .
 
+
+###  http://semanticscience.org/resource/equivalentTo
+sio:equivalentTo rdf:type owl:AnnotationProperty .
+
+
+###  http://semanticscience.org/resource/example
+sio:example rdf:type owl:AnnotationProperty .
+
+
+###  http://semanticscience.org/resource/hasSynonym
+sio:hasSynonym rdf:type owl:AnnotationProperty .
+
+
+###  http://semanticscience.org/resource/subset
+sio:subset rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/nidash/nidm#hasAcronym
 nidm:hasAcronym rdf:type owl:AnnotationProperty .
+
+
 
 
 #################################################################
@@ -269,6 +292,72 @@ nidm:wasMeasuredBy rdf:type owl:ObjectProperty .
 ###  http://purl.org/nidash/nidm#wasScaleOf
 nidm:wasScaleOf rdf:type owl:ObjectProperty .
 
+
+###  http://semanticscience.org/resource/SIO_000001
+sio:SIO_000001 rdf:type owl:ObjectProperty ,
+                        owl:SymmetricProperty ;
+               rdfs:label "is related to"@en ;
+               sio:subset "relations+" ;
+               dc:identifier "SIO_000001" ;
+               rdfs:comment "'is related to' is the top level relation in SIO" ;
+               dc:description "A is related to B iff there is some relation between A and B."@en ;
+               sio:subset "core" ;
+               rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> .
+
+
+###  http://semanticscience.org/resource/SIO_000008
+sio:SIO_000008 rdf:type owl:ObjectProperty ;
+               rdfs:label "has attribute"@en ;
+               sio:subset "core" ;
+               dc:identifier "SIO_000008" ;
+               dc:description "has attribute is a relation that associates a entity with an attribute where an attribute is an intrinsic characteristic such as a quality, capability, disposition, function, or is an externally derived attribute determined from some descriptor (e.g. a quantity, position, label/identifier) either directly or indirectly through generalization of entities of the same type."@en ;
+               rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
+               rdfs:subPropertyOf sio:SIO_000001 .
+
+
+###  http://semanticscience.org/resource/SIO_000059
+sio:SIO_000059 rdf:type owl:IrreflexiveProperty ,
+                        owl:ObjectProperty ;
+               rdfs:label "has member"@en ;
+               dc:identifier "SIO_000059" ;
+               sio:subset "core" ;
+               sio:example "a collection of cars has as a car as a member"@en ;
+               dc:description "has member is a mereological relation between a collection and an item."@en ;
+               rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
+               rdfs:subPropertyOf sio:SIO_000008 .
+
+
+###  http://semanticscience.org/resource/SIO_000210
+sio:SIO_000210 rdf:type owl:ObjectProperty ;
+               rdfs:label "represents"@en ;
+               sio:subset "core" ;
+               dc:identifier "SIO_000210" ;
+               dc:description "a represents b when a serves as a sign, symbol or model of b."@en ;               
+               rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> .
+
+
+###  http://semanticscience.org/resource/SIO_000221
+sio:SIO_000221 rdf:type owl:FunctionalProperty ,
+                        owl:ObjectProperty ;
+               rdfs:label "has unit"@en ;
+               sio:subset "core" ;
+               dc:identifier "SIO_000221" ;
+               dc:description "has unit is a relation between a quantity and the unit it is a multiple of."@en ;
+               rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
+               rdfs:subPropertyOf sio:SIO_000008 ;
+               rdfs:range sio:SIO_000074 .
+
+
+###  http://semanticscience.org/resource/SIO_000632
+sio:SIO_000632 rdf:type owl:ObjectProperty ;
+               rdfs:label "is model of"@en ;
+               dc:identifier "SIO_000632" ;
+               dc:description "is model of is a relation between a model (an artifact) and the entity it purports to represent."@en ;
+               sio:example "the architect builds a model that represents the building she envisions."@en ;
+               rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
+               rdfs:subPropertyOf sio:SIO_000210 .
+
+
 #################################################################
 #    Data properties
 #################################################################
@@ -415,5 +504,857 @@ nidm:DICOMTag rdf:type owl:DatatypeProperty ;
 	       	       rdfs:comment "This property is only here so that the large number of DICOM tag datatype properties are not at the same graph level as the much smaller number of datatype properties, which makes non-DICOM tag properties hard to find." ;
                obo:IAO_0000114 obo:IAO_0000428 .
 
+
+###  http://semanticscience.org/resource/SIO_000300
+sio:SIO_000300 rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:label "has value"@en ;
+               sio:subset "nlp" ,
+                          "core" ;
+               dc:identifier "SIO_000300" ;
+               dc:description "A relation between a informational entity and its actual value (numeric, date, text, etc)."@en ;
+               sio:subset "relations" ,
+                          "sadi"@en ;
+               rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> .
+
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000015
+obo:BFO_0000015 rdf:type owl:Class ;
+                rdfs:subClassOf owl:Thing ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000050 ;
+                                  owl:allValuesFrom obo:BFO_0000015
+                                ] ;
+                rdfs:label "process"@en .
+
+###  http://purl.obolibrary.org/obo/BFO_0000040
+obo:BFO_0000040 rdf:type owl:Class ;
+                rdfs:subClassOf owl:Thing ;
+                rdfs:label "material entity"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0100026
+obo:OBI_0100026 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000040 ;
+                obo:IAO_0000115 "A material entity that is a maximal functionally integrated unit that develops from a program encoded in a genome." ;
+                rdfs:comment "\"Maximal functionally integrated unit\" is intended to express unity, which Barry considers synonymous with BFO 'object'." ,
+                             "Includes virus - we will later have a class for cellular organisms." ;
+                rdfs:label "organism"@en .
+
+
+###  http://purl.obolibrary.org/obo/CARO_0010004
+obo:CARO_0010004 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:OBI_0100026 ;
+                 rdfs:label "cellular organism"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000041
+obo:BFO_0000041 rdf:type owl:Class ;
+                rdfs:subClassOf owl:Thing ;
+                rdfs:label "immaterial entity"@en .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000032
+obo:COB_0000032 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000041 ;
+                rdfs:label "geographical location"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000029
+obo:BFO_0000029 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000041 ;
+                rdfs:label "site" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0000001
+obo:PATO_0000001 rdf:type owl:Class ;
+                 rdfs:subClassOf owl:Thing ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty [ owl:inverseOf obo:RO_0000053
+                                                  ] ;
+                                   owl:someValuesFrom owl:Thing
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty obo:BFO_0000051 ;
+                                   owl:allValuesFrom obo:PATO_0000001
+                                 ] ;
+                 rdfs:label "characteristic"@en ;
+                 rdfs:seeAlso "https://github.com/OBOFoundry/COB/issues/65" ,
+                              "https://github.com/oborel/obo-relations/pull/284" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0000125
+obo:PATO_0000125 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:PATO_0000001 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty obo:RO_0000052 ;
+                                   owl:someValuesFrom obo:BFO_0000040
+                                 ] ;
+                 rdfs:label "mass"@en .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0002193
+obo:PATO_0002193 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:PATO_0000001 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty obo:RO_0000052 ;
+                                   owl:someValuesFrom obo:BFO_0000040
+                                 ] ;
+                 rdfs:label "charge"@en .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000120
+obo:COB_0000120 rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                      owl:onProperty obo:COB_0000078 ;
+                                      owl:someValuesFrom obo:IAO_0000030
+                                    ] ;
+                rdfs:subClassOf obo:PATO_0000001 ;
+                obo:COB_based_on "http://purl.obolibrary.org/obo/IAO_0000015" ;
+                rdfs:comment "Pier 'representational entity'" ,
+                             "This captures: pattern of writing in a book; neural state in the brain, electronic charges in computer memory etc" ;
+                rdfs:label "information representation" .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000260
+obo:OBI_0000260 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000017 ,
+                                obo:COB_0000120 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:COB_0000078 ;
+                                  owl:someValuesFrom obo:IAO_0000104
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty [ owl:inverseOf obo:COB_0000087
+                                                 ] ;
+                                  owl:allValuesFrom obo:COB_0000082
+                                ] ;
+                rdfs:label "plan"@en .
+
+
+###  http://purl.org/nidash/nidm#PerformedPlan
+nidm:PerformedPlan rdf:type owl:Class ;   
+              rdfs:label "Performed Plan"^^xsd:string ;       
+              rdfs:subClassOf obo:OBI_0000260 ;       
+              obo:IAO_0000115 "A performed plan is a plan that is actually implemented during an acquisition activity."^^xsd:string ;           
+              obo:IAO_0000114 obo:IAO_0000428 .
+
+
+###  http://purl.org/nidash/nidm#SpecifiedPlan
+nidm:SpecifiedPlan rdf:type owl:Class ;
+              rdfs:label "Specified Plan"^^xsd:string ;
+              rdfs:subClassOf obo:OBI_0000260 ;
+              obo:IAO_0000115 "A specified plan is a plan that describes how the acquisition activity is to be carried out."^^xsd:string ;
+              rdfs:comment "nidm:SpecifiedPlan is related to nidm:PerformedPlan, the latter is the plan that is actually carried out." ;           
+              obo:IAO_0000114 obo:IAO_0000428 .
+
+
+###  http://purl.org/nidash/nidm#Protocol
+nidm:Protocol rdf:type owl:Class ;
+              rdfs:label "Protocol"^^xsd:string ;
+              rdfs:subClassOf nidm:SpecifiedPlan ;
+              obo:IAO_0000115 "An protocol is a specified plan that contains information necessary to acquire the desired data during a session and the acquisition device parameters that are to be used in that acquisition."^^xsd:string ;
+              obo:IAO_0000114 obo:IAO_0000428 .
+	      
+
+###  http://purl.obolibrary.org/obo/BFO_0000017
+obo:BFO_0000017 rdf:type owl:Class ;
+                rdfs:subClassOf obo:PATO_0000001 ;
+                rdfs:label "realizable"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000023
+obo:BFO_0000023 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000017 ;
+                rdfs:label "role"@en .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000119
+obo:COB_0000119 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000023 ;
+                obo:COB_based_on "OBI:0000067" ;
+                rdfs:label "evaluant role" .
+
+
+###  http://purl.obolibrary.org/obo/SEPIO_0000048
+obo:SEPIO_0000048 rdf:type owl:Class ;
+                  rdfs:subClassOf obo:BFO_0000023 ;
+                  obo:IAO_0000116 "A role realized by a participant in a process such that the participant causes the process." ;
+                  rdfs:label "agent role" .
+		  
+
+###  http://purl.obolibrary.org/obo/BFO_0000016
+obo:BFO_0000016 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000017 ;
+                rdfs:label "disposition"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000034
+obo:BFO_0000034 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000016 ;
+                rdfs:label "function"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000260
+obo:OBI_0000260 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000017 ,
+                                obo:COB_0000120 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:COB_0000078 ;
+                                  owl:someValuesFrom obo:IAO_0000104
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty [ owl:inverseOf obo:COB_0000087
+                                                 ] ;
+                                  owl:allValuesFrom obo:COB_0000082
+                                ] ;
+                rdfs:label "plan"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000030
+obo:IAO_0000030 rdf:type owl:Class ;
+                rdfs:subClassOf owl:Thing ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:IAO_0000136 ;
+                                  owl:someValuesFrom owl:Thing
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty [ owl:inverseOf obo:COB_0000078
+                                                 ] ;
+                                  owl:someValuesFrom obo:COB_0000120
+                                ] ;
+                rdfs:comment "Pier: 'data, information or knowledge'. OR 'representation" ;
+                rdfs:label "information" .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000082
+obo:COB_0000082 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000015 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:COB_0000081 ;
+                                  owl:someValuesFrom obo:OBI_0000260
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:COB_0000087 ;
+                                  owl:someValuesFrom obo:SEPIO_0000048
+                                ] ;
+                obo:IAO_0000115 "A process that is initiated by an agent who intends to carry out a plan to achieve an objective through one or more actions as described in a plan specification." ;
+                rdfs:label "planned process" .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000083
+obo:COB_0000083 rdf:type owl:Class ;
+                rdfs:subClassOf obo:COB_0000082 ;
+                owl:disjointWith obo:OBI_0000011 ;
+                rdfs:label "failed planned process" .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000011
+obo:OBI_0000011 rdf:type owl:Class ;
+                rdfs:subClassOf obo:COB_0000082 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:COB_0000087 ;
+                                  owl:someValuesFrom obo:OBI_0000260
+                                ] ;
+                rdfs:label "completely executed planned process"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000310
+obo:IAO_0000310 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000030 ;
+                rdfs:label "document"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000027
+obo:IAO_0000027 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000030 ;
+                rdfs:label "data item"@en .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000121
+obo:COB_0000121 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000027 ;
+                obo:COB_based_on "http://purl.obolibrary.org/obo/IAO_0000109" ;
+                rdfs:label "measurement datum" .
+
+
+###  http://purl.obolibrary.org/obo/OGMS_0000073
+obo:OGMS_0000073 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:IAO_0000030 ;
+                 rdfs:label "disease diagnosis" .
+
+
+###  http://purl.org/nidash/nidm#Acquisition
+nidm:Acquisition rdf:type owl:Class ;
+               rdfs:label "Acquisition" ;
+               obo:IAO_0000115 "An acquisition is a process during which data about a study participant is gathered."^^xsd:string ;                
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               rdfs:subClassOf COB_0000082 .
+
+
+###  http://purl.org/nidash/nidm#ImmaterialAcquisitionObject
+nidm:AcquisitionObject rdf:type owl:Class ;
+               rdfs:label "Immaterial Acquisition Object"^^xsd:string ;
+               rdfs:subClassOf obo:BFO_0000041 ;
+               obo:IAO_0000115 "An immaterial acquisition object is an immaterial entity that is gathered from a subject during an acquisition activity."^^xsd:string ;
+	       rdfs:comment "This term encompasses immaterial objects such as time series and image files." ;
+               obo:IAO_0000114 obo:IAO_0000428 ;    
+               obo:IAO_0000117 <http://purl.org/nicholsn/card.ttl> .
+
+
+###  http://purl.org/nidash/nidm#MaterialAcquisitionObject
+nidm:AcquisitionObject rdf:type owl:Class ;
+               rdfs:label "Material Acquisition Object"^^xsd:string ;
+               rdfs:subClassOf obo:BFO_0000040 ;
+               obo:IAO_0000115 "An acquisition object is an material entity that is gathered from a subject during an acquisition activity."^^xsd:string ;
+	       rdfs:comment "This term encompasses material objects such as blood samples." ;
+               obo:IAO_0000114 obo:IAO_0000428 ;    
+               obo:IAO_0000117 <http://purl.org/nicholsn/card.ttl> .
+
+
+###  http://purl.org/nidash/nidm#AcquisitionDeviceOperator
+nidm:AcquisitionDeviceOperator rdf:type owl:Class ;                                
+               rdfs:label "Acquisition Device Operator" ;
+               obo:IAO_0000115 "An acquisition device operator is a role of an agent who/that controls the device that collects the acquisition object."^^xsd:string ;                      
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               rdfs:comment "The use of who/that indicates that the agent performing this role can either be a person or another device." ;                                
+               rdfs:subClassOf obo:SEPIO_0000048 .
+
+
+###  http://purl.org/nidash/nidm#AcquisitionMethod
+nidm:AcquisitionMethod rdf:type owl:Class ;                     
+               rdfs:label "Acquisition Method" ;
+               obo:IAO_0000115 "An acquisition method is a specific form of a procedure that was used to gather data from a study participant."^^xsd:string ;      
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               rdfs:subClassOf nidm:AcquisitionObjectQuality .
+
+
+###  http://purl.org/nidash/nidm#AcquisitionModality
+nidm:AcquisitionModality rdf:type owl:Class ;
+               rdfs:label "Acquisition Modality" ;
+               obo:IAO_0000115 "An acquisition modality is a description of the general type of experiment that was used to gather data from a study participant."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;          
+               rdfs:subClassOf nidm:AcquisitionObjectQuality .
+
+
+###  http://purl.org/nidash/nidm#AcquisitionObjectQuality
+nidm:AcquisitionObjectQuality rdf:type owl:Class ;
+               rdfs:label "Acquisition Object Quality"^^xsd:string ;
+               obo:IAO_0000115 "An acquisition object quality is an quality that describes an essential feature of an object that is gathered from a study participant during an acquisition activity."^^xsd:string ;                 
+               obo:IAO_0000114 obo:IAO_0000428 ;                             
+               rdfs:subClassOf obo:PATO_0000001 .
+
+
+###  http://purl.org/nidash/nidm#AcquisitionUsageType
+nidm:AcquisitionUsageType rdf:type owl:Class ;
+               rdfs:label "Acquisition Usage Type"^^xsd:string ;
+               obo:IAO_0000115 "Acquisition usage type is an acquisition object quality that denotes to what purpose the acquired object will be employed."^^xsd:string ;
+               rdfs:comment  "This is used for a non-imaging based acquisition modality."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               rdfs:subClassOf nidm:AcquisitionObjectQuality .
+
+
+###  http://purl.org/nidash/nidm#Amperometry
+nidm:Amperometry rdf:type owl:Class ;
+               rdfs:label "Amperometry" ;
+               obo:IAO_0000115 "Amperometry is an extracellular acquisition method in electrophysiology in which an electrode is brought near a cell to detect the release of ions by vesicles."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               rdfs:subClassOf nidm:AcquisitionMethod .
+
+
+###  http://purl.org/nidash/nidm#Anatomical
+nidm:Anatomical rdf:type owl:Class ;
+               rdfs:label "Anatomical" ;
+               obo:IAO_0000115 "Anatomical is a description of the usage of a given acquisition object, indicating that the purpose of the object is to provide information on the anatomy of the object on which the acquisition was performed."^^xsd:string ;                      
+               obo:IAO_0000114 obo:IAO_0000428 ;             
+               rdfs:subClassOf nidm:ImageUsageType .
+
+
+###  http://purl.org/nidash/nidm#Angiography
+nidm:Angiography rdf:type owl:Class ;                                   
+               rdfs:label "Angiography"^^xsd:string ;
+               obo:IAO_0000115 "Angiography is an acquisition method that visualizes the venus and arterial systems of the body."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+	       rdfs:comment "Angiography is a general term for a method that exists in several image-based modalities such as magnetic resonance imaging."^^xsd:string ;
+               rdfs:subClassOf nidm:AcquisitionMethod .
+
+
+###  http://purl.org/nidash/nidm#ArterialSpinLabeling
+nidm:ArterialSpinLabeling rdf:type owl:Class ;                                  
+               rdfs:label "Arterial Spin Labeling"^^xsd:string ;
+               obo:IAO_0000115 "Arterial spin labeling is a magnetic resonance imaging acquisition method that measures perfusion using the flow of saturated blood into a predefined area by comparing the image intensity obtained in the slice with and without the saturation pulse."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+	       nidm:hasAcronym "ASL"^^xsd:string ;                                   
+               rdfs:subClassOf nidm:AcquisitionMethod .
+
+
+###  http://purl.org/nidash/nidm#Attenuator
+nidm:Attenuator rdf:type owl:Class ;                 
+               rdfs:label "Attenuator" ;
+               obo:IAO_0000115 "An attenuator is a device that reduces the amplitude of an input signal by a fixed amount while keeping the timecourse of the signal essentially unchanged." ;                
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               rdfs:subClassOf nidm:DataProcessingDevice ;
+
+
+###  http://purl.org/nidash/nidm#AuxiliaryFile
+nidm:AuxiliaryFile rdf:type owl:Class ;                  
+               rdfs:label "AuxiliaryFile"^^xsd:string ;                  
+               obo:IAO_0000115 "An auxiliary file is an information-bearing object that is either used to inform the execution of an experiment or that is generated during the execution of the experiment."^^xsd:string ;
+               rdfs:comment "An example of a file that informs the execution of an experiment is a b-vector file in diffusion-weighted MR imaging.  An example of a file that is generated during the execution of the experiment is a stimulus response file in functional MR imaging)"^^xsd:string ;                 
+               obo:IAO_0000114 obo:IAO_0000428 ;
+	       rdfs:subClassOf sio:SIO_000396 ;
+
+
+###  http://purl.org/nidash/nidm#AuxiliaryFileCollection
+nidm:AuxiliaryFileCollection rdf:type owl:Class ;                            
+               rdfs:label "Auxiliary File Collection"^^xsd:string ;
+               obo:IAO_0000115 "An auxiliary file collection is a grouping that contains the URI's of files that are necessary for the execution of the experiment or the processing of the data."^^xsd:string ;                      
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               rdfs:comment "An example of an auxiliary file collection is the b-value and b-vector files in diffusion-weighted MR imaging."^^xsd:string ;
+               prov:wasAssociatedWith nidm:AcquisitionObject ;
+               rdfs:subClassOf prov:Collection .
+
+
+###  http://purl.org/nidash/nidm#BandpassFilter
+nidm:BandpassFilter rdf:type owl:Class ;
+               rdfs:label "Bandpass Filter" ;
+               obo:IAO_0000115 "A bandpass filter is a device that modifies or removes certain signal components outside a selected frequency range from an electrical signal." ;
+               obo:IAO_0000114 obo:IAO_0000428 ;                   
+               rdfs:subClassOf nidm:SignalFilter .
+	       
+
+###  http://purl.org/nidash/nidm#BehavioralInstrument
+nidm:BehavioralInstrument rdf:type owl:Class ;
+               rdfs:label "Behavioral Instrument"^^xsd:string ;
+               obo:IAO_0000115 "A behavioral instrument is a instrument usage type that signifies that the type of data to be collected by the instrument is behaviorally-related data."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               rdfs:subClassOf nidm:InstrumentUsageType .
+
+
+###  http://purl.org/nidash/nidm#NIDM_0000152
+nidm:NIDM_0000152 rdf:type owl:Class ;
+               rdfs:label "Block-Based Design"^^xsd:string ;
+               obo:IAO_0000115 "A block-based design is a fMRI design comprised of epochs of stimulus and/or behavior."^^xsd:string ;
+               obo:IAO_0000116 "Discussed at https://github.com/incf-nidash/nidm/issues/299"^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               rdfs:subClassOf nidm:NIDM_0000155 .	       
+
+
+###  http://purl.org/nidash/nidm#BloodDraw
+nidm:BloodDraw rdf:type owl:Class ;
+               rdfs:label "Blood Draw"^^xsd:string ;
+               obo:IAO_0000115 "Blood draw is an activity in which blood is removed from the body, usually for the purpose of medically-related or scientific measurements."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               rdfs:subClassOf obo:BFO_0000015 .
+
+
+###  http://purl.org/nidash/nidm#BloodOxygenLevelDependentWeighted
+nidm:BloodOxygenLevelDependentWeighted rdf:type owl:Class ;
+               rdfs:label "Blood Oxygen Level Dependent Weighted"^^xsd:string ;
+               obo:IAO_0000115 "Blood Oxygen Level Dependent Weighted is an image contrast type in which differences in voxel intensity are based on magnetic susceptibility differences between oxygenated and de-oxygenated blood."^^xsd:string ;      
+               obo:IAO_0000114 obo:IAO_0000428 ;
+	       nidm:hasAcronym "BOLD"^^xsd:string ;
+	       rdfs:comment "This term is a special case of nidm:SusceptibilityWeighted, in which the image contrast is primarily due to differences in magnetic susceptibility of oxygenated versus de-oxygenated blood. Susceptibility weighting can have numerous causes, such as differences in tissue iron content."^^xsd:string ;    
+               rdfs:subClassOf nidm:ImageContrastType .
+
+
+###  http://purl.org/nidash/nidm#CalculatedParameter
+nidm:CalculatedParameter rdf:type owl:Class ;
+               rdfs:label "Calculated Parameter"^^xsd:string ;
+               obo:IAO_0000115 "A Calculated Parameter is a variable that is the result of the processing of a set of measurements."^^xsd:string ;
+               rdfs:comment "Note that this is similar to, but distinct from a dependent variable, which is a variable that changes in response to changes in a system.  The T2 value would be an example of a dependent variable since changing the echo time allows for calculation of the T2.  Cerebral Blood Flow (CBV) is an example of a Calculated Parameter since it is measure by taking a series of images after the injection of a contrast agent; however the experimenter is not actually changing any independent variable to see a change in the CBV and therefore it is a Calculated Parameter rather than a dependent variable."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               rdfs:subClassOf sio:SIO_000367 .
+
+
+###  http://purl.org/nidash/nidm#Cartesian
+nidm:Cartesian rdf:type owl:Class ;
+               rdfs:label "Cartesian"^^xsd:string ;
+               obo:IAO_0000115 "Cartesian is a k-space traversal scheme in MRI in which the path of the data acquisition follows a straight line parallel to one axis of the defined k-space and perpendicular to the other k=space axis."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               rdfs:subClassOf nidm:k-spaceTraversalScheme ;
+               owl:synonym nidm:Rectilinear .
+
+
+###  http://purl.org/nidash/nidm#CerebralBloodFlow
+nidm:CerebralBloodFlow rdf:type owl:Class ;
+               rdfs:label "Cerebral Blood Flow"^^xsd:string ;
+               obo:IAO_0000115 "Cerebral Blood Flow (CBF) is a calculated parameter that characterizes the blood volume in the brain."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+	       rdfs:comment "This calculated parameter is usually displayed as a map that displays the CBF in quantitative or relative units."^^xsd:string ;
+	       nidm:hasAcronym "CBF"^^xsd:string ;
+               rdfs:subClassOf nidm:CalculatedParameter .
+
+
+###  http://purl.org/nidash/nidm#CerebralBloodVolume
+nidm:CerebralBloodVolume rdf:type owl:Class ;
+               rdfs:label "Cerebral Blood Volume"^^xsd:string ;
+               obo:IAO_0000115 "Cerebral Blood Volume (CBV) is a calculated parameter that characterizes the blood volume in the brain."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+	       nidm:hasAcronym "CBV"^^xsd:string ;
+	       rdfs:comment "This calculated parameter is usually displayed as a map that displays the CBV in quantitative or relative units."^^xsd:string ;                  
+               rdfs:subClassOf nidm:CalculatedParameter .
+
+
+###  http://purl.org/nidash/nidm#ClinicalResearchCoordinator
+nidm:ClinicalResearchCoordinator rdf:type owl:Class ;
+              rdfs:label "Clinical Research Coordinator"^^xsd:string ;
+              rdfs:subClassOf prov:Role ;
+              obo:IAO_0000115 "A clinical research coordinator is a role for a person who performs an activity during which clinical data is acquired from study participants."^^xsd:string ;
+              obo:IAO_0000114 obo:IAO_0000428 .
+
+
+###  http://purl.org/nidash/nidm#CoInvestigator
+nidm:CoInvestigator rdf:type owl:Class ;
+               rdfs:label "Co-Investigator" ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               obo:IAO_0000115 "A co-investigator is a role for a person that shares responsibility for the oversight and performance of an investigation activity." ;
+	       rdfs:subClassOf obo:SEPIO_0000048 .
+
+
+###  http://purl.org/nidash/nidm#CommonDataElement
+nidm:CommonDataElement rdf:type owl:Class ;
+               rdfs:label "Common Data Element" ;
+               obo:IAO_0000115 "A common data element is a data element that is part of a collection of data elements, curated or not, which are available for reuse."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               rdfs:subClassOf nidm:DataElement .
+
+
+###  http://purl.org/nidash/nidm#ContinuousArterialSpinLabeling
+nidm:ContinuousArterialSpinLabeling rdf:type owl:Class ;
+               rdfs:label "Continuous Arterial Spin Labeling"^^xsd:string ;
+               obo:IAO_0000115 "Continuous arterial spin labeling is a magnetic resonance imaging acquisition method that uses continuous irradiation to invert the magnetization of flowing spins to measure perfusion."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+	       nidm:hasAcronym "CASL"^^xsd:string ;
+               rdfs:subClassOf nidm:ArterialSpinLabeling .
+
+
+###  http://purl.org/nidash/nidm#CurrentAmplifier
+nidm:CurrentAmplifier rdf:type owl:Class ;
+               rdfs:label "Current Amplifier" ;
+               rdfs:subClassOf nidm:DataProcessingDevice ;
+               obo:IAO_0000115 "A current amplifier is a device that increases the electrical current amplitude of an input electrical signal by a fixed amount, while keeping the voltage constant." ;
+               obo:IAO_0000114 obo:IAO_0000428 .                    
+
+
+
+###  http://purl.org/nidash/nidm#CurrentClamp
+nidm:CurrentClamp rdf:type owl:Class ;
+               rdfs:label "Current Clamp" ;
+               rdfs:subClassOf nidm:AcquisitionMethod ;
+               obo:IAO_0000115 "A current clamp is an intracellular electrophysiology acquisition method in which current is injected into a cell and the voltage generated by the cell is recorded." ;
+               obo:IAO_0000114 obo:IAO_0000428 .                    
+
+
+###  http://purl.org/nidash/nidm#DataAcquisitionDevice
+nidm:DataAcquisitionDevice rdf:type owl:Class ;
+               rdfs:label "Data Acquisition Device" ;
+               rdfs:subClassOf sio:SIO_000956 ;
+               obo:IAO_0000115 "A data acquisition device is a device that collects a packet or stream of analog or digital information from an entity." ;
+               obo:IAO_0000114 obo:IAO_0000428 .  
+
+
+###  http://purl.org/nidash/nidm#DataElement
+nidm:DataElement rdf:type owl:Class ;
+               rdfs:label "Data Element" ;
+               obo:IAO_0000115 "A data element is a variable, used in a scientific study, used to store either information regarding the acquisition, processing, or analysis of the acquisition object that resulted from the study activity."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               rdfs:subClassOf sio:SIO_000367 .
+
+
+###  http://purl.org/nidash/nidm#DataProcessing
+nidm:DataProcessing rdf:type owl:Class ;
+               rdfs:label "Data Processing" ;
+               obo:IAO_0000115 "Data processing is an activity in which data is tranformed from its initial state at acquisition to a different state more amenable to analysis."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               rdfs:subClassOf obo:COB_0000082 .
+
+
+###  http://purl.org/nidash/nidm#DataProcessingDevice
+nidm:DataProcessingDevice rdf:type owl:Class ;
+               rdfs:label "Data Processing Device" ;
+               rdfs:subClassOf sio:SIO_000956 ;
+               obo:IAO_0000115 "A data processing device is a device that manipulates a data packet, stream, or file by performing an operation on the data." ;
+               obo:IAO_0000114 obo:IAO_0000428 .  
+
+
+###  http://purl.org/nidash/nidm#Date
+nidm:Date rdf:type owl:Class ;
+               rdfs:label "Date" ;
+               rdfs:subClassOf sio:SIO_000015 ;
+               obo:IAO_0000115 "A date is an information content entity compfising the combination of year, month, and numerical value for the day in that month that an event happened." ;
+               obo:IAO_0000114 obo:IAO_0000428 .
+
+
+###  http://purl.org/nidash/nidm#DemographicsInstrument
+nidm:DemographicsInstrument rdf:type owl:Class ;
+               rdfs:label "Demographics Instrument"^^xsd:string ;
+               obo:IAO_0000115 "A demographics instrument is a instrument usage type that signifies that the type of data to be collected by the instrument is demographics-related data."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               rdfs:comment "Common demographics information are variables such as age, handedness, phenotypic sex, ethnicity, and race." ;
+               rdfs:subClassOf nidm:InstrumentUsageType .
+
+
+###  http://purl.org/nidash/nidm#DICOMTagCollection
+nidm:DICOMTagCollection rdf:type owl:Class ;
+               rdfs:label "DICOM Tag Collection"^^xsd:string ;
+               rdfs:subClassOf prov:Collection ;
+               obo:IAO_0000115 "A DICOM tag collection is a group of identifiers and their values that are stored in the headers of DICOM-formatted acquisition objects and that record the acquisition and reconstruction parameters for that acquisition object."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               prov:wasAssociatedWith nidm:AcquisitionObject .
+
+
+###  http://purl.org/nidash/nidm#DiffusionTensor
+nidm:DiffusionTensor rdf:type owl:Class ;
+               rdfs:label "Diffusion Tensor"^^xsd:string ;
+               obo:IAO_0000115 "Diffusion tensor is an image usage type that denotes that the acquisition object collected can be used to construct the diffusion tensor of the imaged tissue."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+	       nidm:hasAcronym "DT"^^xsd:string ;
+               rdfs:subClassOf nidm:ImageUsageType .
+
+
+###  http://purl.org/nidash/nidm#DiffusionWeighted
+nidm:DiffusionWeighted rdf:type owl:Class ;
+               rdfs:label "Diffusion Weighted"^^xsd:string ;
+               obo:IAO_0000115 "Diffusion weighted is an image contrast type in which differences in voxel intensity are based on the brownian-motion behavior of the species that generates the detected signal from that voxel."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+	       nidm:hasAcronym "DW"^^xsd:string ;
+               rdfs:subClassOf nidm:ImageContrastType .
+
+
+###  http://purl.org/nidash/nidm#DistortionCorrection
+nidm:DistortionCorrection rdf:type owl:Class ;
+               rdfs:label "DistortionCorrection" ;
+               obo:IAO_0000115 "Distortion correction is a description of the usage of a given acquisition object, indicating that the purpose of the object is to provide information used to correct distortions in a set of images."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               rdfs:subClassOf nidm:ImageUsageType .
+
+
+###  http://purl.org/nidash/nidm#DynamicContrastEnhanced
+nidm:DynamicContrastEnhanced rdf:type owl:Class ;
+               rdfs:label "Dynamic Contrast Enhanced"^^xsd:string ;
+               obo:IAO_0000115 "Dynamic contrast enhanced is a magnetic resonance imaging acquisition method in which T1-weighted images are acquired both before and then sequentially after a contrast agent has been injected in order to quantify metrics related to the permeability of the blood-brain barrier."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+	       nidm:hasAcronym "DCE"^^xsd:string ;                                
+               rdfs:subClassOf nidm:AcquisitionMethod .
+
+
+###  http://purl.org/nidash/nidm#DynamicSusceptibilityContrast
+nidm:DynamicSusceptibilityContrast rdf:type owl:Class ;
+               rdfs:label "Dynamic Susceptibility Contrast"^^xsd:string ;
+               obo:IAO_0000115 "Dynamic sysceptibility contrast is a magnetic resonance imaging acquisition method in which T2*-weighted images are acquired sequentially after a contrast agent has been injected in order to quantify metrics related to blood volume and flow."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+	       nidm:hasAcronym "DSC"^^xsd:string ;                                   
+               rdfs:subClassOf nidm:AcquisitionMethod .
+
+
+###  http://purl.org/nidash/nidm#EchoPlanar
+nidm:EchoPlanar rdf:type owl:Class ;
+               rdfs:label "Echo Planar"^^xsd:string ;
+               rdfs:subClassOf nidm:k-spaceTraversalScheme ;
+               obo:IAO_0000115 "Echo planar is a k-space traversal scheme  used to acquire the k-space data in magnetic resonance imaging in which the entirety of k-space is continuously traversed for each repetition of the pulse sequence."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 .
+
+
+###  http://purl.org/nidash/nidm#Electrocardiography
+nidm:Electrocardiography rdf:type owl:Class ;
+               obo:IAO_0000115 "Electrocardiography (ECG) is an electrophysiological acquisition method in which electrodes placed on the skin measure the electrical activity of the heart."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               rdfs:label "Electrocardiography"^^xsd:string ;
+               rdfs:subClassOf nidm:AcquisitionMethod .
+
+
+###  http://purl.org/nidash/nidm#Electrocorticography
+nidm:Electrocorticography rdf:type owl:Class ;
+               obo:IAO_0000115 "Electrocorticography (ECoG) is an electrophysiological acquisition method in which the electrical activity of the brain is measured using electrodes that are placed directly on the cortical surface of the brain."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               rdfs:label "Electrocorticography"^^xsd:string ;
+               rdfs:subClassOf nidm:AcquisitionMethod .
+
+
+###  http://purl.org/nidash/nidm#Electrode
+nidm:Electrode rdf:type owl:Class ;
+               rdfs:label "Electrode"^^xsd:string ;
+               obo:IAO_0000115 "An electrode is a data acquisition device that consists of a conductor that is used to record an electrical signal from a study participant."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               rdfs:subClassOf nidm:DataAcquisitionDevice .
+
+
+###  http://purl.org/nidash/nidm#Electroencephalography
+nidm:Electroencephalography rdf:type owl:Class ;
+               obo:IAO_0000115 "Electroencephalography (EEG) is an electrophysiological acquisition method in which the electrical activity of the brain is measured using electrodes that are placed on the surface of the head."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               rdfs:label "Electroencephalography"^^xsd:string ;
+               rdfs:subClassOf nidm:AcquisitionMethod .
+
+
+###  http://purl.org/nidash/nidm#ElectroencephalographyAcquisitionDevice
+nidm:ElectroencephalographyAcquisitionDevice rdf:type owl:Class ;
+               obo:IAO_0000115 "An electroencephalography (EEG) acquisition device is a device that measures the electrical activity of the brain and consists of a set of electrodes placed on the surface of the head and a recording device that collects the signal from each electrode."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               rdfs:label "Electroencephalography Acquisition Device"^^xsd:string ;
+               rdfs:subClassOf nidm:DataAcquisitionDevice .
+
+
+###  http://purl.org/nidash/nidm#Electromyography
+nidm:Electromyography rdf:type owl:Class ;
+               obo:IAO_0000115 "Electromyography (EMG) is an electrophysiological acquisition method in which the electrical activity of the muscles is measured using either surface or inserted electrodes."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               rdfs:label "Electromyography"^^xsd:string ;
+               rdfs:subClassOf nidm:AcquisitionMethod .
+
+
+###  http://purl.org/nidash/nidm#Electrooculography
+nidm:Electrooculography rdf:type owl:Class ;
+               obo:IAO_0000115 "Electrooculography (EOG) is an electrophysiological acquisition method in which the resting potential between the cornea of the eye and Bruch's membrance is measured."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               rdfs:label "Electrooculography"^^xsd:string ;
+               rdfs:subClassOf nidm:AcquisitionMethod .
+
+
+###  http://purl.org/nidash/nidm#ElectrophysiologyRecording
+nidm:ElectrophysiologyRecording rdf:type owl:Class ;
+               rdfs:label "Electrophysiology Recording"^^xsd:string ;
+               obo:IAO_0000115 "Electrophysiology Recording is an acquisition modality in which electrical signals are recorded from one or more electrodes inserted into living tissue."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               rdfs:subClassOf nidm:AcquisitionModality .
+
+
+###  http://purl.org/nidash/nidm#Encephalography
+nidm:Encephalography rdf:type owl:Class ;
+               obo:IAO_0000115 "Encephalography is an acquisition modality in which the electrical activity or structure of the brain is measured using a variety of techniques."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               rdfs:label "Electroencephalography"^^xsd:string ;
+               rdfs:subClassOf nidm:AcquisitionModality .
+
+
+###  http://purl.org/nidash/nidm#NIDM_0000153
+nidm:NIDM_0000153 rdf:type owl:Class ;
+               rdfs:label "Event-Related Design"^^xsd:string ;
+               obo:IAO_0000115 "An event-related design is a fMRI design comprised of discrete events of stimulus and/or behavior."^^xsd:string ;
+               rdfs:subClassOf nidm:NIDM_0000155 ;
+               obo:IAO_0000116 "Discussed at https://github.com/incf-nidash/nidm/issues/299"^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 .
+
+
+###  http://purl.org/nidash/nidm#ExtracellularElectrophysiologyRecording
+nidm:ExtracellularElectrophysiologyRecording rdf:type owl:Class ;
+               rdfs:label "Extracellular Electrophysiology Recording" ;
+               obo:IAO_0000115 "Extracellular Electrophysiology Recording is an acquisition modality in which one or more electrodes are inserted into living tissue and the electrical signals from adjacent cells are recorded."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               rdfs:subClassOf nidm:ElectrophysiologyRecording .
+
+
+###  http://purl.org/nidash/nidm#ExVivo
+nidm:ExVivo rdf:type owl:Class ;
+               rdfs:label "Ex Vivo" ;
+               obo:IAO_0000115 "Ex vivo is a organismal quality, usually used as an attribute of an Agent, that indicates that the Agent it describes was once part of a living organism, but has been removed."^^xsd:string ;
+	       rdfs:comment "A common example is a tissue sample."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               rdfs:subClassOf obo:PATO_0001995 .
+
+
+###  http://purl.org/nidash/nidm#EyeTrackingDevice
+nidm:EyeTrackingDevice rdf:type owl:Class ;
+               rdfs:label "Eye Tracking Device" ;
+               obo:IAO_0000115 "An eye tracking device is a device that consists of hardware that follows the motion of one or both eyes of the study participant, which allows the determination of either the gaze location or of relative eye motion."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               rdfs:subClassOf nidm:DataAcquisitionDevice .
+
+
+###  http://purl.org/nidash/nidm#FastFieldEcho
+nidm:FastFieldEcho rdf:type owl:Class ;
+               rdfs:label "Fast Field Echo"^^xsd:string ;
+               obo:IAO_0000115 "Fast Field Echo is a magnetic resonance imaging acquisition method that employs a gradient to dephase and rephase the signal to create an echo, a gradient-recalled echo, which is then measured."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+	       nidm:hasAcronym "FFE"^^xsd:string ;
+               rdfs:comment "Note that FFE is the Philips name for their implementation of the gradient recalled echo pulse sequence."^^xsd:string ;
+               rdfs:subClassOf nidm:AcquisitionMethod .
+
+
+###  http://purl.org/nidash/nidm#FastImagingEmployingSteadyStateAcquisition
+nidm:FastImagingEmployingSteadyStateAcquisition rdf:type owl:Class ;
+               rdfs:label "Fast Imaging Employing Steady State Acquisition"^^xsd:string ;
+               obo:IAO_0000115 "Fast imaging employing steady state acquisition (FIESTA) is a gradient recalled echo based magnetic resonance imaging acquisition method in which a series of phase-alternating radiofrequency pulses are applied, in conjunction with a balanced set of gradients, generating free induction decays and a steady-state transverse magnetization, the signal from which is collected."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+	       nidm:hasAcronym "FIESTA"^^xsd:string ;
+	       rdfs:comment "FIESTA is the name given to this sequence by GE, True FISP is the acronym used by Siemens."^^xsd:string ;
+               rdfs:subClassOf nidm:SteadyStateFreePrecession .
+
+
+###  http://purl.org/nidash/nidm#FastImagingWithSteadyStatePrecession
+nidm:FastImagingWithSteadyStatePrecession rdf:type owl:Class ;
+               rdfs:label "Fast Imaging With Steady State"^^xsd:string ;
+               obo:IAO_0000115 "Fast imaging with steady state precession (FISP) is a gradient recalled echo based magnetic resonance imaging acquisition method in which a series of phase-alternating radiofrequency pulses are applied, in conjunction with spoiler and rewinder gradients, generating free induction decays and a steady-state transverse magnetization, the signal from which is collected."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+	       nidm:hasAcronym "FISP"^^xsd:string ;
+	       rdfs:comment "GRASS is the name given to this sequence by GE, FISP is the acronym used by Siemens."^^xsd:string ;
+               rdfs:subClassOf nidm:SteadyStateFreePrecession .
+
+
+###  http://purl.org/nidash/nidm#FastLowAngleShot
+nidm:FastLowAngleShot rdf:type owl:Class ;
+               rdfs:label "Fast Low Angle Shot"^^xsd:string ;
+               obo:IAO_0000115 "Fast Low Angle Shot is a magnetic resonance imaging acquisition method that employs a gradient to dephase and rephase the signal to create an echo, which is then measured, and an additional gradient to destroy any residual magnetization at the end of the pulse sequence."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+	       nidm:hasAcronym "FLASH"^^xsd:string ;
+               rdfs:comment "Note that FLASH is the Siemens name for their implementation of this pulse sequence.  GE calls their implementation Spoiled Gradient Echo (SPGR) and Philips calls theirs Contrast Enhanced or T1 Fast Field Echo (T1-FFE)"^^xsd:string ;
+	       rdfs:subClassOf nidm:SpoiledGradientRecalledEcho .	       
+
+
+###  http://purl.org/nidash/nidm#FastSpinEcho
+nidm:FastSpinEcho rdf:type owl:Class ;
+               rdfs:label "Fast Spin Echo"^^xsd:string ;
+               obo:IAO_0000115 "Fast spin echo is a magnetic resonance imaging acquisition method in which the echo used in the measurement is generated by application of an initial radiofrequency 90 degree pulse and multiple subsequent 180 degree pulses, the latter in conjunction with a different phase-encoding gradient at each refocussed echo."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+	       nidm:hasAcronym "FSE"^^xsd:string ;
+	       rdfs:comment "Fast Spin Echo is also known as Turbo Spin Echo"^^xsd:string ;
+               rdfs:subClassOf nidm:SpinEcho .
+
+
+###  http://purl.org/nidash/nidm#FieldPotential
+nidm:FieldPotential rdf:type owl:Class ;
+               rdfs:label "Field Potential" ;
+               obo:IAO_0000115 "The field potential is an extracellular electrophysiology acquisition method in which an electrode is used to measure the voltage that is generated by synaptic activity (in neural tissue)."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               rdfs:subClassOf nidm:AcquisitionMethod .
+
+
+###  http://purl.org/nidash/nidm#FilePath
+nidm:FilePath rdf:type owl:Class ;
+               rdfs:label "File Path"^^xsd:string ;
+               obo:IAO_0000115 "A file path is the location of a file on a computer storage volume."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               rdfs:subClassOf nidm:Path .
+
+
+###  http://purl.org/nidash/nidm#FlowWeighted
+nidm:FlowWeighted rdf:type owl:Class ;
+               rdfs:label "Flow Weighted"^^xsd:string ;
+               obo:IAO_0000115 "Flow weighted is an image contrast type in which differences in voxel intensity are based on the bulk motion behavior of the species that generates the detected signal from that voxel."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               rdfs:subClassOf nidm:ImageContrastType .
+
+
+###  http://purl.org/nidash/nidm#FluidAttenuatedInversionRecovery
+nidm:FluidAttenuatedInversionRecovery rdf:type owl:Class ;
+               rdfs:label "Fluid Attenuated Inversion Recovery"^^xsd:string ;
+               obo:IAO_0000115 "Fluid Attenuated Inversion Recovery, which is often known by its acronym, FLAIR, is a magnetic resonance imaging acquisition method in which images are acquired after an initial magnetization inversion pulse is applied and a delay duration that is selected such that the signal from bulk fluid such as cerebral spinal fluid or fluid in lesions is nulled."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+	       nidm:hasAcronym "FLAIR"^^xsd:string ;
+               rdfs:subClassOf nidm:AcquisitionMethod .
+
+
+###  http://purl.org/nidash/nidm#Functional
+nidm:Functional rdf:type owl:Class ;
+               rdfs:label "Functional"^^xsd:string ;
+               obo:IAO_0000115 "Functional is a description of the usage of a given acquisition object, indicating that the purpose of the object is to provide information on the biological function of some aspect of the object on which the acquisition was performed."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               rdfs:subClassOf nidm:ImageUsageType .
 
 
