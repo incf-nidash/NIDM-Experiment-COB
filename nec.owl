@@ -26,14 +26,66 @@
 #    Annotation properties
 #################################################################
 
+###  http://purl.obolibrary.org/obo/IAO_0000111
+obo:IAO_0000111 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "editor preferred term"@en ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "The concise, meaningful, and human-friendly name for a class or property preferred by the ontology developers. (US-English)"@en ;
+                obo:IAO_0000117 "PERSON:Daniel Schober"@en ;
+                obo:IAO_0000119 "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en ;
+                rdfs:isDefinedBy <http://purl.obolibrary.org/obo/iao.owl> ;
+                rdfs:label "editor preferred term"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000112
+obo:IAO_0000112 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "example of usage"@en ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "A phrase describing how a term should be used and/or a citation to a work which uses it. May also include other kinds of examples that facilitate immediate understanding, such as widely know prototypes or instances of a class, or cases where a relation is said to hold."@en ;
+                obo:IAO_0000117 "PERSON:Daniel Schober"@en ;
+                obo:IAO_0000119 "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en ;
+                rdfs:isDefinedBy <http://purl.obolibrary.org/obo/iao.owl> ;
+                rdfs:label "example of usage"@en .
+		
+
 ###  http://purl.obolibrary.org/obo/IAO_0000114
 obo:IAO_0000114 rdf:type owl:AnnotationProperty ;
-                rdfs:label "has curation status" .
+                obo:IAO_0000111 "has curation status"@en ;
+                obo:IAO_0000117 "PERSON:Alan Ruttenberg"@en ,
+                                "PERSON:Bill Bug"@en ,
+                                "PERSON:Melanie Courtot"@en ;
+                rdfs:label "has curation status"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000115
 obo:IAO_0000115 rdf:type owl:AnnotationProperty ;
-                rdfs:label "definition" .
+                obo:IAO_0000111 "definition"@en ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "The official definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions."@en ;
+                obo:IAO_0000116 """2012-04-05: 
+Barry Smith
+
+The official OBI definition, explaining the meaning of a class or property: 'Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions'  is terrible.
+
+Can you fix to something like:
+
+A statement of necessary and sufficient conditions explaining the meaning of an expression referring to a class or property.
+
+Alan Ruttenberg
+
+Your proposed definition is a reasonable candidate, except that it is very common that necessary and sufficient conditions are not given. Mostly they are necessary, occasionally they are necessary and sufficient or just sufficient. Often they use terms that are not themselves defined and so they effectively can't be evaluated by those criteria. 
+
+On the specifics of the proposed definition:
+
+We don't have definitions of 'meaning' or 'expression' or 'property'. For 'reference' in the intended sense I think we use the term 'denotation'. For 'expression', I think we you mean symbol, or identifier. For 'meaning' it differs for class and property. For class we want documentation that let's the intended reader determine whether an entity is instance of the class, or not. For property we want documentation that let's the intended reader determine, given a pair of potential relata, whether the assertion that the relation holds is true. The 'intended reader' part suggests that we also specify who, we expect, would be able to understand the definition, and also generalizes over human and computer reader to include textual and logical definition. 
+
+Personally, I am more comfortable weakening definition to documentation, with instructions as to what is desirable. 
+
+We also have the outstanding issue of how to aim different definitions to different audiences. A clinical audience reading chebi wants a different sort of definition documentation/definition from a chemistry trained audience, and similarly there is a need for a definition that is adequate for an ontologist to work with.  """@en ;
+                obo:IAO_0000117 "PERSON:Daniel Schober"@en ;
+                obo:IAO_0000119 "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en ;
+                rdfs:isDefinedBy <http://purl.obolibrary.org/obo/iao.owl> ;
+                rdfs:label "definition"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000116
@@ -57,6 +109,19 @@ obo:IAO_0000117 rdf:type owl:AnnotationProperty ;
                 obo:IAO_0000119 "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en ;
                 rdfs:isDefinedBy <http://purl.obolibrary.org/obo/iao.owl> ;
                 rdfs:label "term editor"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000118
+obo:IAO_0000118 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "alternative label"@en ;
+                obo:IAO_0000114 obo:IAO_0000125 ;
+                obo:IAO_0000115 "A label for a class or property that can be used to refer to the class or property instead of the preferred rdfs:label. Alternative labels should be used to indicate community- or context-specific labels, abbreviations, shorthand forms and the like."@en ;
+                obo:IAO_0000117 "OBO Operations committee" ,
+                                "PERSON:Daniel Schober"@en ;
+                obo:IAO_0000119 "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en ;
+                rdfs:comment "Consider re-defing to: An alternative name for a class or property which can mean the same thing as the preferred name (semantically equivalent, narrow, broad or related)." ;
+                rdfs:label "alternative label"@en .
+
 
 ###  http://purl.obolibrary.org/obo/IAO_0000119
 obo:IAO_0000119 rdf:type owl:AnnotationProperty ;
@@ -85,6 +150,87 @@ obo:IAO_0000232 rdf:type owl:AnnotationProperty ;
                 rdfs:label "curator note"@en .
 
 
+
+###  http://purl.obolibrary.org/obo/IAO_0000233
+obo:IAO_0000233 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "term tracker item"@en ;
+                obo:IAO_0000112 "the URI for an OBI Terms ticket at sourceforge, such as https://sourceforge.net/p/obi/obi-terms/772/"@en ;
+                obo:IAO_0000114 obo:IAO_0000125 ;
+                obo:IAO_0000115 "An IRI or similar locator for a request or discussion of an ontology term."@en ;
+                obo:IAO_0000117 "Person: Jie Zheng, Chris Stoeckert, Alan Ruttenberg"@en ;
+                obo:IAO_0000119 "Person: Jie Zheng, Chris Stoeckert, Alan Ruttenberg"@en ;
+                rdfs:comment "The 'tracker item' can associate a tracker with a specific ontology term."@en ;
+                rdfs:label "term tracker item"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000234
+obo:IAO_0000234 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "ontology term requester"@en ;
+                obo:IAO_0000114 obo:IAO_0000125 ;
+                obo:IAO_0000115 "The name of the person, project, or organization that motivated inclusion of an ontology term by requesting its addition."@en ;
+                obo:IAO_0000117 "Person: Jie Zheng, Chris Stoeckert, Alan Ruttenberg"@en ;
+                obo:IAO_0000119 "Person: Jie Zheng, Chris Stoeckert, Alan Ruttenberg"@en ;
+                rdfs:comment "The 'term requester' can credit the person, organization or project who request the ontology term." ;
+                rdfs:label "ontology term requester"@en .
+
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000412
+obo:IAO_0000412 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "imported from"@en ;
+                obo:IAO_0000114 obo:IAO_0000125 ;
+                obo:IAO_0000115 "For external terms/classes, the ontology from which the term was imported"@en ;
+                obo:IAO_0000117 "PERSON:Alan Ruttenberg"@en ,
+                                "PERSON:Melanie Courtot"@en ;
+                obo:IAO_0000119 "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en ;
+                rdfs:isDefinedBy <http://purl.obolibrary.org/obo/iao.owl> ;
+                rdfs:label "imported from"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000589
+obo:IAO_0000589 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "OBO foundry unique label"@en ;
+                obo:IAO_0000114 obo:IAO_0000125 ;
+                obo:IAO_0000115 "An alternative name for a class or property which is unique across the OBO Foundry."@en ;
+                obo:IAO_0000116 "The intended usage of that property is as follow: OBO foundry unique labels are automatically generated based on regular expressions provided by each ontology, so that SO could specify unique label = 'sequence ' + [label], etc. , MA could specify 'mouse + [label]' etc. Upon importing terms, ontology developers can choose to use the 'OBO foundry unique label' for an imported term or not. The same applies to tools ."@en ;
+                obo:IAO_0000117 "PERSON:Alan Ruttenberg"@en ,
+                                "PERSON:Bjoern Peters"@en ,
+                                "PERSON:Chris Mungall"@en ,
+                                "PERSON:Melanie Courtot"@en ;
+                obo:IAO_0000119 "GROUP:OBO Foundry <http://obofoundry.org/>"@en ;
+                rdfs:label "OBO foundry unique label"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000600
+obo:IAO_0000600 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "elucidation"@en ;
+                obo:IAO_0000117 "person:Alan Ruttenberg"@en ;
+                obo:IAO_0000119 "Person:Barry Smith"@en ;
+                obo:IAO_0000600 "Primitive terms in a highest-level ontology such as BFO are terms which are so basic to our understanding of reality that there is no way of defining them in a non-circular fashion. For these, therefore, we can provide only elucidations, supplemented by examples and by axioms"@en ;
+                rdfs:isDefinedBy <http://purl.obolibrary.org/obo/iao.owl> ;
+                rdfs:label "elucidation"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000601
+obo:IAO_0000601 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "has associated axiom(nl)"@en ;
+                obo:IAO_0000117 "Person:Alan Ruttenberg"@en ;
+                obo:IAO_0000119 "Person:Alan Ruttenberg"@en ;
+                obo:IAO_0000600 "An axiom associated with a term expressed using natural language"@en ;
+                rdfs:isDefinedBy <http://purl.obolibrary.org/obo/iao.owl> ;
+                rdfs:label "has associated axiom(nl)"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000602
+obo:IAO_0000602 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "has associated axiom(fol)"@en ;
+                obo:IAO_0000117 "Person:Alan Ruttenberg"@en ;
+                obo:IAO_0000119 "Person:Alan Ruttenberg"@en ;
+                obo:IAO_0000600 "An axiom expressed in first order logic using CLIF syntax"@en ;
+                rdfs:isDefinedBy <http://purl.obolibrary.org/obo/iao.owl> ;
+                rdfs:label "has associated axiom(fol)"@en .
+
+
 ###  http://purl.obolibrary.org/obo/IAO_0006011
 obo:IAO_0006011 rdf:type owl:AnnotationProperty ;
                 obo:IAO_0000111 "may be identical to"@en ;
@@ -94,6 +240,16 @@ obo:IAO_0006011 rdf:type owl:AnnotationProperty ;
                 obo:IAO_0000234 "VFB"@en ;
                 rdfs:comment "Edges asserting this should be annotated with to record evidence supporting the assertion and its provenance."@en ;
                 rdfs:label "may be identical to"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0010000
+obo:IAO_0010000 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "has axiom id"@en ;
+                obo:IAO_0000117 "Person:Alan Ruttenberg"@en ;
+                obo:IAO_0000119 "Person:Alan Ruttenberg"@en ;
+                obo:IAO_0000600 "A URI that is intended to be unique label for an axiom used for tracking change to the ontology. For an axiom expressed in different languages, each expression is given the same URI"@en ;
+                rdfs:isDefinedBy <http://purl.obolibrary.org/obo/iao.owl> ;
+                rdfs:label "has axiom label"@en .
 
 
 ###  http://purl.org/dc/elements/1.1/creator
@@ -742,11 +898,77 @@ obo:COB_0000087 rdf:type owl:ObjectProperty ;
                 rdfs:range obo:BFO_0000017 ;
                 rdfs:label "realizes" .
 
+###  http://purl.obolibrary.org/obo/IAO_0000039
+obo:IAO_0000039 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:BFO_0000051 ;
+                rdf:type owl:FunctionalProperty ;
+                rdfs:range obo:IAO_0000003 ;
+                rdfs:label "has measurement unit label"@en .
+
 
 ###  http://purl.obolibrary.org/obo/IAO_0000136
 obo:IAO_0000136 rdf:type owl:ObjectProperty ;
                 obo:COB_based_on "http://purl.obolibrary.org/obo/IAO_0000136" ;
                 rdfs:label "is about" .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000219
+obo:IAO_0000219 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:IAO_0000136 ;
+                owl:inverseOf obo:IAO_0000235 ;
+                rdfs:domain obo:IAO_0000030 ;
+                rdfs:range obo:BFO_0000001 ;
+                obo:IAO_0000112 "A person's name denotes the person. A variable name in a computer program denotes some piece of memory. Lexically equivalent strings can denote different things, for instance \"Alan\" can denote different people. In each case of use, there is a case of the denotation relation obtaining, between \"Alan\" and the person that is being named."@en ;
+                obo:IAO_0000115 "A primitive, instance-level, relation obtaining between an information content entity and some portion of reality. Denotation is what happens when someone creates an information content entity E in order to specifically refer to something. The only relation between E and the thing is that E can be used to 'pick out' the thing. This relation connects those two together. Freedictionary.com sense 3: To signify directly; refer to specifically"@en ;
+                obo:IAO_0000116 """2009-11-10 Alan Ruttenberg. Old definition said the following to emphasize the generic nature of this relation. We no longer have 'specifically denotes', which would have been primitive, so make this relation primitive.
+g denotes r =def 
+r is a portion of reality
+there is some c that is a concretization of g 
+every c that is a concretization of g specifically denotes r"""@en ;
+                obo:IAO_0000117 "person:Alan Ruttenberg"@en ;
+                obo:IAO_0000119 "Conversations with Barry Smith, Werner Ceusters, Bjoern Peters, Michel Dumontier, Melanie Courtot, James Malone, Bill Hogan"@en ;
+                rdfs:comment ""@en ;
+                rdfs:label "denotes"@en .
+		
+###  http://purl.obolibrary.org/obo/IAO_0000413
+obo:IAO_0000413 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:IAO_0000136 ;
+                rdfs:domain obo:IAO_0000416 ;
+                rdfs:range obo:BFO_0000015 ;
+                obo:IAO_0000114 obo:IAO_0000120 ;
+                obo:IAO_0000115 "relates a process to a time-measurement-datum that represents the duration of the process"@en ;
+                obo:IAO_0000117 "Person:Alan Ruttenberg"@en ;
+                rdfs:label "is duration of"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000581
+obo:IAO_0000581 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:BFO_0000051 ;
+                rdf:type owl:FunctionalProperty ;
+                rdfs:domain obo:IAO_0000582 ;
+                rdfs:range obo:IAO_0000416 ;
+                obo:IAO_0000114 obo:IAO_0000123 ;
+                obo:IAO_0000115 "relates a time stamped measurement datum to the time measurement datum that denotes the time when the measurement was taken"@en ;
+                obo:IAO_0000117 "Alan Ruttenberg"@en ;
+                rdfs:label "has time stamp"@en .
+		
+
+###  http://purl.obolibrary.org/obo/IAO_0000583
+obo:IAO_0000583 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:BFO_0000051 ;
+                rdfs:domain obo:IAO_0000582 ;
+                rdfs:range [ owl:intersectionOf ( obo:IAO_0000109
+                                                  [ rdf:type owl:Class ;
+                                                    owl:complementOf obo:IAO_0000416
+                                                  ]
+                                                ) ;
+                             rdf:type owl:Class
+                           ] ;
+                obo:IAO_0000114 obo:IAO_0000123 ;
+                obo:IAO_0000115 "relates a time stamped measurement datum to the measurement datum that was measured"@en ;
+                obo:IAO_0000117 "Alan Ruttenberg"@en ;
+                rdfs:label "has measurement datum"@en .
+
 
 
 ###  http://purl.obolibrary.org/obo/OBI_0000304
@@ -885,6 +1107,14 @@ obo:RO_0003301 rdf:type owl:ObjectProperty ,
 #################################################################
 #    Data properties
 #################################################################
+
+###  http://purl.obolibrary.org/obo/IAO_0000004
+obo:IAO_0000004 rdf:type owl:DatatypeProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain obo:IAO_0000032 ;
+                rdfs:range xsd:double ;
+                rdfs:label "has measurement value"@en .
+
 
 ###  http://purl.obolibrary.org/obo/COB_0000511
 obo:COB_0000511 rdf:type owl:DatatypeProperty ;
@@ -1987,6 +2217,20 @@ of this, different, term."""@en ,
                 rdfs:label "measurement unit label"@en .
 
 
+###  http://purl.obolibrary.org/obo/IAO_0000009
+obo:IAO_0000009 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000030 ;
+                obo:IAO_0000111 "datum label"@en ;
+                obo:IAO_0000114 obo:IAO_0000123 ;
+                obo:IAO_0000115 "A label is a symbol that is part of some other datum and is used to either partially define  the denotation of that datum or to provide a means for identifying the datum as a member of the set of data with the same label"@en ;
+                obo:IAO_0000116 "http://www.golovchenko.org/cgi-bin/wnsearch?q=label#4n"@en ;
+                obo:IAO_0000117 "GROUP: IAO"@en ;
+                obo:IAO_0000232 """9/22/11 BP: changed the rdfs:label for this class from 'label' to 'datum label' to convey that this class is not intended to cover all kinds of labels (stickers, radiolabels, etc.), and not even all kind of textual labels, but rather the kind of labels occuring in a datum. 
+""" ;
+                rdfs:label "datum label"@en .
+		
+
+
 ###  http://purl.obolibrary.org/obo/IAO_0000010
 obo:IAO_0000010 rdf:type owl:Class ;
                 rdfs:subClassOf obo:IAO_0000104 ;
@@ -2078,6 +2322,24 @@ JAR: A data item is an approximately justified approximately true approximate be
                 rdfs:label "data item"@en .
 
 
+###  http://purl.obolibrary.org/obo/IAO_0000028
+obo:IAO_0000028 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000030 ;
+                obo:IAO_0000111 "symbol"@en ;
+                obo:IAO_0000112 "a serial number such as \"12324X\""@en ,
+                                "a stop sign"@en ,
+                                "a written proper name such as \"OBI\""@en ;
+                obo:IAO_0000114 obo:IAO_0000125 ;
+                obo:IAO_0000115 "An information content entity that is a mark(s) or character(s) used as a conventional representation of another entity."@en ;
+                obo:IAO_0000116 "20091104, MC: this needs work and will most probably change"@en ,
+                                "2014-03-31: We would like to have a deeper analysis of 'mark' and 'sign' in the future (see https://github.com/information-artifact-ontology/IAO/issues/154)."@en ;
+                obo:IAO_0000117 "PERSON: James A. Overton"@en ,
+                                "PERSON: Jonathan Rees"@en ;
+                obo:IAO_0000119 "based on Oxford English Dictionary"@en ;
+                rdfs:label "symbol"@en .
+
+
+
 ###  http://purl.obolibrary.org/obo/IAO_0000030
 obo:IAO_0000030 rdf:type owl:Class ;
                 rdfs:subClassOf obo:BFO_0000031 ,
@@ -2096,6 +2358,16 @@ Previous. An information content entity is a non-realizable information entity t
                 obo:IAO_0000117 "PERSON: Chris Stoeckert"@en ;
                 obo:IAO_0000119 "OBI_0000142"@en ;
                 rdfs:label "information content entity"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000031
+obo:IAO_0000031 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000029 ;
+                obo:IAO_0000111 "integer numeral"@en ;
+                obo:IAO_0000114 obo:IAO_0000123 ;
+                obo:IAO_0000115 "A numeral that denotes an integer"@en ;
+                obo:IAO_0000117 "PERSON: Jonathan Rees"@en ;
+                rdfs:label "integer numeral"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000032
@@ -2120,6 +2392,24 @@ this case we explicitly refer to the singular form"""@en ,
                 rdfs:label "scalar measurement datum"@en .
 
 
+###  http://purl.obolibrary.org/obo/IAO_0000033
+obo:IAO_0000033 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000030 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:IAO_0000136 ;
+                                  owl:someValuesFrom obo:BFO_0000017
+                                ] ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "An information content entity whose concretizations indicate to their bearer how to realize them in a process."@en ;
+                obo:IAO_0000116 "2009-03-16: provenance: a term realizable information entity was proposed for OBI (OBI_0000337) , edited by the PlanAndPlannedProcess branch. Original definition was  \"is the specification of a process that can be concretized and realized by an actor\" with alternative term  \"instruction\".It has been subsequently moved to IAO where the objective for which the original term was defined was satisfied with the definitionof this, different, term."@en ,
+                                "2013-05-30 Alan Ruttenberg: What differentiates a directive information entity from an information concretization is that it can have concretizations that are either qualities or realizable entities. The concretizations that are realizable entities are created when an individual chooses to take up the direction, i.e. has the intention to (try to) realize it."@en ,
+                                "8/6/2009 Alan Ruttenberg: Changed label from \"information entity about a realizable\" after discussions at ICBO"@en ,
+                                "Werner pushed back on calling it realizable information entity as it isn't realizable. However this name isn't right either. An example would be a recipe. The realizable entity would be a plan, but the information entity isn't about the plan, it, once concretized, *is* the plan. -Alan"@en ;
+                obo:IAO_0000117 "PERSON: Alan Ruttenberg"@en ,
+                                "PERSON: Bjoern Peters"@en ;
+                rdfs:label "directive information entity"@en .
+
+
 ###  http://purl.obolibrary.org/obo/IAO_0000064
 obo:IAO_0000064 rdf:type owl:Class ;
                 rdfs:subClassOf obo:IAO_0000104 ;
@@ -2132,6 +2422,31 @@ obo:IAO_0000064 rdf:type owl:Class ;
                 obo:IAO_0000119 "OBI_0000270"@en ,
                                 "adapted from discussion on OBI list (Matthew Pocock, Christian Cocos, Alan Ruttenberg)"@en ;
                 rdfs:label "algorithm"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000088
+obo:IAO_0000088 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000310 ;
+                obo:IAO_0000111 "report"@en ;
+                obo:IAO_0000112 "Examples of reports are gene lists and investigation reports. These are not published (journal) articles but may be included in a journal article."@en ;
+                obo:IAO_0000114 obo:IAO_0000125 ;
+                obo:IAO_0000115 "A document assembled by an author for the purpose of providing information for the audience. A report is the output of a documenting process and has the objective to be consumed by a specific audience. Topic of the report is on something that has completed. A report is not a single figure. Examples of reports are journal article, patent application, grant progress report, case report (not patient record)."@en ;
+                obo:IAO_0000116 """2009-03-16: comment from Darren Natale: I am slightly uneasy with the sentence \"Topic of the report is on 
+something that has completed.\"  Should it be restricted to those things 
+that are completed?  For example, a progress report is (usually) about 
+something that definitely has *not* been completed, or may include 
+(only) projections.  I think the definition would not suffer if the 
+whole sentence is deleted."""@en ,
+                                "2009-03-16: this was report of results with definition: A report is a narrative object that is a formal statement of the results of an investigation, or of any matter on which definite information is required, made by some person or body instructed or required to do so."@en ,
+                                "2009-03-16: work has been done on this term during during the OBI workshop winter 2009 and the current definition was considered acceptable for use in OBI. If there is a need to modify this definition please notify OBI."@en ,
+                                "2009-08-10 Alan Ruttenberg: Larry Hunter suggests that this be obsoleted and replaced by 'document'. Alan restored as there are OBI dependencies and this merits further discussion"@en ,
+                                "disagreement about where reports go. alan: only some gene lists are reports. Is a report all the content of some document? The example of usage suggests that a report may be part of  some article. Term needs clarification"@en ;
+                obo:IAO_0000117 "PERSON: Alan Ruttenberg"@en ,
+                                "PERSON: Chris Stoeckert"@en ,
+                                "PERSON: Melanie Courtot"@en ;
+                obo:IAO_0000119 "GROUP: OBI"@en ,
+                                "OBI_0000099"@en ;
+                rdfs:label "report"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000098
@@ -2165,6 +2480,41 @@ obo:IAO_0000100 rdf:type owl:Class ;
                 obo:IAO_0000119 "OBI_0000042"@en ,
                                 "group:OBI"@en ;
                 rdfs:label "data set"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000104
+obo:IAO_0000104 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000033 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000051 ;
+                                  owl:someValuesFrom obo:IAO_0000005
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000051 ;
+                                  owl:someValuesFrom obo:IAO_0000007
+                                ] ;
+                obo:IAO_0000111 "plan specification"@en ;
+                obo:IAO_0000112 "PMID: 18323827.Nat Med. 2008 Mar;14(3):226.New plan proposed to help resolve conflicting medical advice."@en ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "A directive information entity with action specifications and objective specifications as parts, and that may be concretized as a realizable entity that, if realized, is realized in a process in which the bearer tries to achieve the objectives by taking the actions specified."@en ;
+                obo:IAO_0000116 "2009-03-16: provenance: a term a plan was proposed for OBI (OBI_0000344) , edited by the PlanAndPlannedProcess branch. Original definition was \" a plan is a specification of a process that is realized by an actor to achieve the objective specified as part of the plan\". It has been subsequently moved to IAO where the objective for which the original term was defined was satisfied with the definitionof this, different, term."@en ,
+                                "2014-03-31: A plan specification can have other parts, such as conditional specifications."@en ,
+                                "2022-01-16 Updated definition to that proposed by Clint Dowloand, IAO Issue 231."@en ,
+                                "Alternative previous definition: a plan is a set of instructions that specify how an objective should be achieved"@en ;
+                obo:IAO_0000117 "Alan Ruttenberg"@en ,
+                                "Clint Dowland"@en ;
+                obo:IAO_0000119 "OBI Plan and Planned Process branch"@en ,
+                                "OBI_0000344"@en ;
+                rdfs:comment """2/3/2009 Comment from OBI review.
+
+Action specification not well enough specified.
+Conditional specification not well enough specified.
+Question whether all plan specifications have objective specifications.
+
+Request that IAO either clarify these or change definitions not to use them"""@en ;
+                rdfs:label "plan specification"@en ;
+                rdfs:seeAlso "https://github.com/information-artifact-ontology/IAO/issues/231#issuecomment-1010455131"@en .
+
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000109
@@ -2263,16 +2613,6 @@ obo:IAO_0000305 rdf:type owl:Class ;
                 obo:IAO_0000117 "PERSON: Lawrence Hunter"@en ;
                 rdfs:label "document title"@en .
 
-###  http://purl.obolibrary.org/obo/IAO_0000310
-obo:IAO_0000310 rdf:type owl:Class ;
-                rdfs:subClassOf obo:IAO_0000030 ;
-                obo:IAO_0000111 "document"@en ;
-                obo:IAO_0000112 "A journal article, patent application, laboratory notebook, or a book"@en ;
-                obo:IAO_0000114 obo:IAO_0000120 ;
-                obo:IAO_0000115 "A collection of information content entities intended to be understood together as a whole"@en ;
-                obo:IAO_0000117 "PERSON: Lawrence Hunter"@en ;
-                rdfs:label "document"@en .
-
 
 ###  http://purl.obolibrary.org/obo/IAO_0000310
 obo:IAO_0000310 rdf:type owl:Class ;
@@ -2307,6 +2647,23 @@ obo:IAO_0000311 rdf:type owl:Class ;
                 obo:IAO_0000233 <https://github.com/information-artifact-ontology/IAO/issues/232> ;
                 rdfs:comment "Revisit the term in Octorber 2020. Improve the defintion."@en ;
                 rdfs:label "publication"@en .
+
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000314
+obo:IAO_0000314 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000030 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000050 ;
+                                  owl:someValuesFrom obo:IAO_0000310
+                                ] ;
+                obo:IAO_0000111 "document part"@en ;
+                obo:IAO_0000112 "An abstract, introduction, method or results section."@en ;
+                obo:IAO_0000114 obo:IAO_0000120 ;
+                obo:IAO_0000115 "An information content entity that is part of a document."@en ;
+                obo:IAO_0000117 "PERSON: Lawrence Hunter"@en ;
+                rdfs:label "document part"@en .
+
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000315
@@ -2367,6 +2724,19 @@ obo:IAO_0000442 rdf:type owl:Class ;
                 obo:IAO_0000117 "PERSON: Alan Ruttenberg"@en ,
                                 "PERSON: Melanie Courtot"@en ;
                 rdfs:label "author role"@en .
+
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000444
+obo:IAO_0000444 rdf:type owl:Class ;
+                rdfs:subClassOf obo:OBI_0000011 ;
+                obo:IAO_0000114 obo:IAO_0000120 ;
+                obo:IAO_0000115 "A planned process of making information, such as literature, music, and software etc., available to the public for sale or for free."@en ;
+                obo:IAO_0000117 "Person: Jie Zheng"@en ;
+                obo:IAO_0000119 "https://en.wikipedia.org/wiki/Publishing" ;
+                obo:IAO_0000233 <https://github.com/information-artifact-ontology/IAO/issues/232> ;
+                obo:IAO_0000234 "VEuPathDB"@en ;
+                rdfs:label "publishing process"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000445
@@ -2451,6 +2821,24 @@ obo:IAO_0000578 rdf:type owl:Class ;
                 rdfs:label "centrally registered identifier"@en .
 
 
+###  http://purl.obolibrary.org/obo/IAO_0000579
+obo:IAO_0000579 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0020020 ;
+                obo:IAO_0000112 "PubMed is a CRID registry. It has a code set of PubMed identifiers associated with journal articles. "@en ;
+                obo:IAO_0000114 obo:IAO_0000120 ;
+                obo:IAO_0000115 "A code set of CRID records, each consisting of a CRID symbol and additional information which was recorded in the code set through an assigning a centrally registered identifier process."@en ;
+                obo:IAO_0000117 "Justin Whorton"@en ,
+                                "PERSON: Alan Ruttenberg"@en ,
+                                "PERSON: Bill Hogan"@en ,
+                                "PERSON: Bjoern Peters"@en ,
+                                "PERSON: Melanie Courtot"@en ;
+                obo:IAO_0000118 "CRID registry" ;
+                obo:IAO_0000119 "Original proposal from Bjoern, discussions at IAO calls"@en ;
+                obo:IAO_0000233 "https://github.com/information-artifact-ontology/IAO/issues/237"@en ;
+                rdfs:label "centrally registered identifier registry"@en .
+
+
+
 ###  http://purl.obolibrary.org/obo/IAO_0000582
 obo:IAO_0000582 rdf:type owl:Class ;
                 rdfs:subClassOf obo:IAO_0000109 ,
@@ -2482,6 +2870,21 @@ obo:IAO_0000584 rdf:type owl:Class ;
                 obo:IAO_0000117 "Alan Ruttenberg"@en ;
                 obo:IAO_0000118 "experimental time series"@en ;
                 rdfs:label "time sampled measurement data set"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000590
+obo:IAO_0000590 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000300 ;
+                obo:IAO_0000111 "written name"@en ;
+                obo:IAO_0000112 "\"Bill Clinton\""@en ,
+                                "\"The Eiffel Tower\""@en ,
+                                "\"United States of America\""@en ;
+                obo:IAO_0000114 obo:IAO_0000125 ;
+                obo:IAO_0000115 "A textual entity that denotes a particular in reality."@en ;
+                obo:IAO_0000117 "PERSON: Bill Hogan"@en ;
+                obo:IAO_0000119 "https://github.com/information-artifact-ontology/IAO/issues/114"@en ;
+                obo:IAO_0000232 "The qualifier \"written\" is to set it apart from spoken names.  Also, note the restrictions to particulars.  We are not naming universals.   We could however, be naming, attributive collections which are particulars, so \"All people located in the boundaries of the city of Little Rock, AR on June 18, 2011 at 9:50a CDT\" would be a name."@en ;
+                rdfs:label "written name"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000592
@@ -2897,6 +3300,27 @@ obo:OBI_0000747 rdf:type owl:Class ;
                 obo:IAO_0000233 <https://github.com/obi-ontology/obi/issues/1013> ;
                 obo:OBI_0001847 "sample" ;
                 rdfs:label "material sample" .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000832
+obo:OBI_0000832 rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( obo:OBI_0000968
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty obo:RO_0000085 ;
+                                                             owl:someValuesFrom obo:OBI_0000453
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:subClassOf obo:OBI_0000968 ;
+                obo:IAO_0000111 "measurement device" ;
+                obo:IAO_0000112 "A ruler, a microarray scanner, a Geiger counter." ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "A device in which a measure function inheres." ;
+                obo:IAO_0000117 "GROUP:OBI Philly workshop" ;
+                obo:IAO_0000119 "OBI" ;
+                rdfs:label "measurement device" .
+
 
 
 
@@ -10051,7 +10475,7 @@ nidm:AuxiliaryFile rdf:type owl:Class ;
                obo:IAO_0000115 "An auxiliary file is an information-bearing object that is either used to inform the execution of an experiment or that is generated during the execution of the experiment."^^xsd:string ;
                rdfs:comment "An example of a file that informs the execution of an experiment is a b-vector file in diffusion-weighted MR imaging.  An example of a file that is generated during the execution of the experiment is a stimulus response file in functional MR imaging)"^^xsd:string ;                 
                obo:IAO_0000114 obo:IAO_0000428 ;
-	       rdfs:subClassOf sio:SIO_000396 ;
+	       rdfs:subClassOf obo:IAO_0000310 ;
 
 
 ###  http://purl.org/nidash/nidm#AuxiliaryFileCollection
@@ -10112,7 +10536,7 @@ nidm:CalculatedParameter rdf:type owl:Class ;
                obo:IAO_0000115 "A Calculated Parameter is a variable that is the result of the processing of a set of measurements."^^xsd:string ;
                rdfs:comment "Note that this is similar to, but distinct from a dependent variable, which is a variable that changes in response to changes in a system.  The T2 value would be an example of a dependent variable since changing the echo time allows for calculation of the T2.  Cerebral Blood Flow (CBV) is an example of a Calculated Parameter since it is measure by taking a series of images after the injection of a contrast agent; however the experimenter is not actually changing any independent variable to see a change in the CBV and therefore it is a Calculated Parameter rather than a dependent variable."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 ;
-               rdfs:subClassOf sio:SIO_000367 .
+               rdfs:subClassOf obo:IAO_0000030 .
 
 
 ###  http://purl.org/nidash/nidm#Cartesian
@@ -10165,7 +10589,7 @@ nidm:CommonDataElement rdf:type owl:Class ;
                rdfs:label "Common Data Element" ;
                obo:IAO_0000115 "A common data element is a data element that is part of a collection of data elements, curated or not, which are available for reuse."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 ;
-               rdfs:subClassOf nidm:DataElement .
+               rdfs:subClassOf obo:IAO_0000027 .
 
 
 ###  http://purl.org/nidash/nidm#ContinuousArterialSpinLabeling
@@ -10192,22 +10616,7 @@ nidm:CurrentClamp rdf:type owl:Class ;
                rdfs:subClassOf nidm:AcquisitionMethod ;
                obo:IAO_0000115 "A current clamp is an intracellular electrophysiology acquisition method in which current is injected into a cell and the voltage generated by the cell is recorded." ;
                obo:IAO_0000114 obo:IAO_0000428 .                    
-
-
-###  http://purl.org/nidash/nidm#DataAcquisitionDevice
-nidm:DataAcquisitionDevice rdf:type owl:Class ;
-               rdfs:label "Data Acquisition Device" ;
-               rdfs:subClassOf sio:SIO_000956 ;
-               obo:IAO_0000115 "A data acquisition device is a device that collects a packet or stream of analog or digital information from an entity." ;
-               obo:IAO_0000114 obo:IAO_0000428 .  
-
-
-###  http://purl.org/nidash/nidm#DataElement
-nidm:DataElement rdf:type owl:Class ;
-               rdfs:label "Data Element" ;
-               obo:IAO_0000115 "A data element is a variable, used in a scientific study, used to store either information regarding the acquisition, processing, or analysis of the acquisition object that resulted from the study activity."^^xsd:string ;
-               obo:IAO_0000114 obo:IAO_0000428 ;
-               rdfs:subClassOf sio:SIO_000367 .
+  
 
 
 ###  http://purl.org/nidash/nidm#DataProcessing
@@ -10221,7 +10630,7 @@ nidm:DataProcessing rdf:type owl:Class ;
 ###  http://purl.org/nidash/nidm#DataProcessingDevice
 nidm:DataProcessingDevice rdf:type owl:Class ;
                rdfs:label "Data Processing Device" ;
-               rdfs:subClassOf sio:SIO_000956 ;
+               rdfs:subClassOf obo:OBI_0000968 ;
                obo:IAO_0000115 "A data processing device is a device that manipulates a data packet, stream, or file by performing an operation on the data." ;
                obo:IAO_0000114 obo:IAO_0000428 .  
 
@@ -10229,7 +10638,7 @@ nidm:DataProcessingDevice rdf:type owl:Class ;
 ###  http://purl.org/nidash/nidm#Date
 nidm:Date rdf:type owl:Class ;
                rdfs:label "Date" ;
-               rdfs:subClassOf sio:SIO_000015 ;
+               rdfs:subClassOf obo:IAO_0000027 ;
                obo:IAO_0000115 "A date is an information content entity compfising the combination of year, month, and numerical value for the day in that month that an event happened." ;
                obo:IAO_0000114 obo:IAO_0000428 .
 
@@ -10340,7 +10749,7 @@ nidm:Electrode rdf:type owl:Class ;
                rdfs:label "Electrode"^^xsd:string ;
                obo:IAO_0000115 "An electrode is a data acquisition device that consists of a conductor that is used to record an electrical signal from a study participant."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 ;
-               rdfs:subClassOf nidm:DataAcquisitionDevice .
+               rdfs:subClassOf obo:OBI_0000832 .
 
 
 ###  http://purl.org/nidash/nidm#Electroencephalography
@@ -10356,7 +10765,7 @@ nidm:ElectroencephalographyAcquisitionDevice rdf:type owl:Class ;
                obo:IAO_0000115 "An electroencephalography (EEG) acquisition device is a device that measures the electrical activity of the brain and consists of a set of electrodes placed on the surface of the head and a recording device that collects the signal from each electrode."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 ;
                rdfs:label "Electroencephalography Acquisition Device"^^xsd:string ;
-               rdfs:subClassOf nidm:DataAcquisitionDevice .
+               rdfs:subClassOf obo:OBI_0000832 .
 
 
 ###  http://purl.org/nidash/nidm#Electromyography
@@ -10422,7 +10831,7 @@ nidm:EyeTrackingDevice rdf:type owl:Class ;
                rdfs:label "Eye Tracking Device" ;
                obo:IAO_0000115 "An eye tracking device is a device that consists of hardware that follows the motion of one or both eyes of the study participant, which allows the determination of either the gaze location or of relative eye motion."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 ;
-               rdfs:subClassOf nidm:DataAcquisitionDevice .
+               rdfs:subClassOf obo:OBI_0000832 .
 
 
 ###  http://purl.org/nidash/nidm#FastFieldEcho
@@ -10540,7 +10949,7 @@ nidm:Gender rdf:type owl:Class ;
                rdfs:label "Gender"^^xsd:string ;
                obo:IAO_0000115 "Gender is a social entity that identifies which of either male or female a person identifies as, and which may be different from biological sex."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 ;
-               rdfs:subClassOf sio:SIO_000009 .
+               rdfs:subClassOf obo:BFO_0000019 .
 
 
 ###  http://purl.org/nidash/nidm#Group
@@ -10556,7 +10965,7 @@ nidm:HeartRateMonitor rdf:type owl:Class ;
                rdfs:label "Heart Rate Monitor"^^xsd:string ;
                obo:IAO_0000115 "A heart rate monitor is a data acquisition device that records the number of heart beats in a given period of time of a subject."^^xsd:string ;                             
                obo:IAO_0000114 obo:IAO_0000428 ;
-               rdfs:subClassOf nidm:DataAcquisitionDevice .
+               rdfs:subClassOf obo:OBI_0000832 .
 
 
 ###  http://purl.org/nidash/nidm#HighPassFilter
@@ -10572,7 +10981,7 @@ nidm:ImageAcquisitionDevice rdf:type owl:Class ;
                rdfs:label "Image Acquisition Device"^^xsd:string ;
                obo:IAO_0000115 "An image acquisition device is a data acquisition device that has an image as its primary output."^^xsd:string ;                
                obo:IAO_0000114 obo:IAO_0000428 ;
-               rdfs:subClassOf nidm:DataAcquisitionDevice .
+               rdfs:subClassOf obo:OBI_0000832.
 
 
 ###  http://purl.org/nidash/nidm#ImageContrastType
@@ -10741,7 +11150,7 @@ nidm:MagnetoencephalographyAcquisitionDevice rdf:type owl:Class ;
                obo:IAO_0000115 "An magnetoencephalography (MEG) acquisition device is a device that measures magnetic signals generated by the electrical activity of the brain and consists of a set of magnetometers placed near the surface of the head and a recording device that collects the signal from each electrode."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 ;              
                rdfs:label "Magnetoencephalography Acquisition Device"^^xsd:string ;
-               rdfs:subClassOf nidm:DataAcquisitionDevice .
+               rdfs:subClassOf obo:OBI_0000832 .
 
 
 ###  http://purl.org/nidash/nidm#Magnitude
@@ -10801,7 +11210,7 @@ nidm:MultielectrodeArray rdf:type owl:Class ;
                rdfs:label "Multi-electrode Array"^^xsd:string ;
                obo:IAO_0000115 "A multi-electrode array is a data acquisition device that records more than one concurrent electrical signal from study participant or sample."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 ;
-               rdfs:subClassOf nidm:DataAcquisitionDevice .
+               rdfs:subClassOf obo:OBI_0000832 .
 
 
 ###  http://purl.org/nidash/nidm#MultipleSpinEcho
@@ -10852,7 +11261,7 @@ nidm:NuclearMagneticResonanceSpectroscopy rdf:type owl:Class ;
 ###  http://purl.org/nidash/nidm#NuclearMagneticResonanceDevice
 nidm:NuclearMagneticResonanceDevice rdf:type owl:Class ;
               rdfs:label "Nuclear Magnetic Resonance Device" ;
-              rdfs:subClassOf nidm:DataAcquisitionDevice ;
+              rdfs:subClassOf obo:OBI_0000832 ;
               obo:IAO_0000115 "A Nuclear magnetic resonance device is an data acquisition device in which radiofrequency electromagnetic radiation is used to excite nuclei of the study participant, the characteristics of the detected signal are used to infer information regarding the chemical or physical environment of the sample."^^xsd:string ;
               rdfs:comment "This is a generic term that may be applied to a magnetic resonance imaging scanner, but is most often used for devices used for nuclear magnetic resonance spectroscopy based experiments."^^xsd:string ;
               obo:IAO_0000114 obo:IAO_0000428 .
@@ -10922,7 +11331,7 @@ nidm:PersonalDataElement rdf:type owl:Class ;
                rdfs:label "Personal Data Element" ;
                obo:IAO_0000115 "A personal data element is a data element that is part of a collection of data elements that have been defined locally, e.g., used to single study, lab, or project, but that are not meant for adoption by a wider community."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 ;
-               rdfs:subClassOf nidm:DataElement .
+               rdfs:subClassOf obo:IAO_0000027 .
 
 
 ###  http://purl.org/nidash/nidm#Phantom
@@ -10930,7 +11339,7 @@ nidm:Phantom rdf:type owl:Class ;
                rdfs:label "Phantom" ;
                obo:IAO_0000115 "A phantom is a device that is used in a study as an inanimate study participant from which data is acquired to measure performancde, variability or reproducibility of an data acquisition device."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 ;                
-               rdfs:subClassOf sio:SIO_000956 .
+               rdfs:subClassOf obo:OBI_0000968 .
 
 
 ###  http://purl.org/nidash/nidm#Phase
@@ -11052,7 +11461,7 @@ nidm:RawAcquisitionObject rdf:type owl:Class ;
 ###  http://purl.org/nidash/nidm#ReceiveCoil
 nidm:ReceiveCoil rdf:type owl:Class ;
               rdfs:label "Receive Coil" ;
-              rdfs:subClassOf nidm:DataAcquisitionDevice ;
+              rdfs:subClassOf obo:OBI_0000832 ;
               obo:IAO_0000115 "A receive coil is a data acquisition device used in nuclear magnetic resonance and magnetic resonance imaging to receive the signal from the sample. "^^xsd:string ;
               obo:IAO_0000114 obo:IAO_0000428 .
 
@@ -11087,7 +11496,7 @@ nidm:RespirationRateMonitor rdf:type owl:Class ;
                rdfs:label "Respiration Rate Monitor"^^xsd:string ;
                obo:IAO_0000115 "A respiration rate monitor is a data acquisition device that records the number of breaths taken by a study participant in a given period of time."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 ;
-               rdfs:subClassOf nidm:DataAcquisitionDevice .
+               rdfs:subClassOf obo:OBI_0000832 .
 
 
 ###  http://purl.org/nidash/nidm#Resting
@@ -11149,7 +11558,7 @@ nidm:SharpElectrode rdf:type owl:Class ;
 ###  http://purl.org/nidash/nidm#SignalFilter
 nidm:SignalFilter rdf:type owl:Class ;
                rdfs:label "Signal Filter" ;
-               rdfs:subClassOf sio:SIO_000956 ;
+               rdfs:subClassOf obo:OBI_0000968 ;
                obo:IAO_0000115 "A signal filter is a device that modifies or removes certain components of an electrical signal." ;
                obo:IAO_0000114 obo:IAO_0000428 .                    
 
@@ -11157,7 +11566,7 @@ nidm:SignalFilter rdf:type owl:Class ;
 ###  http://purl.org/nidash/nidm#SignalGenerator
 nidm:SignalGenerator rdf:type owl:Class ;
                rdfs:label "Signal Generator" ;
-               rdfs:subClassOf sio:SIO_000956 ;
+               rdfs:subClassOf obo:OBI_0000968 ;
                obo:IAO_0000115 "A signal generator is a device that supplies an electrical voltage signal of a specified amplitude and shape." ;
                obo:IAO_0000114 obo:IAO_0000428 .                    
 
@@ -11235,7 +11644,7 @@ nidm:Stereoelectroencephalography rdf:type owl:Class ;
 ###  http://purl.org/nidash/nidm#StimulusGenerator
 nidm:StimulusGenerator rdf:type owl:Class ;
                rdfs:label "Stimulus Generator" ;
-               rdfs:subClassOf sio:SIO_000956 ;
+               rdfs:subClassOf obo:OBI_0000968 ;
                obo:IAO_0000115 "A stimulus generator is a device that can deliver a current or voltage waveform that is used to stimulate a sample, cell, or body part." ;
                obo:IAO_0000114 obo:IAO_0000428 .                    
 
@@ -11243,7 +11652,7 @@ nidm:StimulusGenerator rdf:type owl:Class ;
 ###  http://purl.org/nidash/nidm#StimulusIsolator
 nidm:StimulusIsolator rdf:type owl:Class ;
                rdfs:label "Stimulus Isolator" ;
-               rdfs:subClassOf sio:SIO_000956 ;
+               rdfs:subClassOf obo:OBI_0000968 ;
                obo:IAO_0000115 "A stimulus isolatator is a device that can deliver a current or voltage waveform that is used to stimulate a sample, cell, or body part, but is isolated from electrical ground, which both decreases the stimulus artifact in the acquired signal and increases the safety for the user." ;
                obo:IAO_0000114 obo:IAO_0000428 .                    
 
@@ -11378,7 +11787,7 @@ nidm:TaskBased rdf:type owl:Class ;
 ###  http://purl.org/nidash/nidm#TransmitCoil
 nidm:TransmitCoil rdf:type owl:Class ;
               rdfs:label "Transmit Coil" ;
-              rdfs:subClassOf sio:SIO_000956 ;
+              rdfs:subClassOf obo:OBI_0000968 ;
               obo:IAO_0000115 "A transmit coil is a data device used in nuclear magnetic resonance and magnetic resonance imaging to apply the stimulating energy to the sample. "^^xsd:string ;
               obo:IAO_0000114 obo:IAO_0000428 .
 
@@ -11457,6 +11866,7 @@ nidm:k-spaceTraversalScheme rdf:type owl:Class ;
               rdfs:subClassOf nidm:AcquisitionObjectQuality ;
               obo:IAO_0000115 "The k-space traversal scheme is an acquisition object quality that describes, in a magnetic resonance imaging acquisition, the path in k-space along which the signal is acquired."^^xsd:string ;
               obo:IAO_0000114 obo:IAO_0000428 .
+
 
 
 #################################################################
