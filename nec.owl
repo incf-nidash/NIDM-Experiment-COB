@@ -1322,6 +1322,7 @@ every c that is a concretization of g specifically denotes r"""@en ;
                 rdfs:comment ""@en ;
                 rdfs:label "denotes"@en .
 
+
 ###  http://purl.obolibrary.org/obo/IAO_0000221
 obo:IAO_0000221 rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf obo:IAO_0000136 ;
@@ -3766,7 +3767,7 @@ obo:IAO_0000401 rdf:type owl:Class ;
                 obo:IAO_0000115 "A cartesion spatial coordinate datum that  uses one value to specify a position along a one dimensional spatial region"@en ;
                 obo:IAO_0000117 "Alan Ruttenberg"@en ;
                 rdfs:label "one dimensional cartesian spatial coordinate datum"@en .
-		
+
 
 ###  http://purl.obolibrary.org/obo/IAO_0000408
 obo:IAO_0000408 rdf:type owl:Class ;
@@ -4031,6 +4032,7 @@ obo:IAO_0000590 rdf:type owl:Class ;
                 rdfs:label "written name"@en .
 
 
+
 ###  http://purl.obolibrary.org/obo/IAO_0000592
 obo:IAO_0000592 rdf:type owl:Class ;
                 rdfs:subClassOf obo:IAO_0000010 ;
@@ -4096,13 +4098,12 @@ obo:IAO_0000621 rdf:type owl:Class ;
                                   owl:someValuesFrom obo:OBI_0500000
                                 ] ;
                 obo:IAO_0000111 "ethical approval textual entity"@en ;
-                obo:IAO_0000112 """From McLean et al. Br J Gen Pract. 2014 Jul; 64(624): e440–e447 (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4073730/):
-
-The NHS National Research Ethics Service had previously approved the use of these anonymised data for research purposes and this analysis did not require independent review."""@en ;
+                obo:IAO_0000112 """From McLean et al. Br J Gen Pract. 2014 Jul; 64(624): e440–e447 (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4073730/): The NHS National Research Ethics Service had previously approved the use of these anonymised data for research purposes and this analysis did not require independent review."""@en ;
                 obo:IAO_0000115 "A textual entity that documents the ethical approval of some study design."@en ;
                 obo:IAO_0000117 "PERSON: Bill Baumgartner"@en ;
                 obo:IAO_0000233 <https://github.com/information-artifact-ontology/IAO/issues/183> ;
                 rdfs:label "ethical approval textual entity"@en .
+
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000642
@@ -4110,16 +4111,7 @@ obo:IAO_0000642 rdf:type owl:Class ;
                 rdfs:subClassOf obo:IAO_0000300 ;
                 obo:IAO_0000111 "requirements textual entity"@en ;
                 obo:IAO_0000112 """From Qi et al. BMC Bioinformatics. 2014; 15: 11. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3897912/):
-
-• Operating systems: Platform independent
-
-• Programming language: Matlab, R, Python
-
-• Other requirements: None
-
-• License: GNU GPL v3
-
-• Any restrictions to use by non-academics: None"""@en ;
+		Operating systems: Platform independent, Programming language: Matlab, R, Python, Other requirements: None, License: GNU GPL v3, Any restrictions to use by non-academics: None"""@en ;
                 obo:IAO_0000115 "A textual entity that expresses the requirements necessary to use a resource, e.g. software."@en ;
                 obo:IAO_0000117 "PERSON: Bill Baumgartner"@en ;
                 obo:IAO_0000233 <https://github.com/information-artifact-ontology/IAO/issues/183> ;
@@ -4197,7 +4189,7 @@ obo:IAO_0020010 rdf:type owl:Class ;
                 dc:creator "Mathias Brochhausen" ;
                 rdfs:label "identifier creating process"@en .
 
-
+		
 
 ###  http://purl.obolibrary.org/obo/IAO_0020015
 obo:IAO_0020015 rdf:type owl:Class ;
@@ -4207,7 +4199,7 @@ obo:IAO_0020015 rdf:type owl:Class ;
                                 "Mathias Brochhausen"@en ;
                 obo:IAO_0000119 "http://en.wikipedia.org/wiki/Personal_name" ;
                 obo:IAO_0000233 "https://github.com/information-artifact-ontology/IAO/issues/237"@en ;
-                rdfs:comment "Personal names \"today usually comprises a given name bestowed at birth or at a young age plus a surname. It is nearly universal for a human to have a name; except in rare cases, for example feral children growing up in isolation, or infants orphaned by natural disaster for whom no written record survives.[citation needed] The Convention on the Rights of the Child specifies that a child has the right from birth to a name. Certain isolated tribes, such as the Machiguenga of the Amazon, also lack personal names.\" (http://en.wikipedia.org/wiki/Personal_name)"@en ,
+                rdfs:comment "Personal names 'today usually comprises a given name bestowed at birth or at a young age plus a surname. It is nearly universal for a human to have a name; except in rare cases, for example feral children growing up in isolation, or infants orphaned by natural disaster for whom no written record survives.[citation needed] The Convention on the Rights of the Child specifies that a child has the right from birth to a name. Certain isolated tribes, such as the Machiguenga of the Amazon, also lack personal names.' (http://en.wikipedia.org/wiki/Personal_name)"@en ,
                              "Personal names to not include names of fictional characters, e.g. Sherlock Holmes."@en ,
                              "Sep 29, 2016: The comment that including the wikipedia definition of personal name is not to be interpreted in a way that restricts this class to only contain strings of letters. A numerical or alphanumerical identifier that denotes a human is being is a personal name, too. (MB)"@en ;
                 rdfs:label "personal name"@en .
@@ -4220,7 +4212,7 @@ obo:IAO_0020016 rdf:type owl:Class ;
                 obo:IAO_0000117 "Justin Whorton"@en ,
                                 "Mathias Brochhausen"@en ;
                 obo:IAO_0000118 "first name"@en ;
-                obo:IAO_0000119 "http://en.wikipedia.org/wiki/Given_name" ;
+                obo:IAO_0000119 "http://en.wikipedia.org/wiki/Given_name"@en ;
                 obo:IAO_0000233 "https://github.com/information-artifact-ontology/IAO/issues/237"@en ;
                 rdfs:label "given name"@en .
 
@@ -4271,7 +4263,7 @@ When there is no such string, it is almost always because the entities take the 
                              "Many code sets are created for a specific purpose in addition to merely identifying or annotating core ideas of a specified domain."@en ,
                              "The information content entities do not denote each other."@en ;
                 rdfs:label "code set"@en .
-		
+
 
 
 ###  http://purl.obolibrary.org/obo/OBI_0000115
@@ -4310,6 +4302,7 @@ obo:OBI_0000134 rdf:type owl:Class ;
                 obo:IAO_0000115 "Hardware_testing_objective is a methodology_testing_objective role describing a study designed to examine the effects of using different hardware, e.g. scanner."@en ;
                 obo:IAO_0000117 "Jennifer Fostel"@en ;
                 rdfs:label "hardware testing objective"@en .
+		
 
 
 ###  http://purl.obolibrary.org/obo/OBI_0000151
@@ -4633,6 +4626,7 @@ obo:OBI_0000369 rdf:type owl:Class ;
                 rdfs:label "magnify function"@en .
 
 
+
 ###  http://purl.obolibrary.org/obo/OBI_0000372
 obo:OBI_0000372 rdf:type owl:Class ;
                 rdfs:subClassOf obo:BFO_0000034 ;
@@ -4658,6 +4652,7 @@ obo:OBI_0000379 rdf:type owl:Class ;
                                 "Melanie Courtot" ;
                 obo:IAO_0000119 "http://en.wikipedia.org/wiki/Mechanical_work"@en ;
                 rdfs:label "mechanical function"@en .
+
 
 
 ###  http://purl.obolibrary.org/obo/OBI_0000384
@@ -4772,13 +4767,6 @@ obo:OBI_0000399 rdf:type owl:Class ;
                                 "Melanie Courtot" ;
                 rdfs:label "solid support function"@en .
 		
-
-###  http://purl.org/nidash/nidm#Acquisition
-nidm:Acquisition rdf:type owl:Class ;
-               rdfs:label "Acquisition" ;
-               obo:IAO_0000115 "An acquisition is a process during which data about a study participant is gathered."^^xsd:string ;
-               obo:IAO_0000114 obo:IAO_0000428 ;
-               rdfs:subClassOf COB_0000082 .
 
 
 ###  http://purl.obolibrary.org/obo/OBI_0000319
@@ -6192,7 +6180,7 @@ obo:OBI_0000931 rdf:type owl:Class ;
                 obo:IAO_0000115 "the part of the execution of an intervention design study which is varied between two or more subjects in the study" ;
                 obo:IAO_0000117 "PERSON: Bjoern Peters" ;
                 obo:IAO_0000119 "GROUP: OBI" ;
-                rdfs:label "study intervention"
+                rdfs:label "study intervention" .
 
 
 ###  http://purl.obolibrary.org/obo/OBI_0000932
@@ -6772,15 +6760,6 @@ obo:OBI_0000994 rdf:type owl:Class ;
                 obo:IAO_0000115 "is the injection of a material entity (bearing the administered substance role) into the vein (bearing the target role) of an organism using a syringe" ;
                 obo:IAO_0000117 "PERSON: Melanie Courtot" ;
                 rdfs:label "intravenous injection" .
-
-
-###  http://purl.org/nidash/nidm#AssayDeviceOperator
-nidm:AssayDeviceOperator rdf:type owl:Class ;                                
-               rdfs:label "Assay Device Operator" ;
-               obo:IAO_0000115 "An assay device operator is a role of an agent who/that controls the device that collects the acquisition object."^^xsd:string ;                      
-               obo:IAO_0000114 obo:IAO_0000428 ;
-               rdfs:comment "The use of who/that indicates that the agent performing this role can either be a person or another device." ;                                
-               rdfs:subClassOf obo:SEPIO_0000048 .
 
 
 
@@ -14275,6 +14254,7 @@ obo:UBERON_0000465 rdf:type owl:Class ;
                    obo:IAO_0000111 "material anatomical entity" ;
                    obo:IAO_0000115 "Anatomical entity that has mass." ;
                    obo:IAO_0000412 obo:uberon.owl ;
+		   rdfs:label "material anatomical entity" .
 
 
 ##  http://purl.obolibrary.org/obo/UBERON_0000477
@@ -14358,7 +14338,7 @@ obo:UBERON_0001638 rdf:type owl:Class ;
                    obo:IAO_0000111 "vein" ;
                    obo:IAO_0000115 "Any of the tubular branching vessels that carry blood from the capillaries toward the heart." ;
                    obo:IAO_0000412 obo:uberon.owl ;
-
+                   rdfs:label "vein" .
 
 
 ##  http://purl.obolibrary.org/obo/UBERON_0006314
@@ -14481,6 +14461,30 @@ obo:UO_0000280 rdf:type owl:Class ;
 
 ##  http://www.w3.org/2002/07/owl#Thing
 owl:Thing rdf:type owl:Class .
+
+#####################################################################################################################
+###
+###  NIDM Classes
+###
+#####################################################################################################################
+
+
+###  http://purl.org/nidash/nidm#Acquisition
+nidm:Acquisition rdf:type owl:Class ;
+               rdfs:label "Acquisition" ;
+               obo:IAO_0000115 "An acquisition is a process during which data about a study participant is gathered."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               rdfs:subClassOf cob:COB_0000082 .
+
+
+###  http://purl.org/nidash/nidm#AssayDeviceOperator
+nidm:AssayDeviceOperator rdf:type owl:Class ;                                
+               rdfs:label "Assay Device Operator" ;
+               obo:IAO_0000115 "An assay device operator is a role of an agent who/that controls the device that collects the acquisition object."^^xsd:string ;                      
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               rdfs:comment "The use of who/that indicates that the agent performing this role can either be a person or another device." ;                                
+               rdfs:subClassOf obo:SEPIO_0000048 .
+
 
 
 ###  http://purl.org/nidash/nidm#AssayMethod
@@ -14746,7 +14750,7 @@ nidm:DICOMTag rdf:type owl:DatatypeProperty ;
                rdfs:label "DICOM tag"^^xsd:string ;
                obo:IAO_0000115 "A DICOM tag is an identifier that denotes a field used to store a value, which may be null, for an assay or other descriptive parameter of an assay object acquired using hardware or software that outputs data in a format that follows the DICOM standard."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 ;
-	       rdfs:subClassOf obo_IAO_00200000 .
+	       rdfs:subClassOf obo:IAO_00200000 .
 
 
 ###  http://purl.org/nidash/nidm#DICOMTagCollection
@@ -15382,8 +15386,8 @@ nidm:ParallelImaging rdf:type owl:Class ;
 
 
 ###  http://purl.org/nidash/nidm#PatchClamp
-nidm:PatchClamp rdf:type owl:Class 
-              rdfs:label "Patch Clamp" ;
+nidm:PatchClamp rdf:type owl:Class ;
+              rdfs:label "Patch Clamp"^^xsd:string ;
               rdfs:subClassOf nidm:AssayMethod ;
               obo:IAO_0000115 "Patch clamp is an intracellular electrophysiological assay method in which a micropipette tip is brought near a cell and scution applied drawing a section of cell membrane into the tip in order that ion movement or the intracellular environment can be studied."^^xsd:string ;
               obo:IAO_0000114 obo:IAO_0000428 .
@@ -15395,8 +15399,7 @@ nidm:Path rdf:type owl:Class ;
                obo:IAO_0000115 "A path is the location of an entity on a computer storage volume."^^xsd:string ;
 	       rdfs:comment "This can be used for entities other than files, such as folders and symbolic links."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 ;
-	       rdfs:subClassOf obo:IAO_0020000 ;
-	       
+	       rdfs:subClassOf obo:IAO_0020000 .
 
 
 ###  http://purl.org/nidash/nidm#PerformedPlan
@@ -15459,7 +15462,7 @@ nidm:PositronEmissionTomographyScanner rdf:type owl:Class ;
 
 ###  http://purl.org/nidash/nidm#PresentationSoftware
 nidm:PresentationSoftware rdf:type owl:Class ;
-              rdfs:subClassOf prov:SoftwareAgent ;
+              rdfs:subClassOf obo:IAO_0000010 ;
               rdfs:label "Presentation Software"^^xsd:string ;
               obo:IAO_0000115 "Presentation software is a software agent that provides the stimulus to the study participant during a functional imaging (MRI, MEG, EEG) or behavioral data assay process."^^xsd:string ;
               obo:IAO_0000114 obo:IAO_0000428 .
@@ -15492,7 +15495,7 @@ nidm:Project rdf:type owl:Class ;
 ###  http://purl.org/nidash/nidm#Protocol
 nidm:Protocol rdf:type owl:Class ;
               rdfs:label "Protocol"^^xsd:string ;
-              rdfs:subClassOf nidm:SpecifiedPlan ;
+              rdfs:subClassOf obo:IAO_0000104 ;
               obo:IAO_0000115 "An protocol is a specified plan that contains information necessary to acquire the desired data during a session and the assay device parameters that are to be used in that assay."^^xsd:string ;
               obo:IAO_0000114 obo:IAO_0000428 .
 
@@ -15526,7 +15529,7 @@ nidm:PulsedArterialSpinLabeling rdf:type owl:Class ;
 ###  http://purl.org/nidash/nidm#PulseSequence
 nidm:PulseSequence rdf:type owl:Class ;
               rdfs:label "Pulse Sequence"^^xsd:string ;
-              rdfs:subClassOf prov:SoftwareAgent ;
+              rdfs:subClassOf obo:IAO_0000010 ;
               obo:IAO_0000115 "A pulse sequence is a collection of commands sent to the magnetic resonance imaging or nuclear magnetic resonance hardware to control the excitation of the study participant and the acquisition of data."^^xsd:string ;
               obo:IAO_0000114 obo:IAO_0000428 .
 
@@ -15608,7 +15611,7 @@ nidm:RestingState rdf:type owl:Class ;
 nidm:Series rdf:type owl:Class ;
               rdfs:subClassOf obo:OBI_0000011  ;
               rdfs:label "Series"^^xsd:string ;
-              provone:isPartOf nidm:Session ;
+              obo:BFO_0000050 nidm:Session ;
               obo:IAO_0000115 "A series is a planned process in which data of a single type is acquired such that one acquisition takes place during the same temporal epoch."^^xsd:string ;
               rdfs:comment "During a MRI session, for example, T1-weighted and resting-state data were acquired.  Both the T1-weighted and resting state data are AssayObjects and the process during which they were acquired is the Session. The Series is the process that led to the production of each Assay Object." ;
               obo:IAO_0000114 obo:IAO_0000428 .
@@ -15620,7 +15623,7 @@ nidm:Session rdf:type owl:Class ;
               rdfs:label "Session"^^xsd:string ;
               obo:IAO_0000115 "A session is a process during which data, potentially of different types, is acquired from a study participant by an experimenter during a single unbroken time period." ;
               rdfs:comment "During a MRI session, for example, T1-weighted and resting-state data were acquired.  Both the T1-weighted and resting state data are Assay Objects and the time period during which they were acquired is the Session." ;
-              provone:isPartOf nidm:Project ;
+              obo:BFO_0000050 nidm:Project ;
               obo:IAO_0000114 obo:IAO_0000428 .
 
  
@@ -15633,12 +15636,12 @@ nidm:SessionObject rdf:type owl:Class ;
                                 owl:someValuesFrom nidm:AssayObject
                               ] ;
               obo:IAO_0000115 "A session object is an entity that represents one or more assays that take place during the same temporal epoch (session)."^^xsd:string ;
-#              obo:IAO_0000114 obo:IAO_0000428 .
+              obo:IAO_0000114 obo:IAO_0000428 .
 
 
 ###  http://purl.org/nidash/nidm#SharpElectrode
 nidm:SharpElectrode rdf:type owl:Class ;
-              rdfs:label "Sharp Electrode" ;
+              rdfs:label "Sharp Electrode"^^xsd:string ;
               rdfs:subClassOf nidm:AssayMethod ;
               obo:IAO_0000115 "Sharp electrode is intracellular electrophysiological assay method used for measuring the potential of the intracellular environment with minimal disturbance of that environment, in which a pipette, filled with electrolyte and with a very small opening, is inserted into the cell and the potential measured."^^xsd:string ;
               obo:IAO_0000114 obo:IAO_0000428 .
@@ -15646,7 +15649,7 @@ nidm:SharpElectrode rdf:type owl:Class ;
 
 ###  http://purl.org/nidash/nidm#SignalFilter
 nidm:SignalFilter rdf:type owl:Class ;
-               rdfs:label "Signal Filter" ;
+               rdfs:label "Signal Filter"^^xsd:string ;
                rdfs:subClassOf obo:OBI_0000968 ;
                obo:IAO_0000115 "A signal filter is a device that modifies or removes certain components of an electrical signal." ;
                obo:IAO_0000114 obo:IAO_0000428 .                    
@@ -15654,7 +15657,7 @@ nidm:SignalFilter rdf:type owl:Class ;
 
 ###  http://purl.org/nidash/nidm#SignalGenerator
 nidm:SignalGenerator rdf:type owl:Class ;
-               rdfs:label "Signal Generator" ;
+               rdfs:label "Signal Generator"^^xsd:string ;
                rdfs:subClassOf obo:OBI_0000968 ;
                obo:IAO_0000115 "A signal generator is a device that supplies an electrical voltage signal of a specified amplitude and shape." ;
                obo:IAO_0000114 obo:IAO_0000428 .                    
@@ -15695,12 +15698,13 @@ nidm:SingleUnitReccording rdf:type owl:Class ;
 
 
 ###  http://purl.org/nidash/nidm#SpecifiedPlan
-nidm:SpecifiedPlan rdf:type owl:Class ;
-              rdfs:label "Specified Plan"^^xsd:string ;
-              rdfs:subClassOf prov:Plan ;
-              obo:IAO_0000115 "A specified plan is a plan that describes how a process is to be carried out."^^xsd:string ;
-              rdfs:comment "Note that this is related to nidm:PerformedPlan, which is the plan that is actually carried out." ;
-              obo:IAO_0000114 obo:IAO_0000428 .
+### This is the same as obo:IAO_0000104
+#nidm:SpecifiedPlan rdf:type owl:Class ;
+#              rdfs:label "Specified Plan"^^xsd:string ;
+#              rdfs:subClassOf obo:IAO_0000104 ;
+#              obo:IAO_0000115 "A specified plan is a plan that describes how a process is to be carried out."^^xsd:string ;
+#              rdfs:comment "Note that this is related to nidm:PerformedPlan, which is the plan that is actually carried out." ;
+#              obo:IAO_0000114 obo:IAO_0000428 .
 
 
 ###  http://purl.org/nidash/nidm#SpinEcho
@@ -15785,7 +15789,7 @@ nidm:Structural rdf:type owl:Class ;
               rdfs:subClassOf nidm:ImageUsageType ;
               rdfs:label "Structural"^^xsd:string ;
               obo:IAO_0000115 "Structural is an image usage type that describes a number of different scan types, that are used to highlight the anatomy of a sample or person."^^xsd:string ;
-	      rdfs:comment "This nomenclature is common in describing data from the MRI modality, but may be used for other modalities."^^xsd:string
+	      rdfs:comment "This nomenclature is common in describing data from the MRI modality, but may be used for other modalities."^^xsd:string ;
               obo:IAO_0000114 obo:IAO_0000428 .
 
 
