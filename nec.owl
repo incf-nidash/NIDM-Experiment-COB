@@ -2558,6 +2558,13 @@ obo:BFO_0000145 rdf:type owl:Class ;
                 rdfs:isDefinedBy obo:bfo.owl ;
                 rdfs:label "relational quality"@en .
 
+####################################################################
+### Misc Classes
+###################################################################
+
+###  http://purl.obolibrary.org/obo/GAZ_00000448
+obo:GAZ_00000448 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:BFO_0000029 .
 
 
 ###  http://purl.obolibrary.org/obo/CARO_0010004
@@ -2566,42 +2573,127 @@ obo:CARO_0010004 rdf:type owl:Class ;
                  rdfs:label "cellular organism"@en .
 
 
-###  http://purl.obolibrary.org/obo/PATO_0000001
-obo:PATO_0000001 rdf:type owl:Class ;
-                 rdfs:subClassOf owl:Thing ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty [ owl:inverseOf obo:RO_0000053
-                                                  ] ;
-                                   owl:someValuesFrom owl:Thing
-                                 ] ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty obo:BFO_0000051 ;
-                                   owl:allValuesFrom obo:PATO_0000001
-                                 ] ;
-                 rdfs:label "characteristic"@en ;
-                 rdfs:seeAlso "https://github.com/OBOFoundry/COB/issues/65" ,
-                              "https://github.com/oborel/obo-relations/pull/284" .
+###  http://purl.obolibrary.org/obo/NCBITaxon_2
+obo:NCBITaxon_2 rdf:type owl:Class ;
+                rdfs:subClassOf obo:OBI_0100026 ;
+                obo:IAO_0000111 "Bacteria" ;
+                obo:IAO_0000118 "eubacteria" ;
+                obo:IAO_0000412 obo:ncbitaxon.owl ;
+                rdfs:label "Bacteria" .
 
 
-###  http://purl.obolibrary.org/obo/PATO_0000125
-obo:PATO_0000125 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0000001 ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty obo:RO_0000052 ;
-                                   owl:someValuesFrom obo:BFO_0000040
-                                 ] ;
-                 rdfs:label "mass"@en .
+###  http://purl.obolibrary.org/obo/NCBITaxon_2157
+obo:NCBITaxon_2157 rdf:type owl:Class ;
+                   rdfs:subClassOf obo:OBI_0100026 ;
+                   obo:IAO_0000111 "Archaea" ;
+                   obo:IAO_0000412 obo:ncbitaxon.owl ;
+                   rdfs:label "Archaea" .
+
+###  http://purl.obolibrary.org/obo/NCBITaxon_2759
+obo:NCBITaxon_2759 rdf:type owl:Class ;
+                   rdfs:subClassOf obo:OBI_0100026 ;
+                   obo:IAO_0000111 "Eukaryota" ;
+                   obo:IAO_0000118 "eucaryotes" ,
+                                   "eukaryotes" ;
+                   obo:IAO_0000412 obo:ncbitaxon.owl ;
+                   rdfs:label "Eukaryota" .
 
 
-###  http://purl.obolibrary.org/obo/PATO_0002193
-obo:PATO_0002193 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0000001 ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty obo:RO_0000052 ;
-                                   owl:someValuesFrom obo:BFO_0000040
-                                 ] ;
-                 rdfs:label "charge"@en .
+###  http://purl.obolibrary.org/obo/NCBITaxon_7742
+obo:NCBITaxon_7742 rdf:type owl:Class ;
+                   rdfs:subClassOf obo:NCBITaxon_33213 ;
+                   obo:IAO_0000111 "Vertebrata <vertebrates>" ;
+                   obo:IAO_0000118 "Vertebrata" ,
+                                   "vertebrates" ;
+                   obo:IAO_0000412 obo:ncbitaxon.owl ;
+                   rdfs:label "Vertebrata <vertebrates>" .
 
+
+###  http://purl.obolibrary.org/obo/NCBITaxon_9606
+obo:NCBITaxon_9606 rdf:type owl:Class ;
+                   rdfs:subClassOf obo:NCBITaxon_314146 ;
+                   obo:IAO_0000111 "Homo sapiens" ;
+                   obo:IAO_0000118 "human" ,
+                                   "human being" ;
+                   obo:IAO_0000412 obo:ncbitaxon.owl ;
+                   rdfs:label "Homo sapiens" .
+
+
+###  http://purl.obolibrary.org/obo/NCBITaxon_10239
+obo:NCBITaxon_10239 rdf:type owl:Class ;
+                    rdfs:subClassOf obo:OBI_0100026 ;
+                    obo:IAO_0000111 "Viruses" ;
+                    obo:IAO_0000412 obo:ncbitaxon.owl ;
+                    rdfs:label "Viruses" .
+
+###  http://purl.obolibrary.org/obo/NCBITaxon_32523
+obo:NCBITaxon_32523 rdf:type owl:Class ;
+                    rdfs:subClassOf obo:NCBITaxon_117571 ;
+                    obo:IAO_0000111 "Tetrapoda" ;
+                    obo:IAO_0000118 "tetrapods" ;
+                    obo:IAO_0000412 obo:ncbitaxon.owl ;
+                    rdfs:label "Tetrapoda" .
+
+
+###  http://purl.obolibrary.org/obo/NCBITaxon_32524
+obo:NCBITaxon_32524 rdf:type owl:Class ;
+                    rdfs:subClassOf obo:NCBITaxon_32523 ;
+                    obo:IAO_0000111 "Amniota" ;
+                    obo:IAO_0000118 "amniotes" ;
+                    obo:IAO_0000412 obo:ncbitaxon.owl ;
+                    rdfs:label "Amniota" .
+
+
+###  http://purl.obolibrary.org/obo/NCBITaxon_33154
+obo:NCBITaxon_33154 rdf:type owl:Class ;
+                    rdfs:subClassOf obo:NCBITaxon_2759 ;
+                    obo:IAO_0000111 "Opisthokonta" ;
+                    obo:IAO_0000412 obo:ncbitaxon.owl ;
+                    rdfs:label "Opisthokonta" .
+
+
+###  http://purl.obolibrary.org/obo/NCBITaxon_33208
+obo:NCBITaxon_33208 rdf:type owl:Class ;
+                    rdfs:subClassOf obo:NCBITaxon_33154 ;
+                    obo:IAO_0000111 "Metazoa" ;
+                    obo:IAO_0000118 "metazoans" ,
+                                    "multicellular animals" ;
+                    obo:IAO_0000412 obo:ncbitaxon.owl ;
+                    rdfs:label "Metazoa" .
+
+
+###  http://purl.obolibrary.org/obo/NCBITaxon_33213
+obo:NCBITaxon_33213 rdf:type owl:Class ;
+                    rdfs:subClassOf obo:NCBITaxon_33208 ;
+                    obo:IAO_0000111 "Bilateria" ;
+                    obo:IAO_0000412 obo:ncbitaxon.owl ;
+                    rdfs:label "Bilateria" .
+
+
+###  http://purl.obolibrary.org/obo/NCBITaxon_40674
+obo:NCBITaxon_40674 rdf:type owl:Class ;
+                    rdfs:subClassOf obo:NCBITaxon_32524 ;
+                    obo:IAO_0000111 "Mammalia" ;
+                    obo:IAO_0000118 "mammals" ;
+                    obo:IAO_0000412 obo:ncbitaxon.owl ;
+                    rdfs:label "Mammalia" .
+
+
+###  http://purl.obolibrary.org/obo/NCBITaxon_117571
+obo:NCBITaxon_117571 rdf:type owl:Class ;
+                     rdfs:subClassOf obo:NCBITaxon_7742 ;
+                     obo:IAO_0000111 "Euteleostomi" ;
+                     obo:IAO_0000118 "bony vertebrates" ;
+                     obo:IAO_0000412 obo:ncbitaxon.owl ;
+                     rdfs:label "Euteleostomi" .
+
+
+###  http://purl.obolibrary.org/obo/NCBITaxon_314146
+obo:NCBITaxon_314146 rdf:type owl:Class ;
+                     rdfs:subClassOf obo:NCBITaxon_40674 ;
+                     obo:IAO_0000111 "Euarchontoglires" ;
+                     obo:IAO_0000412 obo:ncbitaxon.owl ;
+                     rdfs:label "Euarchontoglires" .
 
 
 ###  http://purl.obolibrary.org/obo/SEPIO_0000048
@@ -2732,6 +2824,16 @@ obo:PATO_0000117 rdf:type owl:Class ;
                  oboInOwl:inSubset pato:attribute_slim ,
                                    pato:scalar_slim ;
                  rdfs:label "size" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0000125
+obo:PATO_0000125 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:PATO_0000001 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty obo:RO_0000052 ;
+                                   owl:someValuesFrom obo:BFO_0000040
+                                 ] ;
+                 rdfs:label "mass"@en .
 
 
 ###  http://purl.obolibrary.org/obo/PATO_0000140
@@ -2952,6 +3054,16 @@ obo:PATO_0002182 rdf:type owl:Class ;
                  oboInOwl:hasOBONamespace "quality" ;
                  oboInOwl:id "PATO:0002182" ;
                  rdfs:label "molecular quality" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0002193
+obo:PATO_0002193 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:PATO_0000001 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty obo:RO_0000052 ;
+                                   owl:someValuesFrom obo:BFO_0000040
+                                 ] ;
+                 rdfs:label "charge"@en .
 
 
 ###  http://purl.obolibrary.org/obo/PATO_0002198
@@ -4250,7 +4362,118 @@ When there is no such string, it is almost always because the entities take the 
                              "The information content entities do not denote each other."@en ;
                 rdfs:label "code set"@en .
 
+########################################################################
+### CL Classes
+########################################################################
 
+###  http://purl.obolibrary.org/obo/CL_0000000
+obo:CL_0000000 rdf:type owl:Class ;
+               rdfs:subClassOf obo:BFO_0000040 ;
+               obo:IAO_0000111 "cell" ;
+               obo:IAO_0000112 "PMID:18089833.Cancer Res. 2007 Dec 15;67(24):12018-25. \"...Epithelial cells were harvested from histologically confirmed adenocarcinomas ..\""@en ;
+               obo:IAO_0000115 "A material entity of anatomical origin (part of or deriving from an organism) that has as its parts a maximally connected cell compartment surrounded by a plasma membrane." ;
+               obo:IAO_0000412 obo:cl.owl ;
+               rdfs:label "cell" .
+
+
+###  http://purl.obolibrary.org/obo/CL_0000010
+obo:CL_0000010 rdf:type owl:Class ;
+               rdfs:subClassOf obo:CL_0000578 ,
+                               [ rdf:type owl:Class ;
+                                 owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                 owl:onProperty obo:OBI_0000312 ;
+                                                 owl:someValuesFrom obo:OBI_0600036
+                                               ]
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty obo:RO_0001000 ;
+                                                 owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty obo:OBI_0000312 ;
+                                                                      owl:someValuesFrom obo:OBI_0600036
+                                                                    ]
+                                               ]
+                                             )
+                               ] ;
+               obo:IAO_0000111 "cultured cell" ;
+               obo:IAO_0000115 "A cell in vitro that is or has been maintained or propagated as part of a cell culture." ;
+               obo:IAO_0000412 obo:cl.owl ;
+               rdfs:label "cultured cell" .
+
+
+###  http://purl.obolibrary.org/obo/CL_0000540
+obo:CL_0000540 rdf:type owl:Class ;
+               rdfs:subClassOf obo:CL_0002319 ;
+               obo:IAO_0000111 "neuron" ;
+               obo:IAO_0000115 "The basic cellular unit of nervous tissue. Each neuron consists of a body, an axon, and dendrites. Their purpose is to receive, conduct, and transmit impulses in the nervous system." ;
+               obo:IAO_0000412 obo:cl.owl ;
+               rdfs:label "neuron" .
+
+
+###  http://purl.obolibrary.org/obo/CL_0000578
+obo:CL_0000578 rdf:type owl:Class ;
+               rdfs:subClassOf obo:CL_0000000 ,
+                               obo:OBI_0000047 ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty obo:OBI_0000312 ;
+                                 owl:someValuesFrom obo:OBI_0000094
+                               ] ;
+               obo:IAO_0000111 "experimentally modified cell in vitro" ;
+               obo:IAO_0000115 "A cell in vitro that has undergone physical changes as a consequence of a deliberate and specific experimental procedure." ;
+               obo:IAO_0000412 obo:cl.owl ;
+               rdfs:label "experimentally modified cell in vitro" .
+
+
+###  http://purl.obolibrary.org/obo/CL_0002319
+obo:CL_0002319 rdf:type owl:Class ;
+               rdfs:subClassOf obo:CL_0000000 ;
+               obo:IAO_0000111 "neural cell" ;
+               obo:IAO_0000115 "A cell that is part of the nervous system." ;
+               obo:IAO_0000412 obo:cl.owl ;
+               rdfs:label "neural cell" .
+
+########################################################################
+### GO Classes
+########################################################################
+
+###  http://purl.obolibrary.org/obo/GO_0001508
+obo:GO_0001508 rdf:type owl:Class ;
+               rdfs:subClassOf obo:GO_0008150 ;
+               obo:IAO_0000111 "action potential" ;
+               obo:IAO_0000115 "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarization. This cycle is driven by the flow of ions through various voltage gated channels with different thresholds and ion specificities." ;
+               obo:IAO_0000412 obo:go.owl ;
+               rdfs:label "action potential" .
+
+
+###  http://purl.obolibrary.org/obo/GO_0005216
+obo:GO_0005216 rdf:type owl:Class ;
+               rdfs:subClassOf obo:GO_0009987 ;
+               obo:IAO_0000111 "ion channel activity" ;
+               obo:IAO_0000115 "Enables the facilitated diffusion of an ion (by an energy-independent process) by passage through a transmembrane aqueous pore or channel without evidence for a carrier-mediated mechanism. May be either selective (it enables passage of a specific ion only) or non-selective (it enables passage of two or more ions of same charge but different size)." ;
+               obo:IAO_0000412 obo:go.owl ;
+               rdfs:label "ion channel activity" .
+
+
+###  http://purl.obolibrary.org/obo/GO_0008150
+obo:GO_0008150 rdf:type owl:Class ;
+               rdfs:subClassOf obo:BFO_0000015 ;
+               owl:disjointWith obo:OBI_0000011 ;
+               obo:IAO_0000111 "biological_process" ;
+               obo:IAO_0000115 "A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence." ;
+               obo:IAO_0000412 obo:go.owl ;
+               rdfs:label "biological_process" .
+
+
+###  http://purl.obolibrary.org/obo/GO_0009987
+obo:GO_0009987 rdf:type owl:Class ;
+               rdfs:subClassOf obo:GO_0008150 ;
+               obo:IAO_0000111 "cellular process" ;
+               obo:IAO_0000115 "Any process that is carried out at the cellular level, but not necessarily restricted to a single cell. For example, cell communication occurs among more than one cell, but occurs at the cellular level." ;
+               obo:IAO_0000412 obo:go.owl ;
+               rdfs:label "cellular process" .
+	       
+
+#########################################################################
+###  OBI Classes
+#########################################################################
 
 ###  http://purl.obolibrary.org/obo/OBI_0000115
 obo:OBI_0000115 rdf:type owl:Class ;
@@ -9352,6 +9575,7 @@ obo:OBI_0002187 rdf:type owl:Class ;
                 obo:IAO_0000117 "Gully Burns" ;
                 obo:IAO_0000119 "url:http://www.thieme.com/media/samples/pubid-80418214.pdf" ;
                 rdfs:label "single-unit recording" .
+
 
 
 ###  http://purl.obolibrary.org/obo/OBI_0002188
@@ -14462,9 +14686,9 @@ owl:Thing rdf:type owl:Class .
 ###  http://purl.org/nidash/nidm#AcquisitionDeviceOperator
 nidm:AcquisitionDeviceOperator rdf:type owl:Class ;                                
                rdfs:label "Acquisition Device Operator" ;
-               obo:IAO_0000115 "An acquisition device operator is a role of an agent who/that controls the device that collects the acquisition object."^^xsd:string ;                      
+               obo:IAO_0000115 "An acquisition device operator is a role of an entity who/that controls the device that collects the acquisition object."^^xsd:string ;                      
                obo:IAO_0000114 obo:IAO_0000428 ;
-               rdfs:comment "The use of who/that indicates that the agent performing this role can either be a person or another device." ;                                
+               rdfs:comment "The use of who/that indicates that the entity performing this role can either be a person or another device." ;                                
                rdfs:subClassOf obo:SEPIO_0000048 .
 
 
@@ -14732,7 +14956,7 @@ nidm:DICOMTag rdf:type owl:DatatypeProperty ;
                rdfs:label "DICOM tag"^^xsd:string ;
                obo:IAO_0000115 "A DICOM tag is an identifier that denotes a field used to store a value, which may be null, for an assay or other descriptive parameter of an assay object acquired using hardware or software that outputs data in a format that follows the DICOM standard."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 ;
-	       rdfs:subClassOf obo:IAO_00200000 .
+	       rdfs:subClassOf obo:IAO_0020000 .
 
 
 ###  http://purl.org/nidash/nidm#DICOMTagCollection
@@ -14895,7 +15119,7 @@ nidm:ExtracellularElectrophysiologyRecording rdf:type owl:Class ;
 ###  http://purl.org/nidash/nidm#ExVivo
 nidm:ExVivo rdf:type owl:Class ;
                rdfs:label "Ex Vivo" ;
-               obo:IAO_0000115 "Ex vivo is a organismal quality, usually used as an attribute of an Agent, that indicates that the Agent it describes was once part of a living organism, but has been removed."^^xsd:string ;
+               obo:IAO_0000115 "Ex vivo is a organismal quality, usually used as an attribute of a sample, that indicates that the organism it adheres to was once part of a living organism, but has been removed."^^xsd:string ;
 	       rdfs:comment "A common example is a tissue sample."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 ;
                rdfs:subClassOf obo:PATO_0001995 .
@@ -15030,7 +15254,7 @@ nidm:Gender rdf:type owl:Class ;
 ###  http://purl.org/nidash/nidm#Group
 nidm:Group rdf:type owl:Class ;
                rdfs:label "Group"^^xsd:string ;
-               obo:IAO_0000115 "A group is a collection of agents or entities formed by the assignment of membership through the selection of one or more common characteristics."^^xsd:string ;
+               obo:IAO_0000115 "A group is a collection of entities formed by the assignment of membership through the selection of one or more common characteristics."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 ;
                rdfs:subClassOf obo:BFO_0000027 .
 
@@ -15095,7 +15319,7 @@ nidm:InformedConsentInstrument rdf:type owl:Class ;
 ###  http://purl.org/nidash/nidm#InstrumentAdministrator
 nidm:InstrumentAdministrator rdf:type owl:Class ;
                rdfs:label "Instrument Administrator" ;
-               obo:IAO_0000115 "An instrument administrator is the role of an agent who/that either provides the instrument or collects the responses of the study participant to the contents of the instrument."^^xsd:string ;
+               obo:IAO_0000115 "An instrument administrator is the role of an entity who/that either provides the instrument or collects the responses of the study participant to the contents of the instrument."^^xsd:string ;
                rdfs:comment "The instrument administrator could either be a computer-based system or a person, hence the use of who/that. Common catagories of instruments are behavioral, clinical, or demographic instruments." ;
                obo:IAO_0000114 obo:IAO_0000428 ;
                rdfs:subClassOf obo:BFO_0000023 .
@@ -15104,7 +15328,7 @@ nidm:InstrumentAdministrator rdf:type owl:Class ;
 ###  http://purl.org/nidash/nidm#InstrumentUsageType
 nidm:InstrumentUsageType rdf:type owl:Class ;
                rdfs:label "Instrument Usage Type"^^xsd:string ;
-               obo:IAO_0000115 "Instrument Usage Type is an assay object quality that denotes to what purpose the assay object will be employed."^^xsd:string ;
+               obo:IAO_0000115 "Instrument Usage Type is an acquisition object quality that denotes to what purpose the assay object will be employed."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 ;
                rdfs:comment "Common instrument usage types are behavioral, clinical, and demographics, i.e., the instrument is used to record those types of data."^^xsd:string ;
                rdfs:subClassOf nidm:AcquisitionObjectQuality .
@@ -15138,7 +15362,7 @@ nidm:IntracranialElectroencephalography rdf:type owl:Class ;
 ###  http://purl.org/nidash/nidm#InVitro
 nidm:InVitro rdf:type owl:Class ;
                rdfs:label "In Vitro" ;
-               obo:IAO_0000115 "In vitro is a organismal quality, usually used as an attribute of an Agent, that indicates that the Agent it describes is outside of a living organism."^^xsd:string ;
+               obo:IAO_0000115 "In vitro is a organismal quality, usually used as an attribute of an organism, that indicates that the quality it describes adheres to a living organism."^^xsd:string ;
 	       rdfs:comment "A common example is a sample consisting of perfused cells."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 ;
                rdfs:subClassOf obo:PATO_0001995 .
@@ -15147,7 +15371,7 @@ nidm:InVitro rdf:type owl:Class ;
 ###  http://purl.org/nidash/nidm#InVivo
 nidm:InVivo rdf:type owl:Class ;
                rdfs:label "In Vivo" ;
-               obo:IAO_0000115 "In vivo is a organismal quality, usually used as an attribute of an Agent, that indicates that the Agent it describes is a living organism."^^xsd:string ;
+               obo:IAO_0000115 "In vivo is a organismal quality, usually used as an attribute of an organism, that indicates that the quality it describes adheres to a living organism."^^xsd:string ;
 	       rdfs:comment "A common example is a person."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 ;
                rdfs:subClassOf obo:PATO_0001995 .
@@ -15241,7 +15465,7 @@ nidm:Magnitude rdf:type owl:Class ;
 nidm:Manufacturer rdf:type owl:Class ;
               rdfs:label "Manufacturer" ;
               rdfs:subClassOf obo:BFO_0000023 ;
-              obo:IAO_0000115 "A manufacturer is a role for an agent, who may be a person or company, who creates an entity." ;
+              obo:IAO_0000115 "A manufacturer is a role for a person or company who creates an entity." ;
               obo:IAO_0000114 obo:IAO_0000428 .
 
 
@@ -15268,7 +15492,7 @@ nidm:NIDM_0000154 rdf:type owl:Class ;
 nidm:ModelDesigner rdf:type owl:Class ;
               rdfs:label "Model Designer" ;
               rdfs:subClassOf obo:BFO_0000023 ;
-              obo:IAO_0000115 "A model designer is a role for an agent who creates the model that describes an experiment" ;
+              obo:IAO_0000115 "A model designer is a role for an entity who creates the model that describes an experiment" ;
               obo:IAO_0000114 obo:IAO_0000428 .
 
 
@@ -15446,7 +15670,7 @@ nidm:PositronEmissionTomographyScanner rdf:type owl:Class ;
 nidm:PresentationSoftware rdf:type owl:Class ;
               rdfs:subClassOf obo:IAO_0000010 ;
               rdfs:label "Presentation Software"^^xsd:string ;
-              obo:IAO_0000115 "Presentation software is a software agent that provides the stimulus to the study participant during a functional imaging (MRI, MEG, EEG) or behavioral data assay process."^^xsd:string ;
+              obo:IAO_0000115 "Presentation software is software that provides the stimulus to the study participant during a functional imaging (MRI, MEG, EEG) or behavioral data assay process."^^xsd:string ;
               obo:IAO_0000114 obo:IAO_0000428 .
 
 
