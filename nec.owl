@@ -2558,6 +2558,164 @@ obo:BFO_0000145 rdf:type owl:Class ;
                 rdfs:isDefinedBy obo:bfo.owl ;
                 rdfs:label "relational quality"@en .
 
+####################################################################
+### Misc Classes
+###################################################################
+
+###  http://purl.obolibrary.org/obo/OMIABIS_0000050
+obo:OMIABIS_0000050 rdf:type owl:Class ;
+                    rdfs:subClassOf obo:OBI_0000953 ;
+                    obo:IAO_0000111 "fixed tissue specimen"@en ;
+                    obo:IAO_0000115 "A processed specimen that is the output of a fixation process."@en ;
+                    obo:IAO_0000412 obo:omiabis.owl ;
+                    rdfs:label "fixed tissue specimen"@en .
+
+
+###  http://purl.obolibrary.org/obo/OMIABIS_0000052
+obo:OMIABIS_0000052 rdf:type owl:Class ;
+                    rdfs:subClassOf obo:OMIABIS_0000050 ;
+                    obo:IAO_0000111 "fixed tissue slide specimen"@en ;
+                    obo:IAO_0000115 "A fixed tissue specimen that is placed in a slide."@en ;
+                    obo:IAO_0000412 obo:omiabis.owl ;
+                    rdfs:label "fixed tissue slide specimen"@en .
+
+
+###  http://purl.obolibrary.org/obo/SO_0000001
+obo:SO_0000001 rdf:type owl:Class ;
+               rdfs:subClassOf obo:BFO_0000031 ;
+               obo:IAO_0000111 "region" ;
+               obo:IAO_0000115 "A sequence_feature with an extent greater than zero. A nucleotide region is composed of bases and a polypeptide region is composed of amino acids." ;
+               obo:IAO_0000118 "primary structure of sequence macromolecule" ,
+                               "sequence" ;
+               obo:IAO_0000412 obo:so.owl ;
+               rdfs:label "region" .
+
+
+###  http://purl.obolibrary.org/obo/UPHENO_0001001
+obo:UPHENO_0001001 rdf:type owl:Class ;
+                   rdfs:subClassOf obo:PATO_0000001 ;
+                   rdfs:label "phenotype"@en .
+
+
+###  http://purl.obolibrary.org/obo/APOLLO_SV_00000796
+obo:APOLLO_SV_00000796 rdf:type owl:Class ;
+                       owl:equivalentClass [ owl:intersectionOf ( obo:OBI_0000011
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty obo:OBI_0000299 ;
+                                                                    owl:someValuesFrom obo:IAO_0000100
+                                                                  ]
+                                                                ) ;
+                                             rdf:type owl:Class
+                                           ] ;
+                       rdfs:subClassOf obo:OBI_0000011 ;
+                       obo:IAO_0000111 "creating a data set"@en ;
+                       obo:IAO_0000115 "A planned process that has a data set as its specified output."@en ;
+                       obo:IAO_0000117 "William R. Hogan"@en ;
+                       obo:IAO_0000118 "data set creation"@en ,
+                                       "dataset creation"@en ;
+                       rdfs:label "dataset creating"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBA_0000001
+obo:OBA_0000001 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000019 ;
+                obo:IAO_0000111 "biological attribute" ;
+                obo:IAO_0000412 obo:oba.owl ;
+                rdfs:label "biological attribute" .
+
+
+###  http://purl.obolibrary.org/obo/OBA_2060180
+obo:OBA_2060180 rdf:type owl:Class ;
+                rdfs:subClassOf obo:OBA_0000001 ;
+                obo:IAO_0000111 "limb coordination efficacy" ;
+                obo:IAO_0000115 "The process efficacy of a limb coordination." ;
+                obo:IAO_0000412 obo:oba.owl ;
+                rdfs:label "limb coordination efficacy" .
+
+
+###  http://purl.obolibrary.org/obo/OBA_2060181
+obo:OBA_2060181 rdf:type owl:Class ;
+                rdfs:subClassOf obo:OBA_2060180 ;
+                obo:IAO_0000111 "upper limb coordination efficacy" ;
+                obo:IAO_0000115 "The process efficacy of a upper limb coordination." ;
+                obo:IAO_0000412 obo:oba.owl ;
+                rdfs:label "upper limb coordination efficacy" .
+
+
+###  http://purl.obolibrary.org/obo/OBA_2060182
+obo:OBA_2060182 rdf:type owl:Class ;
+                rdfs:subClassOf obo:OBA_2060180 ;
+                obo:IAO_0000111 "lower limb coordination efficacy" ;
+                obo:IAO_0000115 "The process efficacy of a lower limb coordination." ;
+                obo:IAO_0000412 obo:oba.owl ;
+                rdfs:label "lower limb coordination efficacy" .
+
+
+###  http://purl.obolibrary.org/obo/OBA_2060184
+obo:OBA_2060184 rdf:type owl:Class ;
+                rdfs:subClassOf obo:OBA_0000001 ;
+                obo:IAO_0000111 "whole organism stability" ;
+                obo:IAO_0000115 "The stability of a multicellular organism." ;
+                obo:IAO_0000412 obo:oba.owl ;
+                rdfs:label "whole organism stability" .
+
+
+###  http://purl.obolibrary.org/obo/PR_000000001
+obo:PR_000000001 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:CHEBI_16670 ;
+                 obo:IAO_0000111 "protein" ;
+                 obo:IAO_0000112 "antithrombin III is a protein" ;
+                 obo:IAO_0000115 "An amino acid chain that is produced de novo by ribosome-mediated translation of a genetically-encoded mRNA, and any derivatives thereof." ;
+                 obo:IAO_0000412 obo:pr.owl ;
+                 rdfs:label "protein" .
+
+
+###  http://purl.obolibrary.org/obo/GAZ_00000448
+obo:GAZ_00000448 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:BFO_0000029 .
+
+###  http://purl.obolibrary.org/obo/CARO_0000000
+obo:CARO_0000000 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:BFO_0000004 ;
+                 obo:IAO_0000115 "A part of a cellular organism that is either an immaterial entity or a material entity with granularity above the level of a protein complex.  Or, a substance produced by a cellular organism with granularity above the level of a protein complex." ;
+                 oboInOwl:id "CARO:0000000" ;
+                 rdfs:comment "Following BFO, material anatomical entities may have immaterial parts (the lumen of your stomach is part of your stomach).  The granularity limit follows the limits set by the Gene Ontology on the granularity limit for GO:cellular_component. Note that substances produced by an organism (sweat, feaces, urine) do not need to be part of an organism to qualify as an anatomical structure." ;
+                 rdfs:label "anatomical entity" .
+
+
+###  http://purl.obolibrary.org/obo/CARO_0000003
+obo:CARO_0000003 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:CARO_0000006 ;
+                 obo:IAO_0000115 "Material anatomical entity that is a single connected structure with inherent 3D shape generated by coordinated expression of the organism's own genome." ;
+                 oboInOwl:id "CARO:0000003" ;
+                 rdfs:comment "Note that the definition does not say 'generated exclusively by the co-ordinated expression of the organism's own genome', so this is still valid for cases where normal morphogenesis requires the actions of a facultative symbiont, or some looser dependency such as the a requirement for the presence of gut flora for normal gut development." ;
+                 rdfs:label "connected anatomical structure" .
+
+
+###  http://purl.obolibrary.org/obo/CARO_0000006
+obo:CARO_0000006 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:CARO_0000000 ;
+                 owl:disjointWith obo:CARO_0000007 ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty obo:BFO_0000050 ;
+                                    owl:someValuesFrom obo:CARO_0000007
+                                  ] ;
+                 obo:IAO_0000115 "An anatomical entity that has mass." ;
+                 oboInOwl:id "CARO:0000006" ;
+                 rdfs:label "material anatomical entity" .
+
+
+###  http://purl.obolibrary.org/obo/CARO_0000007
+obo:CARO_0000007 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:BFO_0000141 ,
+                                 obo:CARO_0000000 ;
+                 owl:disjointWith [ rdf:type owl:Restriction ;
+                                    owl:onProperty obo:BFO_0000051 ;
+                                    owl:someValuesFrom obo:CARO_0000006
+                                  ] ;
+                 obo:IAO_0000115 "Anatomical entity that has no mass." ;
+                 oboInOwl:id "CARO:0000007" ;
+                 rdfs:label "immaterial anatomical entity" .
 
 
 ###  http://purl.obolibrary.org/obo/CARO_0010004
@@ -2566,49 +2724,147 @@ obo:CARO_0010004 rdf:type owl:Class ;
                  rdfs:label "cellular organism"@en .
 
 
-###  http://purl.obolibrary.org/obo/PATO_0000001
-obo:PATO_0000001 rdf:type owl:Class ;
-                 rdfs:subClassOf owl:Thing ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty [ owl:inverseOf obo:RO_0000053
-                                                  ] ;
-                                   owl:someValuesFrom owl:Thing
-                                 ] ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty obo:BFO_0000051 ;
-                                   owl:allValuesFrom obo:PATO_0000001
-                                 ] ;
-                 rdfs:label "characteristic"@en ;
-                 rdfs:seeAlso "https://github.com/OBOFoundry/COB/issues/65" ,
-                              "https://github.com/oborel/obo-relations/pull/284" .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0000125
-obo:PATO_0000125 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0000001 ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty obo:RO_0000052 ;
-                                   owl:someValuesFrom obo:BFO_0000040
-                                 ] ;
-                 rdfs:label "mass"@en .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0002193
-obo:PATO_0002193 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0000001 ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty obo:RO_0000052 ;
-                                   owl:someValuesFrom obo:BFO_0000040
-                                 ] ;
-                 rdfs:label "charge"@en .
-
-
-
 ###  http://purl.obolibrary.org/obo/SEPIO_0000048
 obo:SEPIO_0000048 rdf:type owl:Class ;
                   rdfs:subClassOf obo:BFO_0000023 ;
                   obo:IAO_0000116 "A role realized by a participant in a process such that the participant causes the process." ;
                   rdfs:label "agent role" .
+
+
+###  http://purl.obolibrary.org/obo/OGMS_0000073
+obo:OGMS_0000073 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:IAO_0000030 ;
+                 rdfs:label "disease diagnosis" .
+
+
+#################################################################
+### NCBITaxon Classes
+#################################################################
+
+###  http://purl.obolibrary.org/obo/NCBITaxon_2
+obo:NCBITaxon_2 rdf:type owl:Class ;
+                rdfs:subClassOf obo:OBI_0100026 ;
+                obo:IAO_0000111 "Bacteria" ;
+                obo:IAO_0000118 "eubacteria" ;
+                obo:IAO_0000412 obo:ncbitaxon.owl ;
+                rdfs:label "Bacteria" .
+
+
+###  http://purl.obolibrary.org/obo/NCBITaxon_2157
+obo:NCBITaxon_2157 rdf:type owl:Class ;
+                   rdfs:subClassOf obo:OBI_0100026 ;
+                   obo:IAO_0000111 "Archaea" ;
+                   obo:IAO_0000412 obo:ncbitaxon.owl ;
+                   rdfs:label "Archaea" .
+
+
+###  http://purl.obolibrary.org/obo/NCBITaxon_2759
+obo:NCBITaxon_2759 rdf:type owl:Class ;
+                   rdfs:subClassOf obo:OBI_0100026 ;
+                   obo:IAO_0000111 "Eukaryota" ;
+                   obo:IAO_0000118 "eucaryotes" ,
+                                   "eukaryotes" ;
+                   obo:IAO_0000412 obo:ncbitaxon.owl ;
+                   rdfs:label "Eukaryota" .
+
+
+###  http://purl.obolibrary.org/obo/NCBITaxon_7742
+obo:NCBITaxon_7742 rdf:type owl:Class ;
+                   rdfs:subClassOf obo:NCBITaxon_33213 ;
+                   obo:IAO_0000111 "Vertebrata <vertebrates>" ;
+                   obo:IAO_0000118 "Vertebrata" ,
+                                   "vertebrates" ;
+                   obo:IAO_0000412 obo:ncbitaxon.owl ;
+                   rdfs:label "Vertebrata <vertebrates>" .
+
+
+###  http://purl.obolibrary.org/obo/NCBITaxon_9606
+obo:NCBITaxon_9606 rdf:type owl:Class ;
+                   rdfs:subClassOf obo:NCBITaxon_314146 ;
+                   obo:IAO_0000111 "Homo sapiens" ;
+                   obo:IAO_0000118 "human" ,
+                                   "human being" ;
+                   obo:IAO_0000412 obo:ncbitaxon.owl ;
+                   rdfs:label "Homo sapiens" .
+
+
+###  http://purl.obolibrary.org/obo/NCBITaxon_10239
+obo:NCBITaxon_10239 rdf:type owl:Class ;
+                    rdfs:subClassOf obo:OBI_0100026 ;
+                    obo:IAO_0000111 "Viruses" ;
+                    obo:IAO_0000412 obo:ncbitaxon.owl ;
+                    rdfs:label "Viruses" .
+
+###  http://purl.obolibrary.org/obo/NCBITaxon_32523
+obo:NCBITaxon_32523 rdf:type owl:Class ;
+                    rdfs:subClassOf obo:NCBITaxon_117571 ;
+                    obo:IAO_0000111 "Tetrapoda" ;
+                    obo:IAO_0000118 "tetrapods" ;
+                    obo:IAO_0000412 obo:ncbitaxon.owl ;
+                    rdfs:label "Tetrapoda" .
+
+
+###  http://purl.obolibrary.org/obo/NCBITaxon_32524
+obo:NCBITaxon_32524 rdf:type owl:Class ;
+                    rdfs:subClassOf obo:NCBITaxon_32523 ;
+                    obo:IAO_0000111 "Amniota" ;
+                    obo:IAO_0000118 "amniotes" ;
+                    obo:IAO_0000412 obo:ncbitaxon.owl ;
+                    rdfs:label "Amniota" .
+
+
+###  http://purl.obolibrary.org/obo/NCBITaxon_33154
+obo:NCBITaxon_33154 rdf:type owl:Class ;
+                    rdfs:subClassOf obo:NCBITaxon_2759 ;
+                    obo:IAO_0000111 "Opisthokonta" ;
+                    obo:IAO_0000412 obo:ncbitaxon.owl ;
+                    rdfs:label "Opisthokonta" .
+
+
+###  http://purl.obolibrary.org/obo/NCBITaxon_33208
+obo:NCBITaxon_33208 rdf:type owl:Class ;
+                    rdfs:subClassOf obo:NCBITaxon_33154 ;
+                    obo:IAO_0000111 "Metazoa" ;
+                    obo:IAO_0000118 "metazoans" ,
+                                    "multicellular animals" ;
+                    obo:IAO_0000412 obo:ncbitaxon.owl ;
+                    rdfs:label "Metazoa" .
+
+
+###  http://purl.obolibrary.org/obo/NCBITaxon_33213
+obo:NCBITaxon_33213 rdf:type owl:Class ;
+                    rdfs:subClassOf obo:NCBITaxon_33208 ;
+                    obo:IAO_0000111 "Bilateria" ;
+                    obo:IAO_0000412 obo:ncbitaxon.owl ;
+                    rdfs:label "Bilateria" .
+
+
+###  http://purl.obolibrary.org/obo/NCBITaxon_40674
+obo:NCBITaxon_40674 rdf:type owl:Class ;
+                    rdfs:subClassOf obo:NCBITaxon_32524 ;
+                    obo:IAO_0000111 "Mammalia" ;
+                    obo:IAO_0000118 "mammals" ;
+                    obo:IAO_0000412 obo:ncbitaxon.owl ;
+                    rdfs:label "Mammalia" .
+
+
+###  http://purl.obolibrary.org/obo/NCBITaxon_117571
+obo:NCBITaxon_117571 rdf:type owl:Class ;
+                     rdfs:subClassOf obo:NCBITaxon_7742 ;
+                     obo:IAO_0000111 "Euteleostomi" ;
+                     obo:IAO_0000118 "bony vertebrates" ;
+                     obo:IAO_0000412 obo:ncbitaxon.owl ;
+                     rdfs:label "Euteleostomi" .
+
+
+###  http://purl.obolibrary.org/obo/NCBITaxon_314146
+obo:NCBITaxon_314146 rdf:type owl:Class ;
+                     rdfs:subClassOf obo:NCBITaxon_40674 ;
+                     obo:IAO_0000111 "Euarchontoglires" ;
+                     obo:IAO_0000412 obo:ncbitaxon.owl ;
+                     rdfs:label "Euarchontoglires" .
+
+
 		  
 #########################################################################
 ##  COB Classes
@@ -2669,12 +2925,6 @@ obo:COB_0000121 rdf:type owl:Class ;
                 rdfs:label "measurement datum" .
 
 
-###  http://purl.obolibrary.org/obo/OGMS_0000073
-obo:OGMS_0000073 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:IAO_0000030 ;
-                 rdfs:label "disease diagnosis" .
-
-
 ########################################################################
 ##  PATO Classes
 ########################################################################
@@ -2732,6 +2982,16 @@ obo:PATO_0000117 rdf:type owl:Class ;
                  oboInOwl:inSubset pato:attribute_slim ,
                                    pato:scalar_slim ;
                  rdfs:label "size" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0000125
+obo:PATO_0000125 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:PATO_0000001 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty obo:RO_0000052 ;
+                                   owl:someValuesFrom obo:BFO_0000040
+                                 ] ;
+                 rdfs:label "mass"@en .
 
 
 ###  http://purl.obolibrary.org/obo/PATO_0000140
@@ -2952,6 +3212,16 @@ obo:PATO_0002182 rdf:type owl:Class ;
                  oboInOwl:hasOBONamespace "quality" ;
                  oboInOwl:id "PATO:0002182" ;
                  rdfs:label "molecular quality" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0002193
+obo:PATO_0002193 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:PATO_0000001 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty obo:RO_0000052 ;
+                                   owl:someValuesFrom obo:BFO_0000040
+                                 ] ;
+                 rdfs:label "charge"@en .
 
 
 ###  http://purl.obolibrary.org/obo/PATO_0002198
@@ -4250,6 +4520,517 @@ When there is no such string, it is almost always because the entities take the 
                              "The information content entities do not denote each other."@en ;
                 rdfs:label "code set"@en .
 
+########################################################################
+### CL Classes
+########################################################################
+
+###  http://purl.obolibrary.org/obo/CL_0000000
+obo:CL_0000000 rdf:type owl:Class ;
+               rdfs:subClassOf obo:BFO_0000040 ;
+               obo:IAO_0000111 "cell" ;
+               obo:IAO_0000112 "PMID:18089833.Cancer Res. 2007 Dec 15;67(24):12018-25. \"...Epithelial cells were harvested from histologically confirmed adenocarcinomas ..\""@en ;
+               obo:IAO_0000115 "A material entity of anatomical origin (part of or deriving from an organism) that has as its parts a maximally connected cell compartment surrounded by a plasma membrane." ;
+               obo:IAO_0000412 obo:cl.owl ;
+               rdfs:label "cell" .
+
+
+###  http://purl.obolibrary.org/obo/CL_0000010
+obo:CL_0000010 rdf:type owl:Class ;
+               rdfs:subClassOf obo:CL_0000578 ,
+                               [ rdf:type owl:Class ;
+                                 owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                 owl:onProperty obo:OBI_0000312 ;
+                                                 owl:someValuesFrom obo:OBI_0600036
+                                               ]
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty obo:RO_0001000 ;
+                                                 owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty obo:OBI_0000312 ;
+                                                                      owl:someValuesFrom obo:OBI_0600036
+                                                                    ]
+                                               ]
+                                             )
+                               ] ;
+               obo:IAO_0000111 "cultured cell" ;
+               obo:IAO_0000115 "A cell in vitro that is or has been maintained or propagated as part of a cell culture." ;
+               obo:IAO_0000412 obo:cl.owl ;
+               rdfs:label "cultured cell" .
+
+
+###  http://purl.obolibrary.org/obo/CL_0000540
+obo:CL_0000540 rdf:type owl:Class ;
+               rdfs:subClassOf obo:CL_0002319 ;
+               obo:IAO_0000111 "neuron" ;
+               obo:IAO_0000115 "The basic cellular unit of nervous tissue. Each neuron consists of a body, an axon, and dendrites. Their purpose is to receive, conduct, and transmit impulses in the nervous system." ;
+               obo:IAO_0000412 obo:cl.owl ;
+               rdfs:label "neuron" .
+
+
+###  http://purl.obolibrary.org/obo/CL_0000578
+obo:CL_0000578 rdf:type owl:Class ;
+               rdfs:subClassOf obo:CL_0000000 ,
+                               obo:OBI_0000047 ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty obo:OBI_0000312 ;
+                                 owl:someValuesFrom obo:OBI_0000094
+                               ] ;
+               obo:IAO_0000111 "experimentally modified cell in vitro" ;
+               obo:IAO_0000115 "A cell in vitro that has undergone physical changes as a consequence of a deliberate and specific experimental procedure." ;
+               obo:IAO_0000412 obo:cl.owl ;
+               rdfs:label "experimentally modified cell in vitro" .
+
+
+###  http://purl.obolibrary.org/obo/CL_0002319
+obo:CL_0002319 rdf:type owl:Class ;
+               rdfs:subClassOf obo:CL_0000000 ;
+               obo:IAO_0000111 "neural cell" ;
+               obo:IAO_0000115 "A cell that is part of the nervous system." ;
+               obo:IAO_0000412 obo:cl.owl ;
+               rdfs:label "neural cell" .
+
+########################################################################
+### GO Classes
+########################################################################
+
+###  http://purl.obolibrary.org/obo/GO_0001508
+obo:GO_0001508 rdf:type owl:Class ;
+               rdfs:subClassOf obo:GO_0008150 ;
+               obo:IAO_0000111 "action potential" ;
+               obo:IAO_0000115 "A process in which membrane potential cycles through a depolarizing spike, triggered in response to depolarization above some threshold, followed by repolarization. This cycle is driven by the flow of ions through various voltage gated channels with different thresholds and ion specificities." ;
+               obo:IAO_0000412 obo:go.owl ;
+               rdfs:label "action potential" .
+
+
+###  http://purl.obolibrary.org/obo/GO_0005216
+obo:GO_0005216 rdf:type owl:Class ;
+               rdfs:subClassOf obo:GO_0009987 ;
+               obo:IAO_0000111 "ion channel activity" ;
+               obo:IAO_0000115 "Enables the facilitated diffusion of an ion (by an energy-independent process) by passage through a transmembrane aqueous pore or channel without evidence for a carrier-mediated mechanism. May be either selective (it enables passage of a specific ion only) or non-selective (it enables passage of two or more ions of same charge but different size)." ;
+               obo:IAO_0000412 obo:go.owl ;
+               rdfs:label "ion channel activity" .
+
+
+###  http://purl.obolibrary.org/obo/GO_0008150
+obo:GO_0008150 rdf:type owl:Class ;
+               rdfs:subClassOf obo:BFO_0000015 ;
+               owl:disjointWith obo:OBI_0000011 ;
+               obo:IAO_0000111 "biological_process" ;
+               obo:IAO_0000115 "A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence." ;
+               obo:IAO_0000412 obo:go.owl ;
+               rdfs:label "biological_process" .
+
+
+###  http://purl.obolibrary.org/obo/GO_0009987
+obo:GO_0009987 rdf:type owl:Class ;
+               rdfs:subClassOf obo:GO_0008150 ;
+               obo:IAO_0000111 "cellular process" ;
+               obo:IAO_0000115 "Any process that is carried out at the cellular level, but not necessarily restricted to a single cell. For example, cell communication occurs among more than one cell, but occurs at the cellular level." ;
+               obo:IAO_0000412 obo:go.owl ;
+               rdfs:label "cellular process" .
+	       
+
+#########################################################################
+###  OBI Classes
+#########################################################################
+
+###  http://purl.obolibrary.org/obo/OBI_0000011
+obo:OBI_0000011 rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                      owl:onProperty obo:BFO_0000055 ;
+                                      owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                           owl:onProperty obo:RO_0000059 ;
+                                                           owl:someValuesFrom obo:IAO_0000104
+                                                         ]
+                                    ] ;
+                rdfs:subClassOf obo:BFO_0000015 ;
+                obo:IAO_0000111 "planned process" ,
+                                "planned process"@en ;
+                obo:IAO_0000112 "Injecting mice with a vaccine in order to test its efficacy" ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "A process that realizes a plan which is the concretization of a plan specification."@en ;
+                obo:IAO_0000116 "'Plan' includes a future direction sense. That can be problematic if plans are changed during their execution. There are however implicit contingencies for protocols that an agent has in his mind that can be considered part of the plan, even if the agent didn't have them in mind before. Therefore, a planned process can diverge from what the agent would have said the plan was before executing it, by adjusting to problems encountered during execution (e.g. choosing another reagent with equivalent properties, if the originally planned one has run out.)" ,
+                                """We are only considering successfully completed planned processes. A plan may be modified, and details added during execution. For a given planned process, the associated realized plan specification is the one encompassing all changes made during execution. This means that all processes in which an agent acts towards achieving some 
+objectives is a planned process.""" ;
+                obo:IAO_0000117 "Bjoern Peters" ;
+                obo:IAO_0000119 "branch derived" ;
+                obo:IAO_0000232 "6/11/9: Edited at workshop. Used to include: is initiated by an agent" ,
+                                "This class merges the previously separated objective driven process and planned process, as they the separation proved hard to maintain. (1/22/09, branch call)"@en ;
+                obo:IAO_0000412 <http://purl.obolibrary.org/obo/obi.owl> ;
+                rdfs:label "planned process"@en .
+
+###  http://purl.obolibrary.org/obo/OBI_0000018
+obo:OBI_0000018 rdf:type owl:Class ;
+                rdfs:subClassOf obo:OBI_0000947 ;
+                obo:IAO_0000111 "material supplier role" ;
+                obo:IAO_0000112 "Jackson Labs is an organization which provide mice as experimental material" ;
+                obo:IAO_0000114 obo:IAO_0000120 ;
+                obo:IAO_0000115 "a role realized through the process of supplying materials such as animal subjects, reagents or other materials used in an investigation."@en ;
+                obo:IAO_0000116 "Supplier role is a special kind of service, e.g. biobank" ;
+                obo:IAO_0000117 "PERSON:Jennifer Fostel"@en ;
+                obo:IAO_0000118 "material provider role" ,
+                                "supplier" ;
+                rdfs:label "material supplier role"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000023
+obo:OBI_0000023 rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                      owl:onProperty obo:OBI_0000312 ;
+                                      owl:someValuesFrom obo:OBI_0000663
+                                    ] ;
+                rdfs:subClassOf obo:IAO_0000100 ;
+                obo:IAO_0000111 "classified data set" ;
+                obo:IAO_0000114 obo:IAO_0000125 ;
+                obo:IAO_0000115 "A data set that is produced as the output of a class prediction data transformation and consists of a data set with assigned class labels."@en ;
+                obo:IAO_0000117 "PERSON: James Malone" ,
+                                "PERSON: Monnie McGee" ;
+                obo:IAO_0000118 "data set with assigned class labels" ;
+                rdfs:label "classified data set"@en .
+		
+
+###  http://purl.obolibrary.org/obo/OBI_0000047
+obo:OBI_0000047 rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( obo:BFO_0000040
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty obo:OBI_0000312 ;
+                                                             owl:someValuesFrom obo:OBI_0000094
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:subClassOf obo:BFO_0000040 ;
+                obo:IAO_0000111 "processed material"@en ;
+                obo:IAO_0000112 "Examples include gel matrices, filter paper, parafilm and buffer solutions, mass spectrometer, tissue samples"@en ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "Is a material entity that is created or changed during material processing."@en ;
+                obo:IAO_0000117 "PERSON: Alan Ruttenberg"@en ;
+                rdfs:label "processed material"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000066
+obo:OBI_0000066 rdf:type owl:Class ;
+                rdfs:subClassOf obo:OBI_0000011 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000051 ;
+                                  owl:someValuesFrom obo:IAO_0000572
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000051 ;
+                                  owl:someValuesFrom obo:OBI_0000338
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000051 ;
+                                  owl:someValuesFrom obo:OBI_0000471
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000051 ;
+                                  owl:someValuesFrom [ owl:intersectionOf ( obo:OBI_0000339
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty obo:OBI_0000299 ;
+                                                                              owl:someValuesFrom obo:OBI_0500000
+                                                                            ]
+                                                                          ) ;
+                                                       rdf:type owl:Class
+                                                     ]
+                                ] ;
+                obo:IAO_0000111 "investigation"@en ;
+                obo:IAO_0000112 "Lung cancer investigation using expression profiling, a stem cell transplant investigation, biobanking is not an investigation, though it may be part of an investigation" ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "a planned process that consists of parts: planning, study design execution, documentation and which produce conclusion(s)."@en ;
+                obo:IAO_0000117 "Bjoern Peters"@en ;
+                obo:IAO_0000119 "OBI branch derived"@en ;
+                obo:IAO_0000232 "Could add specific objective specification" ,
+                                """Following OBI call November 2012,26th: it was decided there was no need for adding \"achieves objective of drawing conclusion\" as existing relations were providing equivalent ability. this note closes the issue and validates the class definition to be part of the OBI core
+editor = PRS"""@en ;
+                obo:IAO_0000412 <http://purl.obolibrary.org/obo/obi.owl> ;
+                obo:OBI_0001847 "study" ;
+                rdfs:label "investigation"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000067
+obo:OBI_0000067 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000023 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:RO_0000052 ;
+                                  owl:someValuesFrom obo:BFO_0000040
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000054 ;
+                                  owl:allValuesFrom obo:OBI_0000070
+                                ] ;
+                obo:IAO_0000111 "evaluant role"@en ;
+                obo:IAO_0000112 "When a specimen of blood is assayed for glucose concentration, the blood has the evaluant role. When measuring the mass of a mouse, the evaluant is the mouse. When measuring the time of DNA replication, the evaluant is the DNA. When measuring the intensity of light on a surface, the evaluant is the light source."@en ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "a role that inheres in a material entity that is realized in an assay in which data is generated about the bearer of the evaluant role"@en ;
+                obo:IAO_0000116 "Role call - 17nov-08: JF and MC think an evaluant role is always specified input of a process. Even in the case where we have an assay taking blood as evaluant and outputting blood, the blood is not the specified output at the end of the assay (the concentration of glucose in the blood is)"@en ,
+                                "examples of features that could be described in an evaluant: quality.... e.g. \"contains 10 pg/ml IL2\", or \"no glucose detected\")"@en ;
+                obo:IAO_0000117 "GROUP:  Role Branch" ;
+                obo:IAO_0000119 "OBI" ;
+                obo:IAO_0000232 "Feb 10, 2009.  changes after discussion at OBI Consortium Workshop Feb 2-6, 2009.  accepted as core term." ;
+                rdfs:label "evaluant role"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000070
+obo:OBI_0000070 rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                      owl:onProperty obo:OBI_0000417 ;
+                                      owl:someValuesFrom obo:OBI_0000441
+                                    ] ;
+                rdfs:subClassOf obo:OBI_0000011 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000055 ;
+                                  owl:someValuesFrom obo:OBI_0000067
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:OBI_0000293 ;
+                                  owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000040
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty obo:RO_0000087 ;
+                                                                              owl:someValuesFrom obo:OBI_0000067
+                                                                            ]
+                                                                          ) ;
+                                                       rdf:type owl:Class
+                                                     ]
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:OBI_0000299 ;
+                                  owl:someValuesFrom [ owl:intersectionOf ( obo:IAO_0000027
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty obo:IAO_0000136 ;
+                                                                              owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000040
+                                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                                          owl:onProperty obo:RO_0000087 ;
+                                                                                                                          owl:someValuesFrom obo:OBI_0000067
+                                                                                                                        ]
+                                                                                                                      ) ;
+                                                                                                   rdf:type owl:Class
+                                                                                                 ]
+                                                                            ]
+                                                                          ) ;
+                                                       rdf:type owl:Class
+                                                     ]
+                                ] ;
+                owl:disjointWith obo:OBI_0000339 ,
+                                 obo:OBI_0200000 ,
+                                 obo:OBI_0600013 ;
+                obo:IAO_0000111 "assay"@en ;
+                obo:IAO_0000112 "Assay the wavelength of light emitted by excited Neon atoms. Count of geese flying over a house." ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "A planned process with the objective to produce information about the material entity that is the evaluant, by physically examining it or its proxies."@en ;
+                obo:IAO_0000116 "12/3/12: BP: the reference to the 'physical examination' is included to point out that a prediction is not an assay, as that does not require physical examiniation." ;
+                obo:IAO_0000117 "PlanAndPlannedProcess Branch"@en ;
+                obo:IAO_0000118 "measuring"@en ,
+                                "scientific observation"@en ;
+                obo:IAO_0000119 "OBI branch derived"@en ;
+                obo:OBI_0001847 "study assay" ;
+                obo:OBI_9991118 "any method" ;
+                rdfs:label "assay"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000071
+obo:OBI_0000071 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000027 ;
+                obo:IAO_0000111 "quantitative confidence value"@en ;
+                obo:IAO_0000114 obo:IAO_0000125 ;
+                obo:IAO_0000115 "A data item which is used to indicate the degree of uncertainty about a measurement."@en ;
+                obo:IAO_0000117 "person:Chris Stoeckert"@en ;
+                obo:IAO_0000119 "group:OBI" ;
+                rdfs:label "quantitative confidence value"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000073
+obo:OBI_0000073 rdf:type owl:Class ;
+                rdfs:subClassOf obo:OBI_0000094 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:OBI_0000417 ;
+                                  owl:someValuesFrom obo:OBI_0000456
+                                ] ;
+                obo:IAO_0000111 "sample preparation for assay"@en ;
+                obo:IAO_0000114 obo:IAO_0000125 ;
+                obo:IAO_0000115 "A sample_preparation_for_assay is a protocol_application including material_enrollments and biomaterial_transformations. definition_source: OBI."@en ;
+                obo:IAO_0000117 "PlanAndPlannedProcess Branch"@en ;
+                obo:IAO_0000118 "study"@en ;
+                obo:IAO_0000119 "OBI branch derived"@en ;
+                rdfs:label "sample preparation for assay"@en .
+
+###  http://purl.obolibrary.org/obo/OBI_0000079
+obo:OBI_0000079 rdf:type owl:Class ;
+                rdfs:subClassOf obo:OBI_0000047 ;
+                obo:IAO_0000111 "culture medium" ;
+                obo:IAO_0000112 "A growth medium or culture medium is a substance in which microorganisms or cells can grow.  Wikipedia, growth medium, Feb 29, 2008"@en ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "a processed material that provides the needed nourishment for microorganisms or cells grown in vitro." ;
+                obo:IAO_0000116 """changed from a role to a processed material based on on Aug 22, 2011 dev call. Details see the tracker item: http://sourceforge.net/tracker/?func=detail&aid=3325270&group_id=177891&atid=886178
+Modification made by JZ.""" ;
+                obo:IAO_0000117 "Person: Jennifer Fostel, Jie Zheng"@en ;
+                obo:IAO_0000119 "OBI"@en ;
+                rdfs:label "culture medium"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000086
+obo:OBI_0000086 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000023 ;
+                obo:IAO_0000111 "reagent role" ;
+                obo:IAO_0000112 "Buffer, dye, a catalyst, a solvating agent."@en ;
+                obo:IAO_0000114 obo:IAO_0000120 ;
+                obo:IAO_0000115 "A role inhering in a biological or chemical entity that is intended to be applied in a scientific technique to participate (or have molecular components that participate) in a chemical reaction that facilitates the generation of data about some entity distinct from the bearer, or the generation of some specified material output distinct from the bearer."@en ;
+                obo:IAO_0000117 "PERSON:Matthew Brush"@en ;
+                obo:IAO_0000118 "reagent" ;
+                obo:IAO_0000119 "PERSON:Matthew Brush" ;
+                obo:IAO_0000232 """Feb 10, 2009.  changes after discussion at OBI Consortium Workshop Feb 2-6, 2009.  accepted as core term.
+
+May 28 2013. Updated definition taken from ReO based on discussions initiated in Philly 2011 workshop.  Former defnition described a narrower view of reagents in chemistry that restricts bearers of the role to be chemical entities (\"a role played by a molecular entity used to produce a chemical reaction to detect, measure, or produce other substances\").  Updated definition allows for broader view of reagents in the domain of biomedical research to include larger materials that have parts that participate chemically in a molecular reaction or interaction.""" ;
+                rdfs:comment """(copied from ReO)
+Reagents are distinguished from instruments or devices that also participate in scientific techniques by the fact that reagents are chemical or biological in nature and necessarily participate in or have parts that participate in some chemical interaction or reaction during their intended participation in some technique.  By contrast, instruments do not participate in a chemical reaction/interaction during the technique.
+
+Reagents are distinguished from study subjects/evaluants in that study subjects and evaluants are that about which conclusions are drawn and knowledge is sought in an investigation - while reagents, by definition, are not.  It should be noted, however, that reagent and study subject/evaluant roles can be borne by instances of the same type of material entity - but a given instance will realize only one of these roles in the execution of a given assay or technique. For example, taq polymerase can bear a reagent role or an evaluant role.  In a DNA sequencing assay aimed at generating sequence data about some plasmid, the reagent role of the taq polymerase is realized. In an assay to evaluate the quality of the taq polymerase itself, the evaluant/study subject role of the taq is realized, but not the reagent role since the taq is the subject about which data is generated.
+
+In regard to the statement that reagents are 'distinct' from the specified outputs of a technique, note that a reagent may be incorporated into a material output of a technique, as long as the IDENTITY of this output is distinct from that of the bearer of the reagent role.  For example, dNTPs input into a PCR are reagents that become part of the material output of this technique, but this output has a new identity (ie that of a 'nucleic acid molecule') that is distinct from the identity of the dNTPs that comprise it.  Similarly, a biotin molecule input into a cell labeling technique are reagents that become part of the specified output, but the identity of the output is that of some modified cell specimen which shares identity with the input unmodified cell specimen, and not with the biotin label. Thus, we see that an important criteria of 'reagent-ness' is that it is a facilitator, and not the primary focus of an investigation or material processing technique (ie not the specified subject/evaluant about which knowledge is sought, or the specified output material of the technique).""" ;
+                rdfs:label "reagent role"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000094
+obo:OBI_0000094 rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                      owl:onProperty obo:OBI_0000417 ;
+                                      owl:someValuesFrom obo:OBI_0000456
+                                    ] ;
+                rdfs:subClassOf obo:OBI_0000011 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:OBI_0000299 ;
+                                  owl:someValuesFrom obo:OBI_0000047
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:OBI_0000293 ;
+                                  owl:allValuesFrom obo:BFO_0000040
+                                ] ;
+                owl:disjointWith obo:OBI_0600010 ;
+                obo:IAO_0000111 "material processing" ;
+                obo:IAO_0000112 "A cell lysis, production of a cloning vector, creating a buffer." ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "A planned process which results in physical changes in a specified input material"@en ;
+                obo:IAO_0000117 "PERSON: Bjoern Peters"@en ,
+                                "PERSON: Frank Gibson" ,
+                                "PERSON: Jennifer Fostel" ,
+                                "PERSON: Melanie Courtot" ,
+                                "PERSON: Philippe Rocca Serra" ;
+                obo:IAO_0000118 "material transformation"@en ;
+                obo:IAO_0000119 "OBI branch derived"@en ;
+                rdfs:label "material processing"@en .
+
+###  http://purl.obolibrary.org/obo/OBI_0000097
+obo:OBI_0000097 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000023 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000054 ;
+                                  owl:allValuesFrom obo:OBI_0000471
+                                ] ;
+                obo:IAO_0000111 "study subject role"@en ;
+                obo:IAO_0000112 """Human subjects in a clinical trial, rats in a toxicogenomics study, tissue cutlures subjected to drug tests, fish observed in an ecotoxicology study. 
+Parasite example: people are infected with a parasite which is then extracted; the particpant under investigation could be the parasite, the people, or a population of which the people are members, depending on the nature of the study.
+Lake example: a lake could realize this role in an investigation that assays pollution levels in samples of water taken from the lake.""" ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "A role that is realized through the execution of a study design in which the bearer of the role participates and in which data about that bearer is collected." ;
+                obo:IAO_0000116 "A participant can realize both \"specimen role\" and \"participant under investigation role\" at the same time. However \"participant under investigation role\" is distinct from \"specimen role\", since a specimen could somehow be involved in an investigation without being the thing that is under investigation." ;
+                obo:IAO_0000117 "GROUP:  Role Branch"@en ;
+                obo:IAO_0000119 "OBI" ;
+                obo:IAO_0000232 """Following OBI call November 2012,26th:
+ 
+1. it was decided there was no need for moving the children class and making them siblings of study subject role.
+2. it also settles the disambiguation about 'study subject'. This is about the individual participating in the investigation/study, Not the 'topic' (as in 'toxicity study') of the investigation/study
+
+This note closes the issue and validates the class definition to be part of the OBI core
+editor = PRS"""@en ;
+                rdfs:label "participant under investigation role"@en .###  http://purl.obolibrary.org/obo/OBI_0000094
+obo:OBI_0000094 rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                      owl:onProperty obo:OBI_0000417 ;
+                                      owl:someValuesFrom obo:OBI_0000456
+                                    ] ;
+                rdfs:subClassOf obo:OBI_0000011 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:OBI_0000299 ;
+                                  owl:someValuesFrom obo:OBI_0000047
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:OBI_0000293 ;
+                                  owl:allValuesFrom obo:BFO_0000040
+                                ] ;
+                owl:disjointWith obo:OBI_0600010 ;
+                obo:IAO_0000111 "material processing" ;
+                obo:IAO_0000112 "A cell lysis, production of a cloning vector, creating a buffer." ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "A planned process which results in physical changes in a specified input material"@en ;
+                obo:IAO_0000117 "PERSON: Bjoern Peters"@en ,
+                                "PERSON: Frank Gibson" ,
+                                "PERSON: Jennifer Fostel" ,
+                                "PERSON: Melanie Courtot" ,
+                                "PERSON: Philippe Rocca Serra" ;
+                obo:IAO_0000118 "material transformation"@en ;
+                obo:IAO_0000119 "OBI branch derived"@en ;
+                rdfs:label "material processing"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000094
+obo:OBI_0000094 rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                      owl:onProperty obo:OBI_0000417 ;
+                                      owl:someValuesFrom obo:OBI_0000456
+                                    ] ;
+                rdfs:subClassOf obo:OBI_0000011 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:OBI_0000299 ;
+                                  owl:someValuesFrom obo:OBI_0000047
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:OBI_0000293 ;
+                                  owl:allValuesFrom obo:BFO_0000040
+                                ] ;
+                owl:disjointWith obo:OBI_0600010 ;
+                obo:IAO_0000111 "material processing" ;
+                obo:IAO_0000112 "A cell lysis, production of a cloning vector, creating a buffer." ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "A planned process which results in physical changes in a specified input material"@en ;
+                obo:IAO_0000117 "PERSON: Bjoern Peters"@en ,
+                                "PERSON: Frank Gibson" ,
+                                "PERSON: Jennifer Fostel" ,
+                                "PERSON: Melanie Courtot" ,
+                                "PERSON: Philippe Rocca Serra" ;
+                obo:IAO_0000118 "material transformation"@en ;
+                obo:IAO_0000119 "OBI branch derived"@en ;
+                rdfs:label "material processing"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000112
+obo:OBI_0000112 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000023 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:RO_0000052 ;
+                                  owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000040
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty obo:OBI_0000312 ;
+                                                                              owl:someValuesFrom obo:OBI_0000659
+                                                                            ]
+                                                                          ) ;
+                                                       rdf:type owl:Class
+                                                     ]
+                                ] ;
+                obo:IAO_0000111 "specimen role" ;
+                obo:IAO_0000112 "liver section; a portion of a culture of cells; a nemotode or other animal once no longer a subject (generally killed); portion of blood from a patient." ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "a role borne by a material entity that is gained during a specimen collection process and that can be realized by use of the specimen in an investigation"@en ;
+                obo:IAO_0000116 "22Jun09.  The definition includes whole organisms, and can include a human.  The link between specimen role and study subject role has been removed.  A specimen taken as part of a case study is not considered to be a population representative, while a specimen taken as representing a population, e.g. person taken from a cohort, blood specimen taken from an animal) would be considered a population representative and would also bear material sample role." ,
+                                "Note: definition is in specimen creation objective which is defined as an objective to obtain and store a material entity for potential use as an input during an investigation." ,
+                                """blood taken from animal: animal continues in study, whereas blood has role specimen.
+something taken from study subject, leaves the study and becomes the specimen."""@en ,
+                                """parasite example
+- when parasite in people we study people, people are subjects and parasites are specimen
+- when parasite extracted, they become subject in the following study
+specimen can later be subject."""@en ;
+                obo:IAO_0000117 "GROUP:  Role Branch" ;
+                obo:IAO_0000119 "OBI" ;
+                obo:IAO_0000233 <https://github.com/obi-ontology/obi/issues/1013> ;
+                rdfs:label "specimen role"@en .
 
 
 ###  http://purl.obolibrary.org/obo/OBI_0000115
@@ -4277,7 +5058,6 @@ obo:OBI_0000115 rdf:type owl:Class ;
                 obo:IAO_0000117 "Philppe Rocca-Serra" ;
                 obo:IAO_0000119 "OBI branch derived" ;
                 rdfs:label "intervention design" .
-
 
 
 ###  http://purl.obolibrary.org/obo/OBI_0000134
@@ -9354,6 +10134,7 @@ obo:OBI_0002187 rdf:type owl:Class ;
                 rdfs:label "single-unit recording" .
 
 
+
 ###  http://purl.obolibrary.org/obo/OBI_0002188
 obo:OBI_0002188 rdf:type owl:Class ;
                 rdfs:subClassOf obo:OBI_0000454 ;
@@ -13475,6 +14256,33 @@ obo:OBI_0600024 rdf:type owl:Class ;
                 rdfs:label "maintaining cell culture"@en .
 		
 
+###  http://purl.obolibrary.org/obo/OBI_0600036
+obo:OBI_0600036 rdf:type owl:Class ;
+                rdfs:subClassOf obo:OBI_0000094 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:OBI_0000293 ;
+                                  owl:someValuesFrom obo:CL_0000000
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:OBI_0000293 ;
+                                  owl:someValuesFrom obo:OBI_0000079
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:OBI_0000299 ;
+                                  owl:someValuesFrom obo:OBI_0100060
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:OBI_0000417 ;
+                                  owl:someValuesFrom obo:OBI_0000456
+                                ] ;
+                obo:IAO_0000111 "'establishing cell culture'" ;
+                obo:IAO_0000114 obo:IAO_0000120 ;
+                obo:IAO_0000115 "a process through which a new type of cell culture or cell line is created, either through the isolation and culture of one or more cells from a fresh source, or the deliberate experimental modification of an existing cell culture (e.g passaging a primary culture to become a secondary culture or line, or the immortalization or stable genetic modification of an existing culture or line)." ;
+                obo:IAO_0000117 "PERSON:Matthew Brush" ;
+                obo:IAO_0000119 "PERSON:Matthew Brush" ;
+                rdfs:comment "A 'cell culture' as used here referes to a new lineage of cells in culture deriving from a single biological source.. New cultures are established through the initial isolation and culturing of cells from an organismal source, or through changes in an existing cell culture or line that result in a new culture with unique characteristics.  This can occur through the passaging/selection of a primary culture into a secondary culture or line, or experimental modifications of an existing cell culture or line such as an immortalization process or other stable genetic modification. This class covers establishment of cultures of either multicellular organism cells or unicellular organisms." ;
+                rdfs:label "establishing cell culture" .
+
 
 ###  http://purl.obolibrary.org/obo/OBI_0600047
 obo:OBI_0600047 rdf:type owl:Class ;
@@ -14215,6 +15023,9 @@ obo:PATO_0002243 rdf:type owl:Class ;
                  obo:IAO_0000412 obo:pato.owl ;
                  rdfs:label "fluid flow rate" .
 
+######################################################################
+### UBERON Classes
+######################################################################
 
 ##  http://purl.obolibrary.org/obo/UBERON_0000178
 obo:UBERON_0000178 rdf:type owl:Class ;
@@ -14308,6 +15119,14 @@ obo:UBERON_0001359 rdf:type owl:Class ;
                    rdfs:label "cerebrospinal fluid" .
 
 
+###  http://purl.obolibrary.org/obo/UBERON_0001567
+obo:UBERON_0001567 rdf:type owl:Class ;
+                   rdfs:subClassOf obo:UBERON_0000465 ;
+                   obo:IAO_0000111 "cheek" ;
+                   obo:IAO_0000115 "A fleshy subdivision of one side of the face bounded by an eye, ear and the nose." ;
+                   obo:IAO_0000412 obo:uberon.owl ;
+                   rdfs:label "cheek" .
+
 
 ##  http://purl.obolibrary.org/obo/UBERON_0001621
 obo:UBERON_0001621 rdf:type owl:Class ;
@@ -14325,6 +15144,33 @@ obo:UBERON_0001638 rdf:type owl:Class ;
                    obo:IAO_0000115 "Any of the tubular branching vessels that carry blood from the capillaries toward the heart." ;
                    obo:IAO_0000412 obo:uberon.owl ;
                    rdfs:label "vein" .
+
+
+###  http://purl.obolibrary.org/obo/UBERON_0001728
+obo:UBERON_0001728 rdf:type owl:Class ;
+                   rdfs:subClassOf obo:UBERON_0000465 ;
+                   obo:IAO_0000111 "nasopharynx" ;
+                   obo:IAO_0000115 "The section of the pharynx that lies above the soft palate." ;
+                   obo:IAO_0000412 obo:uberon.owl ;
+                   rdfs:label "nasopharynx" .
+
+
+###  http://purl.obolibrary.org/obo/UBERON_0001836
+obo:UBERON_0001836 rdf:type owl:Class ;
+                   rdfs:subClassOf obo:UBERON_0000463 ;
+                   obo:IAO_0000111 "saliva" ;
+                   obo:IAO_0000115 "A fluid produced in the oral cavity by salivary glands, typically used in predigestion, but also in other functions." ;
+                   obo:IAO_0000412 obo:uberon.owl ;
+                   rdfs:label "saliva" .
+
+
+###  http://purl.obolibrary.org/obo/UBERON_0002389
+obo:UBERON_0002389 rdf:type owl:Class ;
+                   rdfs:subClassOf obo:UBERON_0000465 ;
+                   obo:IAO_0000111 "manual digit" ;
+                   obo:IAO_0000115 "A digit that is part of a manus (hand)." ;
+                   obo:IAO_0000412 obo:uberon.owl ;
+                   rdfs:label "manual digit" .
 
 
 ##  http://purl.obolibrary.org/obo/UBERON_0006314
@@ -14353,7 +15199,9 @@ obo:UBERON_0013756 rdf:type owl:Class ;
                    obo:IAO_0000412 obo:uberon.owl ;
                    rdfs:label "venous blood" .
 
-
+#######################################################################
+### UO Classes
+######################################################################
 ##  http://purl.obolibrary.org/obo/UO_0000001
 obo:UO_0000001 rdf:type owl:Class ;
                rdfs:subClassOf obo:IAO_0000003 ;
@@ -14448,11 +15296,9 @@ obo:UO_0000280 rdf:type owl:Class ;
 ##  http://www.w3.org/2002/07/owl#Thing
 owl:Thing rdf:type owl:Class .
 
-#####################################################################################################################
-###
+#####################################################################
 ###  NIDM Classes
-###
-#####################################################################################################################
+#####################################################################
 
 
 ###  http://purl.org/nidash/nidm#Acquisition
@@ -14462,17 +15308,16 @@ owl:Thing rdf:type owl:Class .
 ###  http://purl.org/nidash/nidm#AcquisitionDeviceOperator
 nidm:AcquisitionDeviceOperator rdf:type owl:Class ;                                
                rdfs:label "Acquisition Device Operator" ;
-               obo:IAO_0000115 "An acquisition device operator is a role of an agent who/that controls the device that collects the acquisition object."^^xsd:string ;                      
+               obo:IAO_0000115 "An acquisition device operator is a role of an entity who/that controls the device that collects the acquisition object."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 ;
-               rdfs:comment "The use of who/that indicates that the agent performing this role can either be a person or another device." ;                                
+               rdfs:comment "The use of who/that indicates that the entity performing this role can either be a person or another device." ;                                
                rdfs:subClassOf obo:SEPIO_0000048 .
-
 
 
 ###  http://purl.org/nidash/nidm#AcquisitionMethod
 nidm:AcquisitionMethod rdf:type owl:Class ;                     
                rdfs:label "Acquisition Method" ;
-               obo:IAO_0000115 "An assay method is a specific form of a procedure that was used to gather data from a study participant."^^xsd:string ;      
+               obo:IAO_0000115 "An acquisition method is a specific form of a procedure that was used to gather data from a study participant."^^xsd:string ;      
                obo:IAO_0000114 obo:IAO_0000428 ;
                rdfs:subClassOf nidm:AcquisitionObjectQuality .
 
@@ -14480,15 +15325,23 @@ nidm:AcquisitionMethod rdf:type owl:Class ;
 ###  http://purl.org/nidash/nidm#AcquisitionModality
 nidm:AcquisitionModality rdf:type owl:Class ;
                rdfs:label "Acquisition Modality" ;
-               obo:IAO_0000115 "An assay modality is a description of the general type of experiment that was used to gather data from a study participant."^^xsd:string ;
+               obo:IAO_0000115 "An acquisition modality is a description of the general type of experiment that was used to gather data from a study participant."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 ;          
                rdfs:subClassOf nidm:AcquisitionObjectQuality .
+
+
+###  http://purl.org/nidash/nidm#AcquisitionObject
+nidm:AcquisitionObject rdf:type owl:Class ;
+               rdfs:label "Acquisition Object"^^xsd:string ;
+               obo:IAO_0000115 "An acquisition object is a material or information entity that is gathered from a study participant during an assay occurent."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 ;                             
+               rdfs:subClassOf obo:BFO_0000040 .
 
 
 ###  http://purl.org/nidash/nidm#AcquisitionObjectQuality
 nidm:AcquisitionObjectQuality rdf:type owl:Class ;
                rdfs:label "Acquisition Object Quality"^^xsd:string ;
-               obo:IAO_0000115 "An assay object quality is an quality that describes an essential feature of an object that is gathered from a study participant during an assay occurent."^^xsd:string ;                 
+               obo:IAO_0000115 "An acquisition object quality is an quality that describes an essential feature of an object that is gathered from a study participant during an assay occurent."^^xsd:string ;                 
                obo:IAO_0000114 obo:IAO_0000428 ;                             
                rdfs:subClassOf obo:PATO_0000001 .
 
@@ -14496,7 +15349,7 @@ nidm:AcquisitionObjectQuality rdf:type owl:Class ;
 ###  http://purl.org/nidash/nidm#AcquisitionUsageType
 nidm:AcquisitionUsageType rdf:type owl:Class ;
                rdfs:label "Acquisition Usage Type"^^xsd:string ;
-               obo:IAO_0000115 "Acquisition usage type is an assay object quality that denotes to what purpose the acquired object will be employed."^^xsd:string ;
+               obo:IAO_0000115 "Acquisition usage type is an acquisition object quality that denotes to what purpose the acquired object will be employed."^^xsd:string ;
                rdfs:comment  "This is used for a non-imaging based acquisition modality."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 ;
                rdfs:subClassOf nidm:AcquisitionObjectQuality .
@@ -14732,7 +15585,7 @@ nidm:DICOMTag rdf:type owl:DatatypeProperty ;
                rdfs:label "DICOM tag"^^xsd:string ;
                obo:IAO_0000115 "A DICOM tag is an identifier that denotes a field used to store a value, which may be null, for an assay or other descriptive parameter of an assay object acquired using hardware or software that outputs data in a format that follows the DICOM standard."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 ;
-	       rdfs:subClassOf obo:IAO_00200000 .
+	       rdfs:subClassOf obo:IAO_0020000 .
 
 
 ###  http://purl.org/nidash/nidm#DICOMTagCollection
@@ -14895,7 +15748,7 @@ nidm:ExtracellularElectrophysiologyRecording rdf:type owl:Class ;
 ###  http://purl.org/nidash/nidm#ExVivo
 nidm:ExVivo rdf:type owl:Class ;
                rdfs:label "Ex Vivo" ;
-               obo:IAO_0000115 "Ex vivo is a organismal quality, usually used as an attribute of an Agent, that indicates that the Agent it describes was once part of a living organism, but has been removed."^^xsd:string ;
+               obo:IAO_0000115 "Ex vivo is a organismal quality, usually used as an attribute of a sample, that indicates that the organism it adheres to was once part of a living organism, but has been removed."^^xsd:string ;
 	       rdfs:comment "A common example is a tissue sample."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 ;
                rdfs:subClassOf obo:PATO_0001995 .
@@ -15030,7 +15883,7 @@ nidm:Gender rdf:type owl:Class ;
 ###  http://purl.org/nidash/nidm#Group
 nidm:Group rdf:type owl:Class ;
                rdfs:label "Group"^^xsd:string ;
-               obo:IAO_0000115 "A group is a collection of agents or entities formed by the assignment of membership through the selection of one or more common characteristics."^^xsd:string ;
+               obo:IAO_0000115 "A group is a collection of entities formed by the assignment of membership through the selection of one or more common characteristics."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 ;
                rdfs:subClassOf obo:BFO_0000027 .
 
@@ -15095,7 +15948,7 @@ nidm:InformedConsentInstrument rdf:type owl:Class ;
 ###  http://purl.org/nidash/nidm#InstrumentAdministrator
 nidm:InstrumentAdministrator rdf:type owl:Class ;
                rdfs:label "Instrument Administrator" ;
-               obo:IAO_0000115 "An instrument administrator is the role of an agent who/that either provides the instrument or collects the responses of the study participant to the contents of the instrument."^^xsd:string ;
+               obo:IAO_0000115 "An instrument administrator is the role of an entity who/that either provides the instrument or collects the responses of the study participant to the contents of the instrument."^^xsd:string ;
                rdfs:comment "The instrument administrator could either be a computer-based system or a person, hence the use of who/that. Common catagories of instruments are behavioral, clinical, or demographic instruments." ;
                obo:IAO_0000114 obo:IAO_0000428 ;
                rdfs:subClassOf obo:BFO_0000023 .
@@ -15104,7 +15957,7 @@ nidm:InstrumentAdministrator rdf:type owl:Class ;
 ###  http://purl.org/nidash/nidm#InstrumentUsageType
 nidm:InstrumentUsageType rdf:type owl:Class ;
                rdfs:label "Instrument Usage Type"^^xsd:string ;
-               obo:IAO_0000115 "Instrument Usage Type is an assay object quality that denotes to what purpose the assay object will be employed."^^xsd:string ;
+               obo:IAO_0000115 "Instrument Usage Type is an acquisition object quality that denotes to what purpose the assay object will be employed."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 ;
                rdfs:comment "Common instrument usage types are behavioral, clinical, and demographics, i.e., the instrument is used to record those types of data."^^xsd:string ;
                rdfs:subClassOf nidm:AcquisitionObjectQuality .
@@ -15138,7 +15991,7 @@ nidm:IntracranialElectroencephalography rdf:type owl:Class ;
 ###  http://purl.org/nidash/nidm#InVitro
 nidm:InVitro rdf:type owl:Class ;
                rdfs:label "In Vitro" ;
-               obo:IAO_0000115 "In vitro is a organismal quality, usually used as an attribute of an Agent, that indicates that the Agent it describes is outside of a living organism."^^xsd:string ;
+               obo:IAO_0000115 "In vitro is a organismal quality, usually used as an attribute of an organism, that indicates that the quality it describes adheres to a living organism."^^xsd:string ;
 	       rdfs:comment "A common example is a sample consisting of perfused cells."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 ;
                rdfs:subClassOf obo:PATO_0001995 .
@@ -15147,7 +16000,7 @@ nidm:InVitro rdf:type owl:Class ;
 ###  http://purl.org/nidash/nidm#InVivo
 nidm:InVivo rdf:type owl:Class ;
                rdfs:label "In Vivo" ;
-               obo:IAO_0000115 "In vivo is a organismal quality, usually used as an attribute of an Agent, that indicates that the Agent it describes is a living organism."^^xsd:string ;
+               obo:IAO_0000115 "In vivo is a organismal quality, usually used as an attribute of an organism, that indicates that the quality it describes adheres to a living organism."^^xsd:string ;
 	       rdfs:comment "A common example is a person."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 ;
                rdfs:subClassOf obo:PATO_0001995 .
@@ -15241,7 +16094,7 @@ nidm:Magnitude rdf:type owl:Class ;
 nidm:Manufacturer rdf:type owl:Class ;
               rdfs:label "Manufacturer" ;
               rdfs:subClassOf obo:BFO_0000023 ;
-              obo:IAO_0000115 "A manufacturer is a role for an agent, who may be a person or company, who creates an entity." ;
+              obo:IAO_0000115 "A manufacturer is a role for a person or company who creates an entity." ;
               obo:IAO_0000114 obo:IAO_0000428 .
 
 
@@ -15268,7 +16121,7 @@ nidm:NIDM_0000154 rdf:type owl:Class ;
 nidm:ModelDesigner rdf:type owl:Class ;
               rdfs:label "Model Designer" ;
               rdfs:subClassOf obo:BFO_0000023 ;
-              obo:IAO_0000115 "A model designer is a role for an agent who creates the model that describes an experiment" ;
+              obo:IAO_0000115 "A model designer is a role for an entity who creates the model that describes an experiment" ;
               obo:IAO_0000114 obo:IAO_0000428 .
 
 
@@ -15446,7 +16299,7 @@ nidm:PositronEmissionTomographyScanner rdf:type owl:Class ;
 nidm:PresentationSoftware rdf:type owl:Class ;
               rdfs:subClassOf obo:IAO_0000010 ;
               rdfs:label "Presentation Software"^^xsd:string ;
-              obo:IAO_0000115 "Presentation software is a software agent that provides the stimulus to the study participant during a functional imaging (MRI, MEG, EEG) or behavioral data assay process."^^xsd:string ;
+              obo:IAO_0000115 "Presentation software is software that provides the stimulus to the study participant during a functional imaging (MRI, MEG, EEG) or behavioral data assay process."^^xsd:string ;
               obo:IAO_0000114 obo:IAO_0000428 .
 
 
