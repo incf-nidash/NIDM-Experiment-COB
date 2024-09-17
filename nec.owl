@@ -1935,110 +1935,110 @@ obo:COB_0000511 rdf:type owl:DatatypeProperty ;
                 rdfs:seeAlso "https://github.com/OBOFoundry/COB/issues/35" .
 
 
-###  http://purl.org/nidash/nidm#bathSolution
-nidm:bathSolution rdf:type owl:DatatypeProperty ;
-               rdfs:label "Bath Solution"^^xsd:string ;
-               obo:IAO_0000115 "A bath solution is a property that associates a string describing the solution that engulfs a sample, with the acquisition object obtained from that sample."^^xsd:string ;
+###  http://purl.org/nidash/nidm#hasBathSolution
+nidm:hasBathSolution rdf:type owl:DatatypeProperty ;
+               rdfs:label "has bath solution"^^xsd:string ;
+               obo:IAO_0000115 "Has bath solution is a property that associates a string describing the solution that engulfs a sample, with the acquisition object obtained from that sample."^^xsd:string ;
                obo:IAO_0000116 "To be discussed"^^xsd:string .
 
 
-###  http://purl.org/nidash/nidm#cellType
-nidm:cellType rdf:type owl:DatatypeProperty ;
-               rdfs:label "Cell Type"^^xsd:string ;
-               obo:IAO_0000115 "Cell type is property that associates a string that is the name of the cells on which measurements are made, with an acquisition object."^^xsd:string ;
+###  http://purl.org/nidash/nidm#hasCellType
+nidm:hasCellType rdf:type owl:DatatypeProperty ;
+               rdfs:label "has cell type"^^xsd:string ;
+               obo:IAO_0000115 "Has cell type is property that associates a string that is the name of the cells on which measurements are made, with an acquisition object."^^xsd:string ;
                obo:IAO_0000116 "To be discussed"^^xsd:string .
 
 
-###  http://purl.org/nidash/nidm#channelNumber
-nidm:channelNumber rdf:type owl:DatatypeProperty ;
-               rdfs:label "Channel Number"^^xsd:string ;
-               obo:IAO_0000115 "Channel number is property that associates the numeric label of a data acquisition channel of a device to the acquisition object that was acquired using that device."^^xsd:string ;
+###  http://purl.org/nidash/nidm#hasChannelNumber
+nidm:hasChannelNumber rdf:type owl:DatatypeProperty ;
+               rdfs:label "has channel number"^^xsd:string ;
+               obo:IAO_0000115 "Has channel number is property that associates the numeric label of a data acquisition channel of a device to the acquisition object that was acquired using that device."^^xsd:string ;
                obo:IAO_0000116 "To be discussed"^^xsd:string .
 
 
-###  http://purl.org/nidash/nidm#electrodeImpedance
-nidm:electrodeImpedance rdf:type owl:DatatypeProperty ;
-               rdfs:label "Electrode Impedance"^^xsd:string ;
-               obo:IAO_0000115 "Electrode impedance is property that associates the numeric value of the ratio of the voltage across the electrodes to the measured AC current (impedance) with the acquisition object that was acquired."^^xsd:string ;
+###  http://purl.org/nidash/nidm#hasElectrodeImpedance
+nidm:hasElectrodeImpedance rdf:type owl:DatatypeProperty ;
+               rdfs:label "has electrode impedance"^^xsd:string ;
+               obo:IAO_0000115 "Has electrode impedance is property that associates the numeric value of the ratio of the voltage across the electrodes to the measured AC current (impedance) with the acquisition object that was acquired."^^xsd:string ;
                obo:IAO_0000116 "To be discussed"^^xsd:string .
 
 
-###  http://purl.org/nidash/nidm#hadFilePath
-nidm:hadFilePath rdf:type owl:DatatypeProperty ;             
-               rdfs:label "had File Path"^^xsd:string ;
-               obo:IAO_0000115 "Had file path is a datatype property that associates a file on a computor storage volume with the string containing the location of that file on the computer storage volume."^^xsd:string ;
+###  http://purl.org/nidash/nidm#hasFilePath
+nidm:hasFilePath rdf:type owl:DatatypeProperty ;             
+               rdfs:label "had file path"^^xsd:string ;
+               obo:IAO_0000115 "Has file path is a datatype property that associates a file on a computor storage volume with the string containing the location of that file on the computer storage volume."^^xsd:string ;
                obo:IAO_0000116 "To be discussed"^^xsd:string .
 
 
-###  http://purl.org/nidash/nidm#hadNumericalValue
-nidm:hadNumericalValue rdf:type owl:DatatypeProperty ;
-               rdfs:label "had Numerical Value"^^xsd:string ;
-               obo:IAO_0000115 "Had numerical value is a property that associates a number measured, calculated, or assigned with a variable."^^xsd:string ;
+###  http://purl.org/nidash/nidm#hasNumericalValue
+nidm:hasNumericalValue rdf:type owl:DatatypeProperty ;
+               rdfs:label "has Numerical Value"^^xsd:string ;
+               obo:IAO_0000115 "Has numerical value is a property that associates a number measured, calculated, or assigned with a variable."^^xsd:string ;
 	       rdfs:comment "This may not be necessary depending upon the level of detail of other datatype properties. For example, if, for each variable calculated in an analysis, there is a separate property, e.g., hadHippocampalVolume, then this property may not be needed." ;
                obo:IAO_0000116 "To be discussed"^^xsd:string .
 
 
-###  http://purl.org/nidash/nidm#hadPath
-nidm:hadPath rdf:type owl:DatatypeProperty ;
-               rdfs:label "had Path"^^xsd:string ;
-               obo:IAO_0000115 "Had path is a datatype property that associates an entity on a computor storage volume with the string containing the location of that entity on the computer storage volume."^^xsd:string ;
+###  http://purl.org/nidash/nidm#hasPath
+nidm:hasPath rdf:type owl:DatatypeProperty ;
+               rdfs:label "has Path"^^xsd:string ;
+               obo:IAO_0000115 "Has path is a datatype property that associates an entity on a computor storage volume with the string containing the location of that entity on the computer storage volume."^^xsd:string ;
 	        rdfs:comment "This can be used for entities other than files, such as folders and symbolic links."^^xsd:string ;
                obo:IAO_0000116 "To be discussed"^^xsd:string .
 
 
-###  http://purl.org/nidash/nidm#groupLabel
-nidm:groupLabel rdf:type owl:DatatypeProperty ;
-               rdfs:label "Group Label"^^xsd:string ;
-               obo:IAO_0000115 "Group label is a property that associates the label used to denote membership in a particular collection with a person or sample."^^xsd:string ;
+###  http://purl.org/nidash/nidm#hasGroupLabel
+nidm:hasGroupLabel rdf:type owl:DatatypeProperty ;
+               rdfs:label "has group label"^^xsd:string ;
+               obo:IAO_0000115 "Has group label is a property that associates the label used to denote membership in a particular collection with a person or sample."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 .
 
 
-###  http://purl.org/nidash/nidm#hollowElectrodeSolution
-nidm:hollowElectrodeSolution rdf:type owl:DatatypeProperty ;
-               rdfs:label "Hollow Electrode Solution"^^xsd:string ;
+###  http://purl.org/nidash/nidm#hasHollowElectrodeSolution
+nidm:hasHollowElectrodeSolution rdf:type owl:DatatypeProperty ;
+               rdfs:label "has hollow electrode solution"^^xsd:string ;
                obo:IAO_0000115 "A hollow electrode solution is a property that associates a string describing the solution that is placed in a hollow electrode used to make an electrophysiology measurement with the acquisition object obtained from that sample."^^xsd:string ;
                obo:IAO_0000116 "To be discussed"^^xsd:string .
 
 
-###  http://purl.org/nidash/nidm#hadImageContrastType
-nidm:hadImageContrastType rdf:type owl:DatatypeProperty ;
-               rdfs:label "had Image Contrast Type"^^xsd:string ;
-               obo:IAO_0000115 "Had image contrast type is a property that associates a string that describes the physical parameter that was manipulated to achieve the contrast of a given image with that image acquisition object."^^xsd:string ;
+###  http://purl.org/nidash/nidm#hasImageContrastType
+nidm:hasImageContrastType rdf:type owl:DatatypeProperty ;
+               rdfs:label "has Image Contrast Type"^^xsd:string ;
+               obo:IAO_0000115 "Has image contrast type is a property that associates a string that describes the physical parameter that was manipulated to achieve the contrast of a given image with that image acquisition object."^^xsd:string ;
                obo:IAO_0000116 "To be discussed"^^xsd:string .
 
 
-###  http://purl.org/nidash/nidm#hadImageUsageType
-nidm:hadImageUsageType rdf:type owl:DatatypeProperty ;
-               rdfs:label "had Image Usage Type"^^xsd:string ;
-               obo:IAO_0000115 "Had Image usage type is a property that associates a string that describes the purpose for which an image was acquired with the image acquisition object."^^xsd:string ;
+###  http://purl.org/nidash/nidm#hasImageUsageType
+nidm:hasImageUsageType rdf:type owl:DatatypeProperty ;
+               rdfs:label "has Image Usage Type"^^xsd:string ;
+               obo:IAO_0000115 "Has Image usage type is a property that associates a string that describes the purpose for which an image was acquired with the image acquisition object."^^xsd:string ;
                obo:IAO_0000116 "To be discussed"^^xsd:string .
 
 
-###  http://purl.org/nidash/nidm#numberOfChannels
-nidm:numberOfChannels rdf:type owl:DatatypeProperty ;
-               rdfs:label "Number Of Channels"^^xsd:string ;
-               obo:IAO_0000115 "Number of channels is a property that associates the number of data acquisition meassurenments concurrently acquired by an assay device to the data acquisition object acquired by that device."^^xsd:string ;
+###  http://purl.org/nidash/nidm#hasNumberOfChannels
+nidm:hasNumberOfChannels rdf:type owl:DatatypeProperty ;
+               rdfs:label "has number Of channels"^^xsd:string ;
+               obo:IAO_0000115 "Has number of channels is a property that associates the number of data acquisition meassurenments concurrently acquired by an assay device to the data acquisition object acquired by that device."^^xsd:string ;
                obo:IAO_0000116 "To be discussed"^^xsd:string .
 
    
-###  http://purl.org/nidash/nidm#appliedFilter
-nidm:appliedFilter rdf:type owl:DatatypeProperty ;
-               rdfs:label "Applied Filter"^^xsd:string ;
-               obo:IAO_0000115 "Applied filter is a property that associates the string name of the filter type used to remove or modify certain components of the input signal with a data acquisition object that includes that signal."^^xsd:string ;
+###  http://purl.org/nidash/nidm#hasAppliedFilter
+nidm:hasAppliedFilter rdf:type owl:DatatypeProperty ;
+               rdfs:label "has applied filter"^^xsd:string ;
+               obo:IAO_0000115 "Has applied filter is a property that associates the string name of the filter type used to remove or modify certain components of the input signal with a data acquisition object that includes that signal."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 .
 
     
-###  http://purl.org/nidash/nidm#solutionFlowSpeed
-nidm:solutionFlowSpeed rdf:type owl:DatatypeProperty ;
-               rdfs:label "Solution Flow Speed"^^xsd:string ;
-               obo:IAO_0000115 "Solution flow speed is a property that associates the value of the speed at which the bathing solution moves across the sample with an acquisition object."^^xsd:string ;
+###  http://purl.org/nidash/nidm#hasSolutionFlowSpeed
+nidm:hasSolutionFlowSpeed rdf:type owl:DatatypeProperty ;
+               rdfs:label "has solution flow speed"^^xsd:string ;
+               obo:IAO_0000115 "Has solution flow speed is a property that associates the value of the speed at which the bathing solution moves across the sample with an acquisition object."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 .
            
 
-###  http://purl.org/nidash/nidm#recordingLocation
-nidm:recordingLocation rdf:type owl:DatatypeProperty ;
-               rdfs:label "Recording Location"^^xsd:string ;
-               obo:IAO_0000115 "Recording location is a property that associates a string that describes the anatomical location at which the electrophysiological measurement was made with an acquisition object."^^xsd:string ;
+###  http://purl.org/nidash/nidm#hasRecordingLocation
+nidm:hasRecordingLocation rdf:type owl:DatatypeProperty ;
+               rdfs:label "has recording location"^^xsd:string ;
+               obo:IAO_0000115 "Has recording location is a property that associates a string that describes the anatomical location at which the electrophysiological measurement was made with an acquisition object."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 .
 
 
@@ -2048,7 +2048,6 @@ nidm:DICOMTag rdf:type owl:DatatypeProperty ;
                obo:IAO_0000115 "DICOM tag is a property that associates a string that denotes a specific DICOM standard tag identifier with a data acquisition object."^^xsd:string ;
 	       	       rdfs:comment "This property is only here so that the large number of DICOM tag datatype properties are not at the same graph level as the much smaller number of datatype properties, which makes non-DICOM tag properties hard to find." ;
                obo:IAO_0000114 obo:IAO_0000428 .
-
 
 
 ###  http://purl.obolibrary.org/obo/OBI_0001937
@@ -2654,6 +2653,9 @@ obo:CHEBI_50860 rdf:type owl:Class ;
 ##########################################################################
 ### Misc Classes
 ##########################################################################
+
+##  http://www.w3.org/2002/07/owl#Thing
+owl:Thing rdf:type owl:Class .
 
 
 ###  http://purl.obolibrary.org/obo/OMIABIS_0000050
@@ -15387,9 +15389,6 @@ obo:UO_0000280 rdf:type owl:Class ;
                obo:IAO_0000412 obo:uo.owl ;
                rdfs:label "rate unit" .
 
-
-##  http://www.w3.org/2002/07/owl#Thing
-owl:Thing rdf:type owl:Class .
 
 #####################################################################
 ###  NIDM Classes
