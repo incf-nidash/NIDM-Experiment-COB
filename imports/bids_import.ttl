@@ -330,7 +330,7 @@ bids:Manufacturer rdf:type owl:DatatypeProperty ;
 
             owl:sameAs dicom:dicom_00080070 ;
 
-            obo:IAO_0000136 sio:SIO_000956 ;
+            obo:IAO_0000136 OBI_0000968 ;
 
             obo:IAO_0000116 "To be discussed"^^xsd:string .
 
@@ -348,7 +348,7 @@ bids:ManufacturersModelName rdf:type owl:DatatypeProperty ;
 
             owl:sameAs dicom:dicom_00081090 ;
 
-            obo:IAO_0000136 sio:SIO_000956 ;
+            obo:IAO_0000136 OBI_0000968 ;
 
             obo:IAO_0000116 "To be discussed"^^xsd:string .
 
@@ -366,7 +366,7 @@ bids:DeviceSerialNumber rdf:type owl:DatatypeProperty ;
 
             owl:sameAs dicom:dicom_00181000 ;
 
-            obo:IAO_0000136 sio:SIO_000956 ;
+            obo:IAO_0000136 OBI_0000968 ;
 
             obo:IAO_0000116 "To be discussed"^^xsd:string .
 
