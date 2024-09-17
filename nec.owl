@@ -1935,110 +1935,110 @@ obo:COB_0000511 rdf:type owl:DatatypeProperty ;
                 rdfs:seeAlso "https://github.com/OBOFoundry/COB/issues/35" .
 
 
-###  http://purl.org/nidash/nidm#bathSolution
-nidm:bathSolution rdf:type owl:DatatypeProperty ;
-               rdfs:label "Bath Solution"^^xsd:string ;
-               obo:IAO_0000115 "A bath solution is a property that associates a string describing the solution that engulfs a sample, with the acquisition object obtained from that sample."^^xsd:string ;
+###  http://purl.org/nidash/nidm#hasBathSolution
+nidm:hasBathSolution rdf:type owl:DatatypeProperty ;
+               rdfs:label "has bath solution"^^xsd:string ;
+               obo:IAO_0000115 "Has bath solution is a property that associates a string describing the solution that engulfs a sample, with the acquisition object obtained from that sample."^^xsd:string ;
                obo:IAO_0000116 "To be discussed"^^xsd:string .
 
 
-###  http://purl.org/nidash/nidm#cellType
-nidm:cellType rdf:type owl:DatatypeProperty ;
-               rdfs:label "Cell Type"^^xsd:string ;
-               obo:IAO_0000115 "Cell type is property that associates a string that is the name of the cells on which measurements are made, with an acquisition object."^^xsd:string ;
+###  http://purl.org/nidash/nidm#hasCellType
+nidm:hasCellType rdf:type owl:DatatypeProperty ;
+               rdfs:label "has cell type"^^xsd:string ;
+               obo:IAO_0000115 "Has cell type is property that associates a string that is the name of the cells on which measurements are made, with an acquisition object."^^xsd:string ;
                obo:IAO_0000116 "To be discussed"^^xsd:string .
 
 
-###  http://purl.org/nidash/nidm#channelNumber
-nidm:channelNumber rdf:type owl:DatatypeProperty ;
-               rdfs:label "Channel Number"^^xsd:string ;
-               obo:IAO_0000115 "Channel number is property that associates the numeric label of a data acquisition channel of a device to the acquisition object that was acquired using that device."^^xsd:string ;
+###  http://purl.org/nidash/nidm#hasChannelNumber
+nidm:hasChannelNumber rdf:type owl:DatatypeProperty ;
+               rdfs:label "has channel number"^^xsd:string ;
+               obo:IAO_0000115 "Has channel number is property that associates the numeric label of a data acquisition channel of a device to the acquisition object that was acquired using that device."^^xsd:string ;
                obo:IAO_0000116 "To be discussed"^^xsd:string .
 
 
-###  http://purl.org/nidash/nidm#electrodeImpedance
-nidm:electrodeImpedance rdf:type owl:DatatypeProperty ;
-               rdfs:label "Electrode Impedance"^^xsd:string ;
-               obo:IAO_0000115 "Electrode impedance is property that associates the numeric value of the ratio of the voltage across the electrodes to the measured AC current (impedance) with the acquisition object that was acquired."^^xsd:string ;
+###  http://purl.org/nidash/nidm#hasElectrodeImpedance
+nidm:hasElectrodeImpedance rdf:type owl:DatatypeProperty ;
+               rdfs:label "has electrode impedance"^^xsd:string ;
+               obo:IAO_0000115 "Has electrode impedance is property that associates the numeric value of the ratio of the voltage across the electrodes to the measured AC current (impedance) with the acquisition object that was acquired."^^xsd:string ;
                obo:IAO_0000116 "To be discussed"^^xsd:string .
 
 
-###  http://purl.org/nidash/nidm#hadFilePath
-nidm:hadFilePath rdf:type owl:DatatypeProperty ;             
-               rdfs:label "had File Path"^^xsd:string ;
-               obo:IAO_0000115 "Had file path is a datatype property that associates a file on a computor storage volume with the string containing the location of that file on the computer storage volume."^^xsd:string ;
+###  http://purl.org/nidash/nidm#hasFilePath
+nidm:hasFilePath rdf:type owl:DatatypeProperty ;             
+               rdfs:label "had file path"^^xsd:string ;
+               obo:IAO_0000115 "Has file path is a datatype property that associates a file on a computor storage volume with the string containing the location of that file on the computer storage volume."^^xsd:string ;
                obo:IAO_0000116 "To be discussed"^^xsd:string .
 
 
-###  http://purl.org/nidash/nidm#hadNumericalValue
-nidm:hadNumericalValue rdf:type owl:DatatypeProperty ;
-               rdfs:label "had Numerical Value"^^xsd:string ;
-               obo:IAO_0000115 "Had numerical value is a property that associates a number measured, calculated, or assigned with a variable."^^xsd:string ;
+###  http://purl.org/nidash/nidm#hasNumericalValue
+nidm:hasNumericalValue rdf:type owl:DatatypeProperty ;
+               rdfs:label "has Numerical Value"^^xsd:string ;
+               obo:IAO_0000115 "Has numerical value is a property that associates a number measured, calculated, or assigned with a variable."^^xsd:string ;
 	       rdfs:comment "This may not be necessary depending upon the level of detail of other datatype properties. For example, if, for each variable calculated in an analysis, there is a separate property, e.g., hadHippocampalVolume, then this property may not be needed." ;
                obo:IAO_0000116 "To be discussed"^^xsd:string .
 
 
-###  http://purl.org/nidash/nidm#hadPath
-nidm:hadPath rdf:type owl:DatatypeProperty ;
-               rdfs:label "had Path"^^xsd:string ;
-               obo:IAO_0000115 "Had path is a datatype property that associates an entity on a computor storage volume with the string containing the location of that entity on the computer storage volume."^^xsd:string ;
+###  http://purl.org/nidash/nidm#hasPath
+nidm:hasPath rdf:type owl:DatatypeProperty ;
+               rdfs:label "has Path"^^xsd:string ;
+               obo:IAO_0000115 "Has path is a datatype property that associates an entity on a computor storage volume with the string containing the location of that entity on the computer storage volume."^^xsd:string ;
 	        rdfs:comment "This can be used for entities other than files, such as folders and symbolic links."^^xsd:string ;
                obo:IAO_0000116 "To be discussed"^^xsd:string .
 
 
-###  http://purl.org/nidash/nidm#groupLabel
-nidm:groupLabel rdf:type owl:DatatypeProperty ;
-               rdfs:label "Group Label"^^xsd:string ;
-               obo:IAO_0000115 "Group label is a property that associates the label used to denote membership in a particular collection with a person or sample."^^xsd:string ;
+###  http://purl.org/nidash/nidm#hasGroupLabel
+nidm:hasGroupLabel rdf:type owl:DatatypeProperty ;
+               rdfs:label "has group label"^^xsd:string ;
+               obo:IAO_0000115 "Has group label is a property that associates the label used to denote membership in a particular collection with a person or sample."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 .
 
 
-###  http://purl.org/nidash/nidm#hollowElectrodeSolution
-nidm:hollowElectrodeSolution rdf:type owl:DatatypeProperty ;
-               rdfs:label "Hollow Electrode Solution"^^xsd:string ;
+###  http://purl.org/nidash/nidm#hasHollowElectrodeSolution
+nidm:hasHollowElectrodeSolution rdf:type owl:DatatypeProperty ;
+               rdfs:label "has hollow electrode solution"^^xsd:string ;
                obo:IAO_0000115 "A hollow electrode solution is a property that associates a string describing the solution that is placed in a hollow electrode used to make an electrophysiology measurement with the acquisition object obtained from that sample."^^xsd:string ;
                obo:IAO_0000116 "To be discussed"^^xsd:string .
 
 
-###  http://purl.org/nidash/nidm#hadImageContrastType
-nidm:hadImageContrastType rdf:type owl:DatatypeProperty ;
-               rdfs:label "had Image Contrast Type"^^xsd:string ;
-               obo:IAO_0000115 "Had image contrast type is a property that associates a string that describes the physical parameter that was manipulated to achieve the contrast of a given image with that image acquisition object."^^xsd:string ;
+###  http://purl.org/nidash/nidm#hasImageContrastType
+nidm:hasImageContrastType rdf:type owl:DatatypeProperty ;
+               rdfs:label "has Image Contrast Type"^^xsd:string ;
+               obo:IAO_0000115 "Has image contrast type is a property that associates a string that describes the physical parameter that was manipulated to achieve the contrast of a given image with that image acquisition object."^^xsd:string ;
                obo:IAO_0000116 "To be discussed"^^xsd:string .
 
 
-###  http://purl.org/nidash/nidm#hadImageUsageType
-nidm:hadImageUsageType rdf:type owl:DatatypeProperty ;
-               rdfs:label "had Image Usage Type"^^xsd:string ;
-               obo:IAO_0000115 "Had Image usage type is a property that associates a string that describes the purpose for which an image was acquired with the image acquisition object."^^xsd:string ;
+###  http://purl.org/nidash/nidm#hasImageUsageType
+nidm:hasImageUsageType rdf:type owl:DatatypeProperty ;
+               rdfs:label "has Image Usage Type"^^xsd:string ;
+               obo:IAO_0000115 "Has Image usage type is a property that associates a string that describes the purpose for which an image was acquired with the image acquisition object."^^xsd:string ;
                obo:IAO_0000116 "To be discussed"^^xsd:string .
 
 
-###  http://purl.org/nidash/nidm#numberOfChannels
-nidm:numberOfChannels rdf:type owl:DatatypeProperty ;
-               rdfs:label "Number Of Channels"^^xsd:string ;
-               obo:IAO_0000115 "Number of channels is a property that associates the number of data acquisition meassurenments concurrently acquired by an assay device to the data acquisition object acquired by that device."^^xsd:string ;
+###  http://purl.org/nidash/nidm#hasNumberOfChannels
+nidm:hasNumberOfChannels rdf:type owl:DatatypeProperty ;
+               rdfs:label "has number Of channels"^^xsd:string ;
+               obo:IAO_0000115 "Has number of channels is a property that associates the number of data acquisition meassurenments concurrently acquired by an assay device to the data acquisition object acquired by that device."^^xsd:string ;
                obo:IAO_0000116 "To be discussed"^^xsd:string .
 
    
-###  http://purl.org/nidash/nidm#appliedFilter
-nidm:appliedFilter rdf:type owl:DatatypeProperty ;
-               rdfs:label "Applied Filter"^^xsd:string ;
-               obo:IAO_0000115 "Applied filter is a property that associates the string name of the filter type used to remove or modify certain components of the input signal with a data acquisition object that includes that signal."^^xsd:string ;
+###  http://purl.org/nidash/nidm#hasAppliedFilter
+nidm:hasAppliedFilter rdf:type owl:DatatypeProperty ;
+               rdfs:label "has applied filter"^^xsd:string ;
+               obo:IAO_0000115 "Has applied filter is a property that associates the string name of the filter type used to remove or modify certain components of the input signal with a data acquisition object that includes that signal."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 .
 
     
-###  http://purl.org/nidash/nidm#solutionFlowSpeed
-nidm:solutionFlowSpeed rdf:type owl:DatatypeProperty ;
-               rdfs:label "Solution Flow Speed"^^xsd:string ;
-               obo:IAO_0000115 "Solution flow speed is a property that associates the value of the speed at which the bathing solution moves across the sample with an acquisition object."^^xsd:string ;
+###  http://purl.org/nidash/nidm#hasSolutionFlowSpeed
+nidm:hasSolutionFlowSpeed rdf:type owl:DatatypeProperty ;
+               rdfs:label "has solution flow speed"^^xsd:string ;
+               obo:IAO_0000115 "Has solution flow speed is a property that associates the value of the speed at which the bathing solution moves across the sample with an acquisition object."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 .
            
 
-###  http://purl.org/nidash/nidm#recordingLocation
-nidm:recordingLocation rdf:type owl:DatatypeProperty ;
-               rdfs:label "Recording Location"^^xsd:string ;
-               obo:IAO_0000115 "Recording location is a property that associates a string that describes the anatomical location at which the electrophysiological measurement was made with an acquisition object."^^xsd:string ;
+###  http://purl.org/nidash/nidm#hasRecordingLocation
+nidm:hasRecordingLocation rdf:type owl:DatatypeProperty ;
+               rdfs:label "has recording location"^^xsd:string ;
+               obo:IAO_0000115 "Has recording location is a property that associates a string that describes the anatomical location at which the electrophysiological measurement was made with an acquisition object."^^xsd:string ;
                obo:IAO_0000114 obo:IAO_0000428 .
 
 
@@ -2049,6 +2049,12 @@ nidm:DICOMTag rdf:type owl:DatatypeProperty ;
 	       	       rdfs:comment "This property is only here so that the large number of DICOM tag datatype properties are not at the same graph level as the much smaller number of datatype properties, which makes non-DICOM tag properties hard to find." ;
                obo:IAO_0000114 obo:IAO_0000428 .
 
+
+###  http://purl.org/nidash/nidm#hasUnit
+nidm:hasUnit rdf:type owl:DatatypeProperty ;
+               rdfs:label "has unit"^^xsd:string ;
+               obo:IAO_0000115 "Has unit is a property that associates a string that denotes the units used to report a quantitative variable with the variable."^^xsd:string ;
+               obo:IAO_0000114 obo:IAO_0000428 .
 
 
 ###  http://purl.obolibrary.org/obo/OBI_0001937
@@ -2655,6 +2661,54 @@ obo:CHEBI_50860 rdf:type owl:Class ;
 ### Misc Classes
 ##########################################################################
 
+##  http://www.w3.org/2002/07/owl#Thing
+owl:Thing rdf:type owl:Class .
+
+
+##  http://purl.obolibrary.org/obo/OGMS_0000015
+obo:OGMS_0000015 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:IAO_0000030 ;
+                 obo:IAO_0000111 "clinical history" ;
+                 obo:IAO_0000115 "A series of statements representing health-relevant qualities of a patient and of a patient's family."@en ;
+                 obo:IAO_0000412 obo:ogms.owl ;
+                 rdfs:label "clinical history" .
+
+
+###  http://purl.obolibrary.org/obo/OGMS_0000023
+obo:OGMS_0000023 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:BFO_0000019 ;
+                 obo:IAO_0000111 "phenotype" ;
+                 obo:IAO_0000115 "A (combination of) quality(ies) of an organism determined by the interaction of its genetic make-up and environment that differentiates specific instances of a species from other instances of the same species."@en ;
+                 obo:IAO_0000412 obo:ogms.owl ;
+                 rdfs:label "phenotype" .
+
+
+###  http://purl.obolibrary.org/obo/OGMS_0000031
+obo:OGMS_0000031 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:BFO_0000016 ;
+                 obo:IAO_0000111 "disease" ;
+                 obo:IAO_0000115 "A disposition (i) to undergo pathological processes that (ii) exists in an organism because of one or more disorders in that organism."@en ;
+                 obo:IAO_0000412 obo:ogms.owl ;
+                 rdfs:label "disease" .
+
+
+##  http://purl.obolibrary.org/obo/OGMS_0000073
+obo:OGMS_0000073 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:IAO_0000027 ;
+                 obo:IAO_0000111 "diagnosis" ;
+                 obo:IAO_0000115 "The representation of a conclusion of a diagnostic process."@en ;
+                 obo:IAO_0000412 obo:ogms.owl ;
+                 rdfs:label "diagnosis" .
+
+
+###  http://purl.obolibrary.org/obo/OGMS_0000090
+obo:OGMS_0000090 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:OBI_0000011 ;
+                 obo:IAO_0000111 "treatment" ;
+                 obo:IAO_0000115 "A planned process whose completion is hypothesized by a health care provider to eliminate, prevent, or alleviate a disorder, the signs and symptoms of a disorder, or a pathological process"@en ;
+                 obo:IAO_0000412 obo:ogms.owl ;
+                 rdfs:label "treatment" .
+
 
 ###  http://purl.obolibrary.org/obo/OMIABIS_0000050
 obo:OMIABIS_0000050 rdf:type owl:Class ;
@@ -2831,6 +2885,37 @@ obo:OGMS_0000073 rdf:type owl:Class ;
                  rdfs:subClassOf obo:IAO_0000030 ;
                  rdfs:label "disease diagnosis" .
 
+
+###  http://purl.obolibrary.org/obo/RO_0001901
+obo:RO_0001901 rdf:type owl:NamedIndividual ;
+               obo:IAO_0000115 """## Elucidation
+
+This is used when the statement/axiom is assumed to hold true &apos;eternally&apos;
+
+## How to interpret (informal)
+
+First the &quot;atemporal&quot; FOL is derived from the OWL using the standard
+interpretation. This axiom is temporalized by embedding the axiom
+within a for-all-times quantified sentence. The t argument is added to
+all instantiation predicates and predicates that use this relation.
+
+## Example
+
+    Class: nucleus
+    SubClassOf: part_of some cell
+
+    forall t :
+      forall n :
+        instance_of(n,Nucleus,t)
+         implies
+        exists c :
+          instance_of(c,Cell,t)
+          part_of(n,c,t)
+
+## Notes
+
+This interpretation is *not* the same as an at-all-times relation""" ;
+               rdfs:label "axiom holds for all times"@en .
 
 #################################################################
 ### NCBITaxon Classes
@@ -3058,6 +3143,27 @@ obo:PATO_0000033 rdf:type owl:Class ;
                  rdfs:label "concentration of" .
 
 
+###  http://purl.obolibrary.org/obo/PATO_0000040
+obo:PATO_0000040 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:PATO_0001018 ;
+                 obo:IAO_0000115 "A quality that is the extent of space between two entities." ;
+                 oboInOwl:hasOBONamespace "quality" ;
+                 oboInOwl:id "PATO:0000040" ;
+                 oboInOwl:inSubset pato:attribute_slim ,
+                                   pato:relational_slim ,
+                                   pato:scalar_slim ;
+                 rdfs:label "distance" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0000047
+obo:PATO_0000047 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:PATO_0001995 ;
+                 obo:IAO_0000111 "biological sex" ;
+                 obo:IAO_0000115 "An organismal quality inhering in a bearer by virtue of the bearer's ability to undergo sexual reproduction in order to differentiate the individuals or types involved." ;
+                 obo:IAO_0000412 obo:pato.owl ;
+                 rdfs:label "biological sex" .
+
+
 ###  http://purl.obolibrary.org/obo/PATO_0000051
 obo:PATO_0000051 rdf:type owl:Class ;
                  rdfs:subClassOf obo:PATO_0001241 ;
@@ -3077,6 +3183,14 @@ obo:PATO_0000117 rdf:type owl:Class ;
                  oboInOwl:inSubset pato:attribute_slim ,
                                    pato:scalar_slim ;
                  rdfs:label "size" .
+
+###  http://purl.obolibrary.org/obo/PATO_0000122
+obo:PATO_0000122 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:PATO_0000051 ;
+                 obo:IAO_0000111 "length" ;
+                 obo:IAO_0000115 "A 1-D extent quality which is equal to the distance between two points." ;
+                 obo:IAO_0000412 obo:pato.owl ;
+                 rdfs:label "length" .
 
 
 ###  http://purl.obolibrary.org/obo/PATO_0000125
@@ -3104,6 +3218,33 @@ obo:PATO_0000140 rdf:type owl:Class ;
                  rdfs:label "position" .
 
 
+###  http://purl.obolibrary.org/obo/PATO_0000141
+obo:PATO_0000141 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:PATO_0000051 ;
+                 obo:IAO_0000111 "structure" ;
+                 obo:IAO_0000115 "A morphology quality inhering in a bearer by virtue of the bearer's relative position, shape, arrangements and connectivity of an organism's various parts; the pattern underlying its form." ;
+                 obo:IAO_0000412 obo:pato.owl ;
+                 rdfs:label "structure" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0000146
+obo:PATO_0000146 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:PATO_0001018 ;
+                 obo:IAO_0000111 "temperature" ;
+                 obo:IAO_0000115 "A physical quality of the thermal energy of a system." ;
+                 obo:IAO_0000412 obo:pato.owl ;
+                 rdfs:label "temperature" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0000165
+obo:PATO_0000165 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:PATO_0001018 ;
+                 obo:IAO_0000111 "time" ;
+                 obo:IAO_0000115 "A quality in which events occur in sequence." ;
+                 obo:IAO_0000412 obo:pato.owl ;
+                 rdfs:label "time" .
+
+
 ###  http://purl.obolibrary.org/obo/PATO_0000169
 obo:PATO_0000169 rdf:type owl:Class ;
                  rdfs:subClassOf obo:PATO_0001995 ;
@@ -3124,6 +3265,33 @@ obo:PATO_0000186 rdf:type owl:Class ;
                  oboInOwl:hasOBONamespace "quality" ;
                  oboInOwl:id "PATO:0000186" ;
                  rdfs:label "behavioral quality" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0000383
+obo:PATO_0000383 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:PATO_0001894 ;
+                 obo:IAO_0000111 "female" ;
+                 obo:IAO_0000115 "A biological sex quality inhering in an individual or a population that only produces gametes that can be fertilised by male gametes." ;
+                 obo:IAO_0000412 obo:pato.owl ;
+                 rdfs:label "female" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0000384
+obo:PATO_0000384 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:PATO_0001894 ;
+                 obo:IAO_0000111 "male" ;
+                 obo:IAO_0000115 "A biological sex quality inhering in an individual or a population whose sex organs contain only male gametes." ;
+                 obo:IAO_0000412 obo:pato.owl ;
+                 rdfs:label "male" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0000918
+obo:PATO_0000918 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:PATO_0001710 ;
+                 obo:IAO_0000111 "volume" ;
+                 obo:IAO_0000115 "A 3-D extent quality inhering in a bearer by virtue of the bearer's amount of 3-dimensional space it occupies." ;
+                 obo:IAO_0000412 obo:pato.owl ;
+                 rdfs:label "volume" .
 
 
 ###  http://purl.obolibrary.org/obo/PATO_0001018
@@ -3150,6 +3318,24 @@ obo:PATO_0001193 rdf:type owl:Class ;
                                    pato:relational_slim ,
                                    pato:value_slim ;
                  rdfs:label "lateral to" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0001196
+obo:PATO_0001196 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:PATO_0000140 ;
+                 obo:IAO_0000111 "ventral to" ;
+                 obo:IAO_0000115 "A spatial quality inhering in a bearer by virtue of the bearer's being located toward the abdomen of an organism relative to another entity." ;
+                 obo:IAO_0000412 obo:pato.owl ;
+                 rdfs:label "ventral to" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0001233
+obo:PATO_0001233 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:PATO_0000140 ;
+                 obo:IAO_0000111 "dorsal to" ;
+                 obo:IAO_0000115 "A spatial quality inhering in a bearer by virtue of the bearer's being located toward the back or upper surface of an organism relative to another entity." ;
+                 obo:IAO_0000412 obo:pato.owl ;
+                 rdfs:label "dorsal to" .
 
 
 ###  http://purl.obolibrary.org/obo/PATO_0001236
@@ -3244,6 +3430,52 @@ obo:PATO_0001546 rdf:type owl:Class ;
                  rdfs:label "quality of a solid" .
 
 
+###  http://purl.obolibrary.org/obo/PATO_0001547
+obo:PATO_0001547 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:PATO_0002198 ;
+                 obo:IAO_0000111 "quality of a gas" ;
+                 obo:IAO_0000115 "A physical quality inhering in a bearer by virtue of the bearer's exhibiting the physical characteristics of an entity consisting of particles that have neither a defined volume nor defined shape." ;
+                 obo:IAO_0000412 obo:pato.owl ;
+                 rdfs:label "quality of a gas" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0001548
+obo:PATO_0001548 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:PATO_0002198 ;
+                 obo:IAO_0000111 "quality of a liquid" ;
+                 obo:IAO_0000115 "A physical quality inhering in an entity exhibiting the physical characteristics of an amorphous (non-crystalline) form of matter between a gas and a solid that has a definite volume, but no definite shape." ;
+                 obo:IAO_0000412 obo:pato.owl ;
+                 rdfs:label "quality of a liquid" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0001574
+obo:PATO_0001574 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:PATO_0001906 ;
+                 obo:IAO_0000111 "flow rate" ;
+                 obo:IAO_0000115 "A physical quality inhering in a bearer by virtue of the bearer's motion characteristic." ;
+                 obo:IAO_0000412 obo:pato.owl ;
+                 rdfs:label "flow rate" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0001632
+obo:PATO_0001632 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:PATO_0000140 ;
+                 obo:IAO_0000111 "anterior to" ;
+                 obo:IAO_0000115 "A spatial quality inhering in a bearer by virtue of the bearer's being located toward the front of an organism relative to another entity." ;
+                 obo:IAO_0000118 "frontal"@en ;
+                 obo:IAO_0000412 obo:pato.owl ;
+                 rdfs:label "anterior to" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0001710
+obo:PATO_0001710 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:PATO_0000117 ;
+                 obo:IAO_0000111 "3-D extent" ;
+                 obo:IAO_0000115 "A size quality inhering in an bearer by virtue of the bearer's extension in three dimensions." ;
+                 obo:IAO_0000412 obo:pato.owl ;
+                 rdfs:label "3-D extent" .
+
+
 ###  http://purl.obolibrary.org/obo/PATO_0001739
 obo:PATO_0001739 rdf:type owl:Class ;
                  rdfs:subClassOf obo:PATO_0001018 ;
@@ -3253,6 +3485,51 @@ obo:PATO_0001739 rdf:type owl:Class ;
                  oboInOwl:inSubset pato:attribute_slim ;
                  rdfs:comment "Radiation quality is often expressed in terms of the linear energy transfer of the ionising particles that deliver the absorbed dose, but this is an over simplification." ;
                  rdfs:label "radiation quality" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0001740
+obo:PATO_0001740 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:PATO_0001739 ;
+                 obo:IAO_0000111 "activity (of a radionuclide)" ;
+                 obo:IAO_0000115 "A radiation quality inhering in a radioactive substance by virtue of its transformation (disintegration) rate." ;
+                 obo:IAO_0000412 obo:pato.owl ;
+                 rdfs:label "activity (of a radionuclide)" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0001741
+obo:PATO_0001741 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:PATO_0001740 ;
+                 obo:IAO_0000111 "radioactive" ;
+                 obo:IAO_0000115 "A radiation quality inhering in bearer by virtue of the bearer's exhibiting or being caused by radioactivity." ;
+                 obo:IAO_0000412 obo:pato.owl ;
+                 rdfs:label "radioactive" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0001792
+obo:PATO_0001792 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:PATO_0000140 ;
+                 obo:IAO_0000111 "left side of" ;
+                 obo:IAO_0000115 "A spatial quality inhering in a bearer by virtue of the bearer's being located on left side of from the a another entity." ;
+                 obo:IAO_0000412 obo:pato.owl ;
+                 rdfs:label "left side of" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0001793
+obo:PATO_0001793 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:PATO_0000140 ;
+                 obo:IAO_0000111 "right side of" ;
+                 obo:IAO_0000115 "A spatial quality inhering in a bearer by virtue of the bearer's being located on right side of a another entity." ;
+                 obo:IAO_0000412 obo:pato.owl ;
+                 rdfs:label "right side of" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0001894
+obo:PATO_0001894 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:PATO_0000047 ;
+                 obo:IAO_0000111 "phenotypic sex" ;
+                 obo:IAO_0000115 "An organismal quality inhering in a bearer by virtue of the bearer's physical expression of sexual characteristics." ;
+                 obo:IAO_0000412 obo:pato.owl ;
+                 rdfs:label "phenotypic sex" .
 
 
 ###  http://purl.obolibrary.org/obo/PATO_0001906
@@ -3322,27 +3599,55 @@ obo:PATO_0002193 rdf:type owl:Class ;
 ###  http://purl.obolibrary.org/obo/PATO_0002198
 obo:PATO_0002198 rdf:type owl:Class ;
                  rdfs:subClassOf obo:PATO_0001018 ;
+                 obo:IAO_0000111 "quality of a substance" ;
                  obo:IAO_0000115 "A quality inhering in a bearer by virtue of its constitution." ;
-                 terms:contributor <https://orcid.org/0000-0002-2061-091X> ;
-                 oboInOwl:creation_date "2010-03-15T04:35:27Z" ;
-                 oboInOwl:hasOBONamespace "quality" ;
-                 oboInOwl:id "PATO:0002198" ;
-                 oboInOwl:inSubset pato:attribute_slim ;
+                 obo:IAO_0000412 obo:pato.owl ;
                  rdfs:label "quality of a substance" .
 
 
-###  http://purl.obolibrary.org/obo/PATO_0002201
+##  http://purl.obolibrary.org/obo/PATO_0002201
 obo:PATO_0002201 rdf:type owl:Class ;
                  rdfs:subClassOf obo:PATO_0000186 ;
+                 obo:IAO_0000111 "handedness" ;
                  obo:IAO_0000115 "A behavioral quality inhering ina bearer by virtue of the bearer's unequal distribution of fine motor skill between its left and right hands or feet." ;
-                 terms:contributor <https://orcid.org/0000-0001-9114-8737> ;
-                 oboInOwl:creation_date "2010-03-22T05:48:33Z" ;
-                 oboInOwl:hasOBONamespace "quality" ;
-                 oboInOwl:id "PATO:0002201" ;
-                 oboInOwl:inSubset pato:attribute_slim ,
-                                   pato:disposition_slim ;
-                 rdfs:comment "Adapted from Wikipedia and the birnlex term that is dbxref'd. Added on behalf of OBI at March 2010 workshop." ;
+                 obo:IAO_0000412 obo:pato.owl ;
                  rdfs:label "handedness" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0002202
+obo:PATO_0002202 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:PATO_0002201 ;
+                 obo:IAO_0000111 "left handedness" ;
+                 obo:IAO_0000115 "Handedness where the organism preferentially uses the left hand or foot for tasks requiring the use of a single hand or foot or a dominant hand or foot." ;
+                 obo:IAO_0000412 obo:pato.owl ;
+                 rdfs:label "left handedness" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0002203
+obo:PATO_0002203 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:PATO_0002201 ;
+                 obo:IAO_0000111 "right handedness" ;
+                 obo:IAO_0000115 "Handedness where the organism preferentially uses the right hand or foot for tasks requiring the use of a single hand or foot or a dominant hand or foot." ;
+                 obo:IAO_0000412 obo:pato.owl ;
+                 rdfs:label "right handedness" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0002204
+obo:PATO_0002204 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:PATO_0002201 ;
+                 obo:IAO_0000111 "ambidextrous handedness" ;
+                 obo:IAO_0000115 "Handedness where the organism exhibits no overall dominance in the use of right or left hand or foot in the performance of tasks that require one hand or foot or a dominant hand or foot." ;
+                 obo:IAO_0000412 obo:pato.owl ;
+                 rdfs:label "ambidextrous handedness" .
+		
+
+###  http://purl.obolibrary.org/obo/PATO_0002243
+obo:PATO_0002243 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:PATO_0001574 ;
+                 obo:IAO_0000111 "fluid flow rate" ;
+                 obo:IAO_0000115 "A physical quality inhering in a fluid (liquid or gas) by virtue of the amount of fluid which passes through a given surface per unit time." ;
+                 obo:IAO_0000412 obo:pato.owl ;
+                 rdfs:label "fluid flow rate" .
 
 
 ###  http://purl.obolibrary.org/obo/PATO_0040057
@@ -14662,461 +14967,6 @@ obo:RO_0002577 rdf:type owl:Class ;
                rdfs:label "system" .
 
 
-##  http://purl.obolibrary.org/obo/OGMS_0000015
-obo:OGMS_0000015 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:IAO_0000030 ;
-                 obo:IAO_0000111 "clinical history" ;
-                 obo:IAO_0000115 "A series of statements representing health-relevant qualities of a patient and of a patient's family."@en ;
-                 obo:IAO_0000412 obo:ogms.owl ;
-                 rdfs:label "clinical history" .
-
-
-###  http://purl.obolibrary.org/obo/OGMS_0000023
-obo:OGMS_0000023 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:BFO_0000019 ;
-                 obo:IAO_0000111 "phenotype" ;
-                 obo:IAO_0000115 "A (combination of) quality(ies) of an organism determined by the interaction of its genetic make-up and environment that differentiates specific instances of a species from other instances of the same species."@en ;
-                 obo:IAO_0000412 obo:ogms.owl ;
-                 rdfs:label "phenotype" .
-
-
-###  http://purl.obolibrary.org/obo/OGMS_0000031
-obo:OGMS_0000031 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:BFO_0000016 ;
-                 obo:IAO_0000111 "disease" ;
-                 obo:IAO_0000115 "A disposition (i) to undergo pathological processes that (ii) exists in an organism because of one or more disorders in that organism."@en ;
-                 obo:IAO_0000412 obo:ogms.owl ;
-                 rdfs:label "disease" .
-
-
-##  http://purl.obolibrary.org/obo/OGMS_0000073
-obo:OGMS_0000073 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:IAO_0000027 ;
-                 obo:IAO_0000111 "diagnosis" ;
-                 obo:IAO_0000115 "The representation of a conclusion of a diagnostic process."@en ;
-                 obo:IAO_0000412 obo:ogms.owl ;
-                 rdfs:label "diagnosis" .
-
-
-###  http://purl.obolibrary.org/obo/OGMS_0000090
-obo:OGMS_0000090 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:OBI_0000011 ;
-                 obo:IAO_0000111 "treatment" ;
-                 obo:IAO_0000115 "A planned process whose completion is hypothesized by a health care provider to eliminate, prevent, or alleviate a disorder, the signs and symptoms of a disorder, or a pathological process"@en ;
-                 obo:IAO_0000412 obo:ogms.owl ;
-                 rdfs:label "treatment" .
-
-
-###  http://purl.obolibrary.org/obo/OMIABIS_0000050
-obo:OMIABIS_0000050 rdf:type owl:Class ;
-                    rdfs:subClassOf obo:OBI_0000953 ;
-                    obo:IAO_0000111 "fixed tissue specimen"@en ;
-                    obo:IAO_0000115 "A processed specimen that is the output of a fixation process."@en ;
-                    obo:IAO_0000412 obo:omiabis.owl ;
-                    rdfs:label "fixed tissue specimen"@en .
-
-
-
-###  http://purl.obolibrary.org/obo/PATO_0000047
-obo:PATO_0000047 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0001995 ;
-                 obo:IAO_0000111 "biological sex" ;
-                 obo:IAO_0000115 "An organismal quality inhering in a bearer by virtue of the bearer's ability to undergo sexual reproduction in order to differentiate the individuals or types involved." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "biological sex" .
-
-
-
-
-##  http://purl.obolibrary.org/obo/PATO_0000117
-obo:PATO_0000117 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0000051 ;
-                 obo:IAO_0000111 "size" ;
-                 obo:IAO_0000115 "A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "size" .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0000122
-obo:PATO_0000122 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0000051 ;
-                 obo:IAO_0000111 "length" ;
-                 obo:IAO_0000115 "A 1-D extent quality which is equal to the distance between two points." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "length" .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0000125
-obo:PATO_0000125 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0001018 ;
-                 obo:IAO_0000111 "mass" ;
-                 obo:IAO_0000115 "A physical quality that inheres in a bearer by virtue of the proportion of the bearer's amount of matter." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "mass" .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0000140
-obo:PATO_0000140 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0001018 ;
-                 obo:IAO_0000111 "position" ;
-                 obo:IAO_0000115 "A spatial quality inhering in a bearer by virtue of the bearer's spatial location relative to other objects in the vicinity." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "position" .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0000141
-obo:PATO_0000141 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0000051 ;
-                 obo:IAO_0000111 "structure" ;
-                 obo:IAO_0000115 "A morphology quality inhering in a bearer by virtue of the bearer's relative position, shape, arrangements and connectivity of an organism's various parts; the pattern underlying its form." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "structure" .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0000146
-obo:PATO_0000146 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0001018 ;
-                 obo:IAO_0000111 "temperature" ;
-                 obo:IAO_0000115 "A physical quality of the thermal energy of a system." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "temperature" .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0000165
-obo:PATO_0000165 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0001018 ;
-                 obo:IAO_0000111 "time" ;
-                 obo:IAO_0000115 "A quality in which events occur in sequence." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "time" .
-
-
-##  http://purl.obolibrary.org/obo/PATO_0000186
-obo:PATO_0000186 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0001995 ;
-                 obo:IAO_0000111 "behavioral quality" ;
-                 obo:IAO_0000115 "An organismal quality inhering in a bearer by virtue of the bearer's behavior aggregate of the responses or reactions or movements in a given situation." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "behavioral quality" .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0000383
-obo:PATO_0000383 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0001894 ;
-                 obo:IAO_0000111 "female" ;
-                 obo:IAO_0000115 "A biological sex quality inhering in an individual or a population that only produces gametes that can be fertilised by male gametes." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "female" .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0000384
-obo:PATO_0000384 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0001894 ;
-                 obo:IAO_0000111 "male" ;
-                 obo:IAO_0000115 "A biological sex quality inhering in an individual or a population whose sex organs contain only male gametes." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "male" .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0000918
-obo:PATO_0000918 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0001710 ;
-                 obo:IAO_0000111 "volume" ;
-                 obo:IAO_0000115 "A 3-D extent quality inhering in a bearer by virtue of the bearer's amount of 3-dimensional space it occupies." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "volume" .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0001018
-obo:PATO_0001018 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0001241 ;
-                 obo:IAO_0000111 "physical quality" ;
-                 obo:IAO_0000115 "A quality of a physical entity that exists through action of continuants at the physical level of organisation in relation to other entities." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "physical quality" .
-
-
-##  http://purl.obolibrary.org/obo/PATO_0001193
-obo:PATO_0001193 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0000140 ;
-                 obo:IAO_0000111 "lateral to" ;
-                 obo:IAO_0000115 "A spatial quality inhering in a bearer by virtue of the bearer's being located toward the side relative to another entity." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "lateral to" .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0001196
-obo:PATO_0001196 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0000140 ;
-                 obo:IAO_0000111 "ventral to" ;
-                 obo:IAO_0000115 "A spatial quality inhering in a bearer by virtue of the bearer's being located toward the abdomen of an organism relative to another entity." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "ventral to" .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0001233
-obo:PATO_0001233 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0000140 ;
-                 obo:IAO_0000111 "dorsal to" ;
-                 obo:IAO_0000115 "A spatial quality inhering in a bearer by virtue of the bearer's being located toward the back or upper surface of an organism relative to another entity." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "dorsal to" .
-
-
-
-###  http://purl.obolibrary.org/obo/PATO_0001241
-obo:PATO_0001241 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:BFO_0000019 ;
-                 obo:IAO_0000111 "physical object quality" ;
-                 obo:IAO_0000115 "A quality which inheres in a continuant." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "physical object quality" .
-
-
-
-##  http://purl.obolibrary.org/obo/PATO_0001338
-obo:PATO_0001338 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0002003 ;
-                 obo:IAO_0000111 "mixed sex" ;
-                 obo:IAO_0000115 "A biological sex quality inhering in a population of multiple sexes." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "mixed sex" .
-
-
-##  http://purl.obolibrary.org/obo/PATO_0001340
-obo:PATO_0001340 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0001894 ;
-                 obo:IAO_0000111 "hermaphrodite" ;
-                 obo:IAO_0000115 "A biological sex quality inhering in an organism or a population with both male and female sexual organs in one individual." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "hermaphrodite" .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0001421
-obo:PATO_0001421 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0000169 ;
-                 obo:IAO_0000111 "alive" ;
-                 obo:IAO_0000115 "A viability quality inhering in a bearer by virtue of the bearer's condition before death." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "alive" .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0001422
-obo:PATO_0001422 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0000169 ;
-                 obo:IAO_0000111 "dead" ;
-                 obo:IAO_0000115 "A viability quality inhering in a bearer by virtue of the cessation of the bearer's life." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "dead" .
-
-
-##  http://purl.obolibrary.org/obo/PATO_0001546
-obo:PATO_0001546 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0002198 ;
-                 obo:IAO_0000111 "quality of a solid" ;
-                 obo:IAO_0000115 "A physical quality inhering in a bearer by virtue of the bearer's exhibiting the physical characteristics of an entity characterized by particles arranged such that their shape and volume are relatively stable." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "quality of a solid" .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0001547
-obo:PATO_0001547 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0002198 ;
-                 obo:IAO_0000111 "quality of a gas" ;
-                 obo:IAO_0000115 "A physical quality inhering in a bearer by virtue of the bearer's exhibiting the physical characteristics of an entity consisting of particles that have neither a defined volume nor defined shape." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "quality of a gas" .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0001548
-obo:PATO_0001548 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0002198 ;
-                 obo:IAO_0000111 "quality of a liquid" ;
-                 obo:IAO_0000115 "A physical quality inhering in an entity exhibiting the physical characteristics of an amorphous (non-crystalline) form of matter between a gas and a solid that has a definite volume, but no definite shape." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "quality of a liquid" .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0001574
-obo:PATO_0001574 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0001906 ;
-                 obo:IAO_0000111 "flow rate" ;
-                 obo:IAO_0000115 "A physical quality inhering in a bearer by virtue of the bearer's motion characteristic." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "flow rate" .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0001632
-obo:PATO_0001632 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0000140 ;
-                 obo:IAO_0000111 "anterior to" ;
-                 obo:IAO_0000115 "A spatial quality inhering in a bearer by virtue of the bearer's being located toward the front of an organism relative to another entity." ;
-                 obo:IAO_0000118 "frontal"@en ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "anterior to" .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0001710
-obo:PATO_0001710 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0000117 ;
-                 obo:IAO_0000111 "3-D extent" ;
-                 obo:IAO_0000115 "A size quality inhering in an bearer by virtue of the bearer's extension in three dimensions." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "3-D extent" .
-
-
-
-##  http://purl.obolibrary.org/obo/PATO_0001739
-obo:PATO_0001739 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0001018 ;
-                 obo:IAO_0000111 "radiation quality" ;
-                 obo:IAO_0000115 "A quality that inheres in an bearer by virtue of how that bearer interacts with radiation." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "radiation quality" .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0001740
-obo:PATO_0001740 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0001739 ;
-                 obo:IAO_0000111 "activity (of a radionuclide)" ;
-                 obo:IAO_0000115 "A radiation quality inhering in a radioactive substance by virtue of its transformation (disintegration) rate." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "activity (of a radionuclide)" .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0001741
-obo:PATO_0001741 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0001740 ;
-                 obo:IAO_0000111 "radioactive" ;
-                 obo:IAO_0000115 "A radiation quality inhering in bearer by virtue of the bearer's exhibiting or being caused by radioactivity." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "radioactive" .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0001792
-obo:PATO_0001792 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0000140 ;
-                 obo:IAO_0000111 "left side of" ;
-                 obo:IAO_0000115 "A spatial quality inhering in a bearer by virtue of the bearer's being located on left side of from the a another entity." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "left side of" .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0001793
-obo:PATO_0001793 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0000140 ;
-                 obo:IAO_0000111 "right side of" ;
-                 obo:IAO_0000115 "A spatial quality inhering in a bearer by virtue of the bearer's being located on right side of a another entity." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "right side of" .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0001894
-obo:PATO_0001894 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0000047 ;
-                 obo:IAO_0000111 "phenotypic sex" ;
-                 obo:IAO_0000115 "An organismal quality inhering in a bearer by virtue of the bearer's physical expression of sexual characteristics." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "phenotypic sex" .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0001906
-obo:PATO_0001906 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0001018 ;
-                 obo:IAO_0000111 "movement quality" ;
-                 obo:IAO_0000115 "A physical quality inhering in a bearer by virtue of the bearer's participation in movement." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "movement quality" .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0001985
-obo:PATO_0001985 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0000146 ;
-                 obo:IAO_0000111 "frozen" ;
-                 obo:IAO_0000115 "A quality inhering in a bearer by virtue of the bearer's being kept below its freezing point." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "frozen" .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0001995
-obo:PATO_0001995 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0001241 ;
-                 obo:IAO_0000111 "organismal quality" ;
-                 obo:IAO_0000115 "A quality that inheres in an entire organism or part of an organism." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "organismal quality" .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0002003
-obo:PATO_0002003 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0001241 ;
-                 obo:IAO_0000111 "population quality" ;
-                 obo:IAO_0000115 "A quality that inheres in an entire population or part of a population." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "population quality" .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0002182
-obo:PATO_0002182 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0001241 ;
-                 obo:IAO_0000111 "molecular quality" ;
-                 obo:IAO_0000115 "A quality which inheres in a molecular entity, a single molecule, atom, ion, radical etc." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "molecular quality" .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0002198
-obo:PATO_0002198 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0001018 ;
-                 obo:IAO_0000111 "quality of a substance" ;
-                 obo:IAO_0000115 "A quality inhering in a bearer by virtue of its constitution." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "quality of a substance" .
-
-
-##  http://purl.obolibrary.org/obo/PATO_0002201
-obo:PATO_0002201 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0000186 ;
-                 obo:IAO_0000111 "handedness" ;
-                 obo:IAO_0000115 "A behavioral quality inhering ina bearer by virtue of the bearer's unequal distribution of fine motor skill between its left and right hands or feet." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "handedness" .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0002202
-obo:PATO_0002202 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0002201 ;
-                 obo:IAO_0000111 "left handedness" ;
-                 obo:IAO_0000115 "Handedness where the organism preferentially uses the left hand or foot for tasks requiring the use of a single hand or foot or a dominant hand or foot." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "left handedness" .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0002203
-obo:PATO_0002203 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0002201 ;
-                 obo:IAO_0000111 "right handedness" ;
-                 obo:IAO_0000115 "Handedness where the organism preferentially uses the right hand or foot for tasks requiring the use of a single hand or foot or a dominant hand or foot." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "right handedness" .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0002204
-obo:PATO_0002204 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0002201 ;
-                 obo:IAO_0000111 "ambidextrous handedness" ;
-                 obo:IAO_0000115 "Handedness where the organism exhibits no overall dominance in the use of right or left hand or foot in the performance of tasks that require one hand or foot or a dominant hand or foot." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "ambidextrous handedness" .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0002243
-obo:PATO_0002243 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0001574 ;
-                 obo:IAO_0000111 "fluid flow rate" ;
-                 obo:IAO_0000115 "A physical quality inhering in a fluid (liquid or gas) by virtue of the amount of fluid which passes through a given surface per unit time." ;
-                 obo:IAO_0000412 obo:pato.owl ;
-                 rdfs:label "fluid flow rate" .
 
 ######################################################################
 ### UBERON Classes
@@ -15387,9 +15237,6 @@ obo:UO_0000280 rdf:type owl:Class ;
                obo:IAO_0000412 obo:uo.owl ;
                rdfs:label "rate unit" .
 
-
-##  http://www.w3.org/2002/07/owl#Thing
-owl:Thing rdf:type owl:Class .
 
 #####################################################################
 ###  NIDM Classes
@@ -17096,6 +16943,9 @@ obo:OBI_0001004 rdf:type owl:NamedIndividual ,
                 rdfs:label "Edingburgh handedness inventory" .
 		
 
+#####################################################################
+###  UO Classes
+#####################################################################
 
 ###  http://purl.obolibrary.org/obo/UO_0000008
 obo:UO_0000008 rdf:type owl:NamedIndividual ,
@@ -17546,33 +17396,5 @@ obo:UO_0000208 rdf:type owl:NamedIndividual ,
                obo:IAO_0000412 obo:uo.owl ;
                rdfs:label "gram per deciliter" .
 
-###  http://purl.obolibrary.org/obo/RO_0001901
-obo:RO_0001901 rdf:type owl:NamedIndividual ;
-               obo:IAO_0000115 """## Elucidation
 
-This is used when the statement/axiom is assumed to hold true &apos;eternally&apos;
 
-## How to interpret (informal)
-
-First the &quot;atemporal&quot; FOL is derived from the OWL using the standard
-interpretation. This axiom is temporalized by embedding the axiom
-within a for-all-times quantified sentence. The t argument is added to
-all instantiation predicates and predicates that use this relation.
-
-## Example
-
-    Class: nucleus
-    SubClassOf: part_of some cell
-
-    forall t :
-      forall n :
-        instance_of(n,Nucleus,t)
-         implies
-        exists c :
-          instance_of(c,Cell,t)
-          part_of(n,c,t)
-
-## Notes
-
-This interpretation is *not* the same as an at-all-times relation""" ;
-               rdfs:label "axiom holds for all times"@en .
