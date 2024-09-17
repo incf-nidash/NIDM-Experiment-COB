@@ -2559,8 +2559,102 @@ obo:BFO_0000145 rdf:type owl:Class ;
                 rdfs:label "relational quality"@en .
 
 ####################################################################
-### Misc Classes
+### CHEBI Classes
 ###################################################################
+
+### http://purl.obolibrary.org/obo/CHEBI_15986
+obo:CHEBI_15986 rdf:type owl:Class ;
+                    rdfs:subClassOf obo:CHEBI_33695 ;
+                    obo:IAO_0000115 "A nucleobase-containing molecular entity with a polymeric structure comprised of a linear sequence of 13 or more nucleotide residues."@en ;
+                    rdfs:label "polynucleotide"@en .
+
+
+### http://purl.obolibrary.org/obo/CHEBI_16670
+obo:CHEBI_16670 rdf:type owl:Class ;
+                    rdfs:subClassOf obo:CHEBI_50047 ;
+                    obo:IAO_0000115 "Amide derived from two or more amino carboxylic acid molecules (the same or different) by formation of a covalent bond from the carbonyl carbon of one to the nitrogen atom of another with formal loss of water. The term is usually applied to structures formed from alpha-amino acids, but it includes those derived from any amino carboxylic acid. X = OH, OR, NH2, NHR, etc.."@en ;
+                    rdfs:label "peptide"@en .
+
+
+### http://purl.obolibrary.org/obo/CHEBI_16991
+obo:CHEBI_16991 rdf:type owl:Class ;
+                    rdfs:subClassOf obo:CHEBI_33696 ;
+                    obo:IAO_0000115 "High molecular weight, linear polymers, composed of nucleotides containing deoxyribose and linked by phosphodiester bonds; DNA contain the genetic information of organisms."@en ;
+                    rdfs:label "deoxyribonucleic acid"@en .
+
+
+### http://purl.obolibrary.org/obo/CHEBI_24431
+obo:CHEBI_24431 rdf:type owl:Class ;
+                    rdfs:subClassOf obo:BFO_0000040 ;
+                    obo:IAO_0000115 "A chemical entity is a physical entity of interest in chemistry including molecular entities, parts thereof, and chemical substances."@en ;
+                    rdfs:label "chemical entity"@en .
+
+
+### http://purl.obolibrary.org/obo/CHEBI_23367
+obo:CHEBI_23367 rdf:type owl:Class ;
+                    rdfs:subClassOf obo:CHEBI_24431 ;
+                    obo:IAO_0000115 "Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity."@en ;
+                    rdfs:label "molecular entity"@en .
+
+
+### http://purl.obolibrary.org/obo/CHEBI_33579
+obo:CHEBI_33579 rdf:type owl:Class ;
+                    rdfs:subClassOf obo:CHEBI_23367 ;
+                    obo:IAO_0000115 "A molecular entity containing one or more atoms from any of groups 1, 2, 13, 14, 15, 16, 17, and 18 of the periodic table."@en ;
+                    rdfs:label "main group molecular entity"@en .
+		    
+
+### http://purl.obolibrary.org/obo/CHEBI_33582
+obo:CHEBI_33582 rdf:type owl:Class ;
+                    rdfs:subClassOf obo:CHEBI_33675 ;
+                    rdfs:label "carbon group molecular entity"@en .
+
+
+### http://purl.obolibrary.org/obo/CHEBI_33675
+obo:CHEBI_33675 rdf:type owl:Class ;
+                    rdfs:subClassOf obo:CHEBI_33579 ;
+                    obo:IAO_0000115 "A main group molecular entity that contains one or more atoms of a p-block element."@en ;
+                    rdfs:label "p-block molecular entity"@en .
+
+
+### http://purl.obolibrary.org/obo/CHEBI_33694
+obo:CHEBI_33694 rdf:type owl:Class ;
+                    rdfs:subClassOf obo:CHEBI_50860 ;
+                    obo:IAO_0000115 "A macromolecule formed by a living organism."@en ;
+                    rdfs:label "biomacromolecule"@en .
+
+
+### http://purl.obolibrary.org/obo/CHEBI_33695
+obo:CHEBI_33695 rdf:type owl:Class ;
+                    rdfs:subClassOf obo:CHEBI_33694 ;
+                    rdfs:label "information biomacromolecule"@en .
+
+
+### http://purl.obolibrary.org/obo/CHEBI_33696
+obo:CHEBI_33696 rdf:type owl:Class ;
+                    rdfs:subClassOf obo:CHEBI_15986 ;
+                    obo:IAO_0000115 "A macromolecule made up of nucleotide units and hydrolysable into certain pyrimidine or purine bases (usually adenine, cytosine, guanine, thymine, uracil), D-ribose or 2-deoxy-D-ribose and phosphoric acid."@en ;
+                    rdfs:label "nucleic acid"@en .
+
+
+### http://purl.obolibrary.org/obo/CHEBI_50047
+obo:CHEBI_50047 rdf:type owl:Class ;
+                    rdfs:subClassOf obo:CHEBI_50860 ;
+                    obo:IAO_0000115 "A compound formally derived from ammonia by replacing one, two or three hydrogen atoms by organyl groups."@en ;
+                    rdfs:label "organic amino compound"@en .
+
+
+### http://purl.obolibrary.org/obo/CHEBI_50860
+obo:CHEBI_50860 rdf:type owl:Class ;
+                    rdfs:subClassOf obo:CHEBI_33582 ;
+                    obo:IAO_0000115 "Any molecular entity that contains carbon."@en ;
+                    rdfs:label "organic molecular entity"@en .
+
+
+##########################################################################
+### Misc Classes
+##########################################################################
+
 
 ###  http://purl.obolibrary.org/obo/OMIABIS_0000050
 obo:OMIABIS_0000050 rdf:type owl:Class ;
@@ -2673,6 +2767,7 @@ obo:PR_000000001 rdf:type owl:Class ;
 ###  http://purl.obolibrary.org/obo/GAZ_00000448
 obo:GAZ_00000448 rdf:type owl:Class ;
                  rdfs:subClassOf obo:BFO_0000029 .
+
 
 ###  http://purl.obolibrary.org/obo/CARO_0000000
 obo:CARO_0000000 rdf:type owl:Class ;
