@@ -33,7 +33,7 @@ dicom:dicom_00280011 rdf:type owl:DatatypeProperty ;
 
         obo:IAO_0000115 "Number of columns in the image."^^xsd:string ;
 
-        dicom:dicom_00000065 "(0028,0011)"^^xsd:string ;
+        dicom:dicom_xxxx0065 "(0028,0011)"^^xsd:string ;
 
         dicom:VR "US"^^xsd:string ;
 
@@ -52008,6 +52008,22 @@ dicom:dicom_00189064 rdf:type owl:DatatypeProperty  ;
 
         rdfs:subPropertyOf nidm:DICOMTag .
 
+
+##################################################################
+###  DICOM Classes
+##################################################################
+
+###  http://purl.org/nidash/dicom#dicom_xxxx0065
+
+     dicom:dicom_xxxx0065 rdf:type owl:Class ; 
+
+        rdfs:label "Tag"^^xsd:string ;
+
+        obo:IAO_0000114  obo:IAO_0000428 ;
+
+        obo:IAO_0000115 "A unique identifier for an element of information composed of an ordered pair of numbers (a Group Number followed by an Element Number), which is used to identify Attributes and corresponding Data Elements." ;
+
+	rdfs:subClassOf obo:IAO_0020000 .
 
 
 
