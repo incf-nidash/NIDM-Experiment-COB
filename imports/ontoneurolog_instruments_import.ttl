@@ -7,6 +7,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix owl2xml: <http://www.w3.org/2006/12/owl2-xml#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @base <http://purl.org/nidash/nidm/ontoneurolog_instruments_import.owl> .
 
 <http://purl.org/nidash/nidm/ontoneurolog_instruments_import.owl> rdf:type owl:Ontology ;
